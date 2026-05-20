@@ -1,0 +1,8 @@
+flowchart LR
+    A[用户场景需求] --> B[LLM 拆解意图]
+    B --> C{遇到结构风险?}
+    C -->|是| D[查询知识图谱记录]
+    D --> E[读取 choice / sequence / variants / references / enums]
+    E --> F[约束当前 XML 设计]
+    F --> G[输出更稳健的 XML 草案]
+    C -->|否| G

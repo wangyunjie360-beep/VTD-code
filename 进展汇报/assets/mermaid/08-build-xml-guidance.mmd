@@ -1,0 +1,16 @@
+flowchart TD
+    A[query + element + parent_context + errors?] --> B[调用 retrieve_spec]
+    A --> C[调用 get_element_schema]
+    A --> D{是否有 errors?}
+    D -->|有| E[调用 explain_validation_errors]
+    D -->|无| F[跳过诊断]
+    B --> G[提取 strategy_summary]
+    C --> H[提取完整 strategy]
+    E --> I[提取 repair_actions]
+    F --> I
+    G --> J[组装 draft_checklist]
+    H --> K[组装 element_schema]
+    I --> L[组装 repair_diagnostics / repair_actions]
+    J --> M[输出 guidance packet]
+    K --> M
+    L --> M

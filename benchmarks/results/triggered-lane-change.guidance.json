@@ -1,0 +1,159 @@
+{
+  "prompt_path": "D:/wyj/OPenscenario/benchmarks/prompts/triggered-lane-change.md",
+  "prompt_text": "# Triggered Lane Change\n\n## User Request\nCreate an OpenSCENARIO XML scenario where `ego` cruises in its starting lane until a trigger fires, then performs a single lane change. Keep the XML conservative and avoid extra scenario complexity beyond the triggered lane change.\n\n## Coverage Expectations\n- One vehicle named `ego`\n- A trigger that starts the lane-change maneuver\n- One lateral action for the lane change\n- Clear stop behavior after the maneuver completes or after a bounded simulation time\n",
+  "guidance": {
+    "query": "lane change action",
+    "element": "LaneChangeAction",
+    "parent_context": "LateralAction",
+    "retrieval_hits": [
+      {
+        "title": "LaneChangeAction",
+        "kind": "element",
+        "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1417; knowledge/raw/schema/OpenSCENARIO.xsd#L1459",
+        "source_paths": [
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L1417",
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L1459"
+        ],
+        "summary": "Schema-derived LaneChangeAction element with context-dependent type variants captured from the local XSD.",
+        "constraints": [
+          "Required children: LaneChangeActionDynamics, LaneChangeTarget",
+          "Content model: all",
+          "Contextual variants: LateralAction -> LaneChangeAction"
+        ],
+        "parent_contexts": [
+          "LateralAction"
+        ],
+        "strategy_summary": [
+          "Use variant for LateralAction: LaneChangeAction.",
+          "Keep required children present: LaneChangeActionDynamics, LaneChangeTarget."
+        ]
+      },
+      {
+        "title": "LaneChangeAction.targetLaneOffset",
+        "kind": "attribute",
+        "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1417; knowledge/raw/schema/OpenSCENARIO.xsd#L1459",
+        "source_paths": [
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L1417",
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L1459"
+        ],
+        "summary": "Optional attribute 'targetLaneOffset' on LaneChangeAction. Type: Double. Schema-derived LaneChangeAction element with context-dependent type variants captured from the local XSD.",
+        "constraints": [
+          "Optional on LaneChangeAction",
+          "Type: Double"
+        ],
+        "parent_contexts": [
+          "LateralAction",
+          "LaneChangeAction"
+        ]
+      },
+      {
+        "title": "LaneChangeActionDynamics",
+        "kind": "element",
+        "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L177; knowledge/raw/schema/OpenSCENARIO.xsd#L191; knowledge/raw/schema/OpenSCENARIO.xsd#L206; knowledge/raw/schema/OpenSCENARIO.xsd#L1419; knowledge/raw/schema/OpenSCENARIO.xsd#L2488",
+        "source_paths": [
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L177",
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L191",
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L206",
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L1419",
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L2488"
+        ],
+        "summary": "Schema-derived LaneChangeActionDynamics element with context-dependent type variants captured from the local XSD.",
+        "constraints": [
+          "Required attributes: dynamicsDimension, dynamicsShape, value",
+          "Contextual variants: LaneChangeAction -> TransitionDynamics"
+        ],
+        "parent_contexts": [
+          "LaneChangeAction"
+        ],
+        "strategy_summary": [
+          "Resolve contextual variant before emitting this shared element name."
+        ]
+      }
+    ],
+    "element_schema": {
+      "element": "LaneChangeAction",
+      "description": "Schema-derived LaneChangeAction element with context-dependent type variants captured from the local XSD.",
+      "content_model_kind": "all",
+      "child_groups": [],
+      "semantic_constraints": [],
+      "contextual_variants": [
+        {
+          "parent_context": "LateralAction",
+          "type_ref": "LaneChangeAction",
+          "deprecated": false
+        }
+      ],
+      "parent_contexts": [
+        "LateralAction"
+      ],
+      "required_attributes": [],
+      "optional_attributes": [
+        {
+          "name": "targetLaneOffset",
+          "type": "Double"
+        }
+      ],
+      "allowed_children": [
+        {
+          "name": "LaneChangeActionDynamics",
+          "cardinality": "1..1"
+        },
+        {
+          "name": "LaneChangeTarget",
+          "cardinality": "1..1"
+        }
+      ],
+      "child_order": [],
+      "multiplicity": {
+        "LaneChangeActionDynamics": "1..1",
+        "LaneChangeTarget": "1..1"
+      },
+      "enum_constraints": {},
+      "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1417; knowledge/raw/schema/OpenSCENARIO.xsd#L1459",
+      "strategy": {
+        "structure_mode": "all",
+        "branch_selection": {
+          "mode": "none",
+          "groups": []
+        },
+        "ordering": {
+          "mode": "all",
+          "child_order": []
+        },
+        "required_children": [
+          "LaneChangeActionDynamics",
+          "LaneChangeTarget"
+        ],
+        "variant_resolution": {
+          "selection_required": true,
+          "parent_context": "LateralAction",
+          "resolved_variant": {
+            "parent_context": "LateralAction",
+            "type_ref": "LaneChangeAction",
+            "deprecated": false
+          },
+          "preferred_variants": [
+            {
+              "parent_context": "LateralAction",
+              "type_ref": "LaneChangeAction",
+              "deprecated": false
+            }
+          ],
+          "deprecated_variants": []
+        },
+        "reference_requirements": [],
+        "repair_priority": [
+          "resolve_contextual_variant",
+          "add_required_children"
+        ]
+      }
+    },
+    "draft_checklist": [
+      "Use variant for LateralAction: LaneChangeAction.",
+      "Keep required children present: LaneChangeActionDynamics, LaneChangeTarget.",
+      "Resolve contextual variant before emitting this shared element name."
+    ],
+    "repair_diagnostics": [],
+    "repair_actions": []
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "element": "AbsoluteTargetLaneOffset",
+  "description": "Schema-derived AbsoluteTargetLaneOffset element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "LaneOffsetTarget",
+      "type_ref": "AbsoluteTargetLaneOffset",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "LaneOffsetTarget"
+  ],
+  "required_attributes": [
+    {
+      "name": "value",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L754; knowledge/raw/schema/OpenSCENARIO.xsd#L1444"
+}

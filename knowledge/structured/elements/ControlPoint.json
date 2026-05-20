@@ -1,0 +1,42 @@
+{
+  "element": "ControlPoint",
+  "description": "Schema-derived ControlPoint element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Nurbs",
+      "type_ref": "ControlPoint",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Nurbs"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [
+    {
+      "name": "time",
+      "type": "Double"
+    },
+    {
+      "name": "weight",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "Position",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "Position"
+  ],
+  "multiplicity": {
+    "Position": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1081; knowledge/raw/schema/OpenSCENARIO.xsd#L1603"
+}

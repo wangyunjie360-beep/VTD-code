@@ -1,0 +1,25 @@
+{
+  "element": "ConditionGroup",
+  "description": "Ordered list of one or more Condition entries. Conditions inside one group are combined with logical AND, while multiple groups inside a trigger are combined with logical OR.",
+  "content_model_kind": "sequence",
+  "parent_contexts": [
+    "StartTrigger",
+    "StopTrigger"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Condition",
+      "cardinality": "1..*"
+    }
+  ],
+  "child_order": [
+    "Condition"
+  ],
+  "multiplicity": {
+    "Condition": "1..*"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1041"
+}

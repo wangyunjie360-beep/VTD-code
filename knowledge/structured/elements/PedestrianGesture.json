@@ -1,0 +1,45 @@
+{
+  "element": "PedestrianGesture",
+  "description": "Schema-derived PedestrianGesture element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "PedestrianAnimation",
+      "type_ref": "PedestrianGesture",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "PedestrianAnimation"
+  ],
+  "required_attributes": [
+    {
+      "name": "gesture",
+      "type": "PedestrianGestureType"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "gesture": [
+      "phoneCallRightHand",
+      "phoneCallLeftHand",
+      "phoneTextRightHand",
+      "phoneTextLeftHand",
+      "wavingRightArm",
+      "wavingLeftArm",
+      "umbrellaRightHand",
+      "umbrellaLeftHand",
+      "crossArms",
+      "coffeeRightHand",
+      "coffeeLeftHand",
+      "sandwichRightHand",
+      "sandwichLeftHand"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L377; knowledge/raw/schema/OpenSCENARIO.xsd#L1781; knowledge/raw/schema/OpenSCENARIO.xsd#L1791"
+}

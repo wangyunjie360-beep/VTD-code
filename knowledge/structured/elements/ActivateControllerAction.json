@@ -1,0 +1,59 @@
+{
+  "element": "ActivateControllerAction",
+  "description": "Controller activation branch used under ControllerAction and deprecated directly under PrivateAction.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [
+    "The controllerRef attribute is deprecated."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "ControllerAction",
+      "type_ref": "ActivateControllerAction",
+      "deprecated": false
+    },
+    {
+      "parent_context": "PrivateAction",
+      "type_ref": "ActivateControllerAction",
+      "deprecated": true
+    }
+  ],
+  "parent_contexts": [
+    "ControllerAction",
+    "PrivateAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [
+    {
+      "name": "animation",
+      "type": "Boolean"
+    },
+    {
+      "name": "controllerRef",
+      "type": "String",
+      "reference_kind": "controller"
+    },
+    {
+      "name": "lateral",
+      "type": "Boolean"
+    },
+    {
+      "name": "lighting",
+      "type": "Boolean"
+    },
+    {
+      "name": "longitudinal",
+      "type": "Boolean"
+    },
+    {
+      "name": "objectControllerRef",
+      "type": "String",
+      "reference_kind": "controller"
+    }
+  ],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L786; knowledge/raw/schema/OpenSCENARIO.xsd#L1061; knowledge/raw/schema/OpenSCENARIO.xsd#L1875"
+}

@@ -1,0 +1,85 @@
+{
+  "element": "MiscObject",
+  "description": "Schema-derived MiscObject element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Catalog",
+      "type_ref": "MiscObject",
+      "deprecated": false
+    },
+    {
+      "parent_context": "EntityObject",
+      "type_ref": "MiscObject",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Catalog",
+    "EntityObject"
+  ],
+  "required_attributes": [
+    {
+      "name": "mass",
+      "type": "Double"
+    },
+    {
+      "name": "miscObjectCategory",
+      "type": "MiscObjectCategory"
+    },
+    {
+      "name": "name",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "model3d",
+      "type": "String"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "ParameterDeclarations",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "BoundingBox",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "Properties",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "ParameterDeclarations": "0..1",
+    "BoundingBox": "1..1",
+    "Properties": "0..1"
+  },
+  "enum_constraints": {
+    "miscObjectCategory": [
+      "barrier",
+      "building",
+      "crosswalk",
+      "gantry",
+      "none",
+      "obstacle",
+      "parkingSpace",
+      "patch",
+      "pole",
+      "railing",
+      "roadMark",
+      "soundBarrier",
+      "streetLamp",
+      "trafficIsland",
+      "tree",
+      "vegetation",
+      "wind"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L295; knowledge/raw/schema/OpenSCENARIO.xsd#L927; knowledge/raw/schema/OpenSCENARIO.xsd#L1252; knowledge/raw/schema/OpenSCENARIO.xsd#L1556"
+}

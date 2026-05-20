@@ -1,0 +1,34 @@
+{
+  "element": "TriggeringEntities",
+  "description": "Entity reference set used by ByEntityCondition. At least one EntityRef is required, and the triggeringEntitiesRule controls whether all or any listed entities may satisfy the condition.",
+  "content_model_kind": "sequence",
+  "parent_contexts": [
+    "ByEntityCondition"
+  ],
+  "required_attributes": [
+    {
+      "name": "triggeringEntitiesRule",
+      "type": "TriggeringEntitiesRule"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "EntityRef",
+      "cardinality": "1..*"
+    }
+  ],
+  "child_order": [
+    "EntityRef"
+  ],
+  "multiplicity": {
+    "EntityRef": "1..*"
+  },
+  "enum_constraints": {
+    "triggeringEntitiesRule": [
+      "all",
+      "any"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L631; knowledge/raw/schema/OpenSCENARIO.xsd#L2502"
+}

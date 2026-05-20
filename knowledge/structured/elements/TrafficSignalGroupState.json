@@ -1,0 +1,29 @@
+{
+  "element": "TrafficSignalGroupState",
+  "description": "Phase child that assigns a required state to one traffic signal group.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Phase",
+      "type_ref": "TrafficSignalGroupState",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Phase"
+  ],
+  "required_attributes": [
+    {
+      "name": "state",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1804; knowledge/raw/schema/OpenSCENARIO.xsd#L2381"
+}

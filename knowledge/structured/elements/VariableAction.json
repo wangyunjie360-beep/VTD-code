@@ -1,0 +1,54 @@
+{
+  "element": "VariableAction",
+  "description": "Global variable-action branch. Exactly one of SetAction or ModifyAction must be selected for the referenced variable.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "SetAction",
+        "ModifyAction"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: SetAction, ModifyAction."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "GlobalAction",
+      "type_ref": "VariableAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "GlobalAction"
+  ],
+  "required_attributes": [
+    {
+      "name": "variableRef",
+      "type": "String",
+      "reference_kind": "variable"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "SetAction",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "ModifyAction",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [
+    "SetAction|ModifyAction"
+  ],
+  "multiplicity": {
+    "SetAction": "0..1",
+    "ModifyAction": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1371; knowledge/raw/schema/OpenSCENARIO.xsd#L2558"
+}

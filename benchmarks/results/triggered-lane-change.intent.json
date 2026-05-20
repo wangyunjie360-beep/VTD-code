@@ -1,0 +1,54 @@
+{
+  "parsed_intent": {
+    "parameters": [],
+    "entities": [
+      {
+        "name": "ego",
+        "type": "Vehicle",
+        "role": "primary"
+      }
+    ],
+    "environment": {},
+    "map_context": {
+      "logic_file": "../../roads/highway_edge_merge.xodr",
+      "road_id": "1",
+      "start_lane_id": "-2",
+      "target_lane_id": "-1"
+    },
+    "init_actions": [
+      {
+        "entity": "ego",
+        "actions": [
+          "teleport to road 1 lane -2 at s=320.0",
+          "set absolute speed to 18.0 m/s"
+        ]
+      }
+    ],
+    "story_actions": [
+      "perform one lane change from lane -2 to lane -1 with linear dynamics over 2.0 seconds"
+    ],
+    "triggers": [
+      "simulation time > 2.0 seconds starts the lane change event"
+    ],
+    "stop_conditions": [
+      "stop when simulation time exceeds 8.0 seconds"
+    ],
+    "assumptions": [
+      "Use an absolute target lane to encode a single conservative lane change.",
+      "The road asset supports the adjacent lane -1 used as the lane change target."
+    ]
+  },
+  "xml_intent_check": {
+    "matched": [
+      "one ego vehicle named ego",
+      "trigger-based lateral action after 2 seconds",
+      "single lane change from lane -2 to lane -1",
+      "bounded stop condition at 8 seconds"
+    ],
+    "missing": [],
+    "extra": []
+  },
+  "schema_valid": true,
+  "intent_consistent": true,
+  "remaining_blockers": []
+}

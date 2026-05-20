@@ -1,0 +1,42 @@
+{
+  "element": "Timing",
+  "description": "Schema-derived Timing element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "TimeReference",
+      "type_ref": "Timing",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "TimeReference"
+  ],
+  "required_attributes": [
+    {
+      "name": "domainAbsoluteRelative",
+      "type": "ReferenceContext"
+    },
+    {
+      "name": "offset",
+      "type": "Double"
+    },
+    {
+      "name": "scale",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "domainAbsoluteRelative": [
+      "absolute",
+      "relative"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L455; knowledge/raw/schema/OpenSCENARIO.xsd#L2270; knowledge/raw/schema/OpenSCENARIO.xsd#L2293"
+}

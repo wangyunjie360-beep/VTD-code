@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSCENARIO>
+  <FileHeader revMajor="1" revMinor="1" date="2026-03-25T22:30:00" description="Heavy rain nighttime elevated ramp merge multihazard controller-ready scene" author="OpenAI"/>
+  <ParameterDeclarations/>
+  <CatalogLocations/>
+  <RoadNetwork>
+    <LogicFile filepath="..\roads\viaduct_three_lane_ramp_merge.xodr"/>
+  </RoadNetwork>
+  <Entities>
+    <ScenarioObject name="Ego">
+      <Vehicle name="EgoVehicle" vehicleCategory="car">
+        <BoundingBox>
+          <Center x="1.5" y="0.0" z="0.9"/>
+          <Dimensions width="1.9" length="4.8" height="1.55"/>
+        </BoundingBox>
+        <Performance maxSpeed="69.44" maxAcceleration="8.0" maxDeceleration="9.0"/>
+        <Axles>
+          <FrontAxle maxSteering="0.48" wheelDiameter="0.68" trackWidth="1.62" positionX="2.90" positionZ="0.34"/>
+          <RearAxle maxSteering="0.0" wheelDiameter="0.68" trackWidth="1.62" positionX="0.0" positionZ="0.34"/>
+        </Axles>
+        <Properties>
+          <Property name="role" value="ego_under_test"/>
+        </Properties>
+      </Vehicle>
+    </ScenarioObject>
+    <ScenarioObject name="TruckA">
+      <Vehicle name="LeadCargoVan" vehicleCategory="van">
+        <BoundingBox>
+          <Center x="2.4" y="0.0" z="1.35"/>
+          <Dimensions width="2.1" length="6.2" height="2.7"/>
+        </BoundingBox>
+        <Performance maxSpeed="38.89" maxAcceleration="4.0" maxDeceleration="7.5"/>
+        <Axles>
+          <FrontAxle maxSteering="0.42" wheelDiameter="0.78" trackWidth="1.78" positionX="3.7" positionZ="0.39"/>
+          <RearAxle maxSteering="0.0" wheelDiameter="0.78" trackWidth="1.78" positionX="0.0" positionZ="0.39"/>
+        </Axles>
+        <Properties>
+          <Property name="cargoState" value="rear_biased_load"/>
+          <Property name="stabilityRisk" value="hydroplane_sensitive"/>
+          <Property name="rearDoorLatch" value="partially_locked"/>
+        </Properties>
+      </Vehicle>
+    </ScenarioObject>
+    <ScenarioObject name="CarB">
+      <Vehicle name="AggressiveLeftSedan" vehicleCategory="car">
+        <BoundingBox>
+          <Center x="1.5" y="0.0" z="0.9"/>
+          <Dimensions width="1.88" length="4.75" height="1.48"/>
+        </BoundingBox>
+        <Performance maxSpeed="72.22" maxAcceleration="7.5" maxDeceleration="8.0"/>
+        <Axles>
+          <FrontAxle maxSteering="0.48" wheelDiameter="0.66" trackWidth="1.60" positionX="2.88" positionZ="0.33"/>
+          <RearAxle maxSteering="0.0" wheelDiameter="0.66" trackWidth="1.60" positionX="0.0" positionZ="0.33"/>
+        </Axles>
+        <Properties>
+          <Property name="drivingStyle" value="aggressive_non_yielding"/>
+        </Properties>
+      </Vehicle>
+    </ScenarioObject>
+    <ScenarioObject name="SuvC">
+      <Vehicle name="WhiteRampSUV" vehicleCategory="car">
+        <BoundingBox>
+          <Center x="1.55" y="0.0" z="0.95"/>
+          <Dimensions width="1.95" length="4.85" height="1.72"/>
+        </BoundingBox>
+        <Performance maxSpeed="72.22" maxAcceleration="7.0" maxDeceleration="8.0"/>
+        <Axles>
+          <FrontAxle maxSteering="0.46" wheelDiameter="0.70" trackWidth="1.68" positionX="2.98" positionZ="0.35"/>
+          <RearAxle maxSteering="0.0" wheelDiameter="0.70" trackWidth="1.68" positionX="0.0" positionZ="0.35"/>
+        </Axles>
+        <Properties>
+          <Property name="mergeIntent" value="late_high_speed_entry"/>
+        </Properties>
+      </Vehicle>
+    </ScenarioObject>
+    <ScenarioObject name="MotorbikeD">
+      <Vehicle name="OccludedMotorbike" vehicleCategory="motorbike">
+        <BoundingBox>
+          <Center x="1.0" y="0.0" z="0.7"/>
+          <Dimensions width="0.82" length="2.25" height="1.4"/>
+        </BoundingBox>
+        <Performance maxSpeed="55.55" maxAcceleration="8.5" maxDeceleration="8.5"/>
+        <Axles>
+          <FrontAxle maxSteering="0.60" wheelDiameter="0.58" trackWidth="0.72" positionX="1.28" positionZ="0.29"/>
+          <RearAxle maxSteering="0.0" wheelDiameter="0.58" trackWidth="0.72" positionX="0.0" positionZ="0.29"/>
+        </Axles>
+        <Properties>
+          <Property name="occlusionSource" value="TruckA"/>
+          <Property name="behavior" value="squeeze_between_truck_and_ego"/>
+        </Properties>
+      </Vehicle>
+    </ScenarioObject>
+    <ScenarioObject name="CrateE">
+      <MiscObject name="DroppedPlasticCrate" mass="18.0" miscObjectCategory="obstacle">
+        <BoundingBox>
+          <Center x="0.25" y="0.0" z="0.22"/>
+          <Dimensions width="0.52" length="0.62" height="0.44"/>
+        </BoundingBox>
+        <Properties>
+          <Property name="color" value="black"/>
+          <Property name="reflectivity" value="low"/>
+          <Property name="rainDrift" value="irregular"/>
+        </Properties>
+      </MiscObject>
+    </ScenarioObject>
+  </Entities>
+  <Storyboard>
+    <Init>
+      <Actions>
+        <GlobalAction>
+          <EnvironmentAction>
+            <Environment name="HeavyRainNightMerge">
+              <TimeOfDay animation="false" dateTime="2026-03-25T22:30:00"/>
+              <Weather atmosphericPressure="100200.0" temperature="285.15" fractionalCloudCover="nineOktas">
+                <Fog visualRange="55.0"/>
+                <Precipitation precipitationType="rain" precipitationIntensity="0.95"/>
+                <Wind direction="1.57" speed="14.0"/>
+              </Weather>
+              <RoadCondition frictionScaleFactor="0.38" wetness="lowFlooded">
+                <Properties>
+                  <Property name="surfacePuddling" value="widespread"/>
+                  <Property name="mergeLaneMarkingState" value="worn_and_partially_missing"/>
+                  <Property name="lightingGlare" value="reflected_from_pooled_water"/>
+                  <Property name="constructionSignOcclusion" value="intermittent_rotating_panel"/>
+                  <Property name="cameraVisibilityImpact" value="reduced"/>
+                  <Property name="radarMultipathImpact" value="water_and_guardrail"/>
+                  <Property name="lidarNoiseImpact" value="sparse_rain_contaminated_points"/>
+                </Properties>
+              </RoadCondition>
+            </Environment>
+          </EnvironmentAction>
+        </GlobalAction>
+        <Private entityRef="Ego">
+          <PrivateAction>
+            <TeleportAction>
+              <Position>
+                <LanePosition roadId="1" laneId="-3" s="300.0" offset="0.0"/>
+              </Position>
+            </TeleportAction>
+          </PrivateAction>
+          <PrivateAction>
+            <LongitudinalAction>
+              <SpeedAction>
+                <SpeedActionDynamics dynamicsShape="step" dynamicsDimension="time" value="0.0"/>
+                <SpeedActionTarget>
+                  <AbsoluteTargetSpeed value="20.0"/>
+                </SpeedActionTarget>
+              </SpeedAction>
+            </LongitudinalAction>
+          </PrivateAction>
+        </Private>
+        <Private entityRef="TruckA">
+          <PrivateAction>
+            <TeleportAction>
+              <Position>
+                <LanePosition roadId="1" laneId="-3" s="374.0" offset="0.0"/>
+              </Position>
+            </TeleportAction>
+          </PrivateAction>
+          <PrivateAction>
+            <LongitudinalAction>
+              <SpeedAction>
+                <SpeedActionDynamics dynamicsShape="step" dynamicsDimension="time" value="0.0"/>
+                <SpeedActionTarget>
+                  <AbsoluteTargetSpeed value="16.11"/>
+                </SpeedActionTarget>
+              </SpeedAction>
+            </LongitudinalAction>
+          </PrivateAction>
+        </Private>
+        <Private entityRef="CarB">
+          <PrivateAction>
+            <TeleportAction>
+              <Position>
+                <LanePosition roadId="1" laneId="-2" s="302.0" offset="0.0"/>
+              </Position>
+            </TeleportAction>
+          </PrivateAction>
+          <PrivateAction>
+            <LongitudinalAction>
+              <SpeedAction>
+                <SpeedActionDynamics dynamicsShape="step" dynamicsDimension="time" value="0.0"/>
+                <SpeedActionTarget>
+                  <AbsoluteTargetSpeed value="20.83"/>
+                </SpeedActionTarget>
+              </SpeedAction>
+            </LongitudinalAction>
+          </PrivateAction>
+        </Private>
+        <Private entityRef="SuvC">
+          <PrivateAction>
+            <TeleportAction>
+              <Position>
+                <LanePosition roadId="1" laneId="-4" s="334.0" offset="0.0"/>
+              </Position>
+            </TeleportAction>
+          </PrivateAction>
+          <PrivateAction>
+            <LongitudinalAction>
+              <SpeedAction>
+                <SpeedActionDynamics dynamicsShape="step" dynamicsDimension="time" value="0.0"/>
+                <SpeedActionTarget>
+                  <AbsoluteTargetSpeed value="22.22"/>
+                </SpeedActionTarget>
+              </SpeedAction>
+            </LongitudinalAction>
+          </PrivateAction>
+        </Private>
+        <Private entityRef="MotorbikeD">
+          <PrivateAction>
+            <TeleportAction>
+              <Position>
+                <LanePosition roadId="1" laneId="-4" s="320.0" offset="0.0"/>
+              </Position>
+            </TeleportAction>
+          </PrivateAction>
+          <PrivateAction>
+            <LongitudinalAction>
+              <SpeedAction>
+                <SpeedActionDynamics dynamicsShape="step" dynamicsDimension="time" value="0.0"/>
+                <SpeedActionTarget>
+                  <AbsoluteTargetSpeed value="18.0"/>
+                </SpeedActionTarget>
+              </SpeedAction>
+            </LongitudinalAction>
+          </PrivateAction>
+        </Private>
+        <Private entityRef="CrateE">
+          <PrivateAction>
+            <TeleportAction>
+              <Position>
+                <LanePosition roadId="1" laneId="-4" s="185.0" offset="0.0"/>
+              </Position>
+            </TeleportAction>
+          </PrivateAction>
+        </Private>
+      </Actions>
+    </Init>
+    <Story name="MainStory">
+      <Act name="MainAct">
+        <ManeuverGroup name="TruckAGroup" maximumExecutionCount="1">
+          <Actors selectTriggeringEntities="false">
+            <EntityRef entityRef="TruckA"/>
+          </Actors>
+          <Maneuver name="TruckAManeuver">
+            <Event name="TruckAHoldSpeed" priority="overwrite">
+              <Action name="TruckAHoldSpeedAction">
+                <PrivateAction>
+                  <LongitudinalAction>
+                    <SpeedAction>
+                      <SpeedActionDynamics dynamicsShape="linear" dynamicsDimension="time" value="0.8"/>
+                      <SpeedActionTarget>
+                        <AbsoluteTargetSpeed value="16.11"/>
+                      </SpeedActionTarget>
+                    </SpeedAction>
+                  </LongitudinalAction>
+                </PrivateAction>
+              </Action>
+              <StartTrigger>
+                <ConditionGroup>
+                  <Condition name="TruckAHoldStart" delay="0.0" conditionEdge="rising">
+                    <ByValueCondition>
+                      <SimulationTimeCondition value="0.2" rule="greaterThan"/>
+                    </ByValueCondition>
+                  </Condition>
+                </ConditionGroup>
+              </StartTrigger>
+            </Event>
+            <Event name="TruckAHydroplaneBrake" priority="overwrite">
+              <Action name="TruckABrakeAction">
+                <PrivateAction>
+                  <LongitudinalAction>
+                    <SpeedAction>
+                      <SpeedActionDynamics dynamicsShape="linear" dynamicsDimension="time" value="1.2"/>
+                      <SpeedActionTarget>
+                        <AbsoluteTargetSpeed value="12.50"/>
+                      </SpeedActionTarget>
+                    </SpeedAction>
+                  </LongitudinalAction>
+                </PrivateAction>
+              </Action>
+              <StartTrigger>
+                <ConditionGroup>
+                  <Condition name="TruckAHydroplaneBrakeTrigger" delay="0.0" conditionEdge="rising">
+                    <ByEntityCondition>
+                      <TriggeringEntities triggeringEntitiesRule="any">
+                        <EntityRef entityRef="Ego"/>
+                      </TriggeringEntities>
+                      <EntityCondition>
+                        <RelativeDistanceCondition entityRef="TruckA" relativeDistanceType="longitudinal" value="60.0" freespace="true" rule="lessThan"/>
+                      </EntityCondition>
+                    </ByEntityCondition>
+                  </Condition>
+                </ConditionGroup>
+              </StartTrigger>
+            </Event>
+            <Event name="TruckAHydroplaneDrift" priority="parallel">
+              <Action name="TruckADriftAction">
+                <PrivateAction>
+                  <LateralAction>
+                    <LaneOffsetAction continuous="false">
+                      <LaneOffsetActionDynamics dynamicsShape="sinusoidal" maxLateralAcc="0.85"/>
+                      <LaneOffsetTarget>
+                        <AbsoluteTargetLaneOffset value="0.55"/>
+                      </LaneOffsetTarget>
+                    </LaneOffsetAction>
+                  </LateralAction>
+                </PrivateAction>
+              </Action>
+              <StartTrigger>
+                <ConditionGroup>
+                  <Condition name="TruckADriftTrigger" delay="0.0" conditionEdge="rising">
+                    <ByEntityCondition>
+                      <TriggeringEntities triggeringEntitiesRule="any">
+                        <EntityRef entityRef="Ego"/>
+                      </TriggeringEntities>
+                      <EntityCondition>
+                        <RelativeDistanceCondition entityRef="TruckA" relativeDistanceType="longitudinal" value="60.0" freespace="true" rule="lessThan"/>
+                      </EntityCondition>
+                    </ByEntityCondition>
+                  </Condition>
+                </ConditionGroup>
+              </StartTrigger>
+            </Event>
+          </Maneuver>
+        </ManeuverGroup>
+
+        <ManeuverGroup name="CarBGroup" maximumExecutionCount="1">
+          <Actors selectTriggeringEntities="false">
+            <EntityRef entityRef="CarB"/>
+          </Actors>
+          <Maneuver name="CarBManeuver">
+            <Event name="CarBParallelHold" priority="overwrite">
+              <Action name="CarBHoldSpeedAction">
+                <PrivateAction>
+                  <LongitudinalAction>
+                    <SpeedAction>
+                      <SpeedActionDynamics dynamicsShape="linear" dynamicsDimension="time" value="0.6"/>
+                      <SpeedActionTarget>
+                        <AbsoluteTargetSpeed value="20.83"/>
+                      </SpeedActionTarget>
+                    </SpeedAction>
+                  </LongitudinalAction>
+                </PrivateAction>
+              </Action>
+              <StartTrigger>
+                <ConditionGroup>
+                  <Condition name="CarBHoldStart" delay="0.0" conditionEdge="rising">
+                    <ByValueCondition>
+                      <SimulationTimeCondition value="0.2" rule="greaterThan"/>
+                    </ByValueCondition>
+                  </Condition>
+                </ConditionGroup>
+              </StartTrigger>
+            </Event>
+          </Maneuver>
+        </ManeuverGroup>
+
+        <ManeuverGroup name="SuvCGroup" maximumExecutionCount="1">
+          <Actors selectTriggeringEntities="false">
+            <EntityRef entityRef="SuvC"/>
+          </Actors>
+          <Maneuver name="SuvCManeuver">
+            <Event name="SuvCHoldSpeed" priority="overwrite">
+              <Action name="SuvCHoldSpeedAction">
+                <PrivateAction>
+                  <LongitudinalAction>
+                    <SpeedAction>
+                      <SpeedActionDynamics dynamicsShape="linear" dynamicsDimension="time" value="0.8"/>
+                      <SpeedActionTarget>
+                        <AbsoluteTargetSpeed value="22.22"/>
+                      </SpeedActionTarget>
+                    </SpeedAction>
+                  </LongitudinalAction>
+                </PrivateAction>
+              </Action>
+              <StartTrigger>
+                <ConditionGroup>
+                  <Condition name="SuvCHoldStart" delay="0.0" conditionEdge="rising">
+                    <ByValueCondition>
+                      <SimulationTimeCondition value="0.2" rule="greaterThan"/>
+                    </ByValueCondition>
+                  </Condition>
+                </ConditionGroup>
+              </StartTrigger>
+            </Event>
+            <Event name="SuvCForcedMerge" priority="overwrite">
+              <Action name="SuvCMergeAction">
+                <PrivateAction>
+                  <LateralAction>
+                    <LaneChangeAction>
+                      <LaneChangeActionDynamics dynamicsShape="sinusoidal" dynamicsDimension="time" value="2.2"/>
+                      <LaneChangeTarget>
+                        <AbsoluteTargetLane value="-3"/>
+                      </LaneChangeTarget>
+                    </LaneChangeAction>
+                  </LateralAction>
+                </PrivateAction>
+              </Action>
+              <StartTrigger>
+                <ConditionGroup>
+                  <Condition name="SuvCForcedMergeTrigger" delay="0.0" conditionEdge="rising">
+                    <ByEntityCondition>
+                      <TriggeringEntities triggeringEntitiesRule="any">
+                        <EntityRef entityRef="Ego"/>
+                      </TriggeringEntities>
+                      <EntityCondition>
+                        <RelativeDistanceCondition entityRef="TruckA" relativeDistanceType="longitudinal" value="46.0" freespace="true" rule="lessThan"/>
+                      </EntityCondition>
+                    </ByEntityCondition>
+                  </Condition>
+                </ConditionGroup>
+              </StartTrigger>
+            </Event>
+            <Event name="SuvCCompressionBrake" priority="parallel">
+              <Action name="SuvCBrakeAction">
+                <PrivateAction>
+                  <LongitudinalAction>
+                    <SpeedAction>
+                      <SpeedActionDynamics dynamicsShape="linear" dynamicsDimension="time" value="1.4"/>
+                      <SpeedActionTarget>
+                        <AbsoluteTargetSpeed value="18.50"/>
+                      </SpeedActionTarget>
+                    </SpeedAction>
+                  </LongitudinalAction>
+                </PrivateAction>
+              </Action>
+              <StartTrigger>
+                <ConditionGroup>
+                  <Condition name="SuvCBrakeTrigger" delay="0.0" conditionEdge="rising">
+                    <ByEntityCondition>
+                      <TriggeringEntities triggeringEntitiesRule="any">
+                        <EntityRef entityRef="Ego"/>
+                      </TriggeringEntities>
+                      <EntityCondition>
+                        <RelativeDistanceCondition entityRef="TruckA" relativeDistanceType="longitudinal" value="46.0" freespace="true" rule="lessThan"/>
+                      </EntityCondition>
+                    </ByEntityCondition>
+                  </Condition>
+                </ConditionGroup>
+              </StartTrigger>
+            </Event>
+          </Maneuver>
+        </ManeuverGroup>
+
+        <ManeuverGroup name="MotorbikeDGroup" maximumExecutionCount="1">
+          <Actors selectTriggeringEntities="false">
+            <EntityRef entityRef="MotorbikeD"/>
+          </Actors>
+          <Maneuver name="MotorbikeDManeuver">
+            <Event name="MotorbikeDHoldSpeed" priority="overwrite">
+              <Action name="MotorbikeDHoldSpeedAction">
+                <PrivateAction>
+                  <LongitudinalAction>
+                    <SpeedAction>
+                      <SpeedActionDynamics dynamicsShape="linear" dynamicsDimension="time" value="0.8"/>
+                      <SpeedActionTarget>
+                        <AbsoluteTargetSpeed value="18.0"/>
+                      </SpeedActionTarget>
+                    </SpeedAction>
+                  </LongitudinalAction>
+                </PrivateAction>
+              </Action>
+              <StartTrigger>
+                <ConditionGroup>
+                  <Condition name="MotorbikeDHoldStart" delay="0.0" conditionEdge="rising">
+                    <ByValueCondition>
+                      <SimulationTimeCondition value="0.2" rule="greaterThan"/>
+                    </ByValueCondition>
+                  </Condition>
+                </ConditionGroup>
+              </StartTrigger>
+            </Event>
+            <Event name="MotorbikeDCutIn" priority="overwrite">
+              <Action name="MotorbikeDCutInAction">
+                <PrivateAction>
+                  <LateralAction>
+                    <LaneChangeAction>
+                      <LaneChangeActionDynamics dynamicsShape="sinusoidal" dynamicsDimension="time" value="1.2"/>
+                      <LaneChangeTarget>
+                        <AbsoluteTargetLane value="-3"/>
+                      </LaneChangeTarget>
+                    </LaneChangeAction>
+                  </LateralAction>
+                </PrivateAction>
+              </Action>
+              <StartTrigger>
+                <ConditionGroup>
+                  <Condition name="MotorbikeDCutInTrigger" delay="0.0" conditionEdge="rising">
+                    <ByEntityCondition>
+                      <TriggeringEntities triggeringEntitiesRule="any">
+                        <EntityRef entityRef="Ego"/>
+                      </TriggeringEntities>
+                      <EntityCondition>
+                        <RelativeDistanceCondition entityRef="TruckA" relativeDistanceType="longitudinal" value="34.0" freespace="true" rule="lessThan"/>
+                      </EntityCondition>
+                    </ByEntityCondition>
+                  </Condition>
+                </ConditionGroup>
+              </StartTrigger>
+            </Event>
+            <Event name="MotorbikeDSurge" priority="parallel">
+              <Action name="MotorbikeDSurgeAction">
+                <PrivateAction>
+                  <LongitudinalAction>
+                    <SpeedAction>
+                      <SpeedActionDynamics dynamicsShape="linear" dynamicsDimension="time" value="0.7"/>
+                      <SpeedActionTarget>
+                        <AbsoluteTargetSpeed value="19.6"/>
+                      </SpeedActionTarget>
+                    </SpeedAction>
+                  </LongitudinalAction>
+                </PrivateAction>
+              </Action>
+              <StartTrigger>
+                <ConditionGroup>
+                  <Condition name="MotorbikeDSurgeTrigger" delay="0.0" conditionEdge="rising">
+                    <ByEntityCondition>
+                      <TriggeringEntities triggeringEntitiesRule="any">
+                        <EntityRef entityRef="Ego"/>
+                      </TriggeringEntities>
+                      <EntityCondition>
+                        <RelativeDistanceCondition entityRef="TruckA" relativeDistanceType="longitudinal" value="34.0" freespace="true" rule="lessThan"/>
+                      </EntityCondition>
+                    </ByEntityCondition>
+                  </Condition>
+                </ConditionGroup>
+              </StartTrigger>
+            </Event>
+          </Maneuver>
+        </ManeuverGroup>
+
+        <ManeuverGroup name="CrateEGroup" maximumExecutionCount="1">
+          <Actors selectTriggeringEntities="false">
+            <EntityRef entityRef="CrateE"/>
+          </Actors>
+          <Maneuver name="CrateEManeuver">
+            <Event name="CrateEDrop" priority="overwrite">
+              <Action name="CrateEDropAction">
+                <PrivateAction>
+                  <TeleportAction>
+                    <Position>
+                      <LanePosition roadId="1" laneId="-3" s="447.0" offset="0.55"/>
+                    </Position>
+                  </TeleportAction>
+                </PrivateAction>
+              </Action>
+              <StartTrigger>
+                <ConditionGroup>
+                  <Condition name="CrateEDropTrigger" delay="0.0" conditionEdge="rising">
+                    <ByEntityCondition>
+                      <TriggeringEntities triggeringEntitiesRule="any">
+                        <EntityRef entityRef="Ego"/>
+                      </TriggeringEntities>
+                      <EntityCondition>
+                        <RelativeDistanceCondition entityRef="TruckA" relativeDistanceType="longitudinal" value="30.0" freespace="true" rule="lessThan"/>
+                      </EntityCondition>
+                    </ByEntityCondition>
+                  </Condition>
+                </ConditionGroup>
+              </StartTrigger>
+            </Event>
+            <Event name="CrateEDrift" priority="overwrite">
+              <Action name="CrateEDriftAction">
+                <PrivateAction>
+                  <TeleportAction>
+                    <Position>
+                      <LanePosition roadId="1" laneId="-3" s="451.0" offset="0.95"/>
+                    </Position>
+                  </TeleportAction>
+                </PrivateAction>
+              </Action>
+              <StartTrigger>
+                <ConditionGroup>
+                  <Condition name="CrateEDriftTrigger" delay="0.0" conditionEdge="rising">
+                    <ByValueCondition>
+                      <SimulationTimeCondition value="8.0" rule="greaterThan"/>
+                    </ByValueCondition>
+                  </Condition>
+                </ConditionGroup>
+              </StartTrigger>
+            </Event>
+          </Maneuver>
+        </ManeuverGroup>
+
+        <StartTrigger>
+          <ConditionGroup>
+            <Condition name="MainActStart" delay="0.0" conditionEdge="rising">
+              <ByValueCondition>
+                <SimulationTimeCondition value="0.0" rule="greaterThan"/>
+              </ByValueCondition>
+            </Condition>
+          </ConditionGroup>
+        </StartTrigger>
+      </Act>
+    </Story>
+    <StopTrigger>
+      <ConditionGroup>
+        <Condition name="VehicleCollisionStop" delay="0.0" conditionEdge="rising">
+          <ByEntityCondition>
+            <TriggeringEntities triggeringEntitiesRule="any">
+              <EntityRef entityRef="Ego"/>
+            </TriggeringEntities>
+            <EntityCondition>
+              <CollisionCondition>
+                <ByType type="vehicle"/>
+              </CollisionCondition>
+            </EntityCondition>
+          </ByEntityCondition>
+        </Condition>
+      </ConditionGroup>
+      <ConditionGroup>
+        <Condition name="MiscCollisionStop" delay="0.0" conditionEdge="rising">
+          <ByEntityCondition>
+            <TriggeringEntities triggeringEntitiesRule="any">
+              <EntityRef entityRef="Ego"/>
+            </TriggeringEntities>
+            <EntityCondition>
+              <CollisionCondition>
+                <ByType type="miscellaneous"/>
+              </CollisionCondition>
+            </EntityCondition>
+          </ByEntityCondition>
+        </Condition>
+      </ConditionGroup>
+      <ConditionGroup>
+        <Condition name="SuccessfulClearance" delay="0.0" conditionEdge="rising">
+          <ByEntityCondition>
+            <TriggeringEntities triggeringEntitiesRule="any">
+              <EntityRef entityRef="Ego"/>
+            </TriggeringEntities>
+            <EntityCondition>
+              <ReachPositionCondition tolerance="8.0">
+                <Position>
+                  <LanePosition roadId="1" laneId="-3" s="760.0" offset="0.0"/>
+                </Position>
+              </ReachPositionCondition>
+            </EntityCondition>
+          </ByEntityCondition>
+        </Condition>
+      </ConditionGroup>
+      <ConditionGroup>
+        <Condition name="MaxRuntimeStop" delay="0.0" conditionEdge="rising">
+          <ByValueCondition>
+            <SimulationTimeCondition value="35.0" rule="greaterThan"/>
+          </ByValueCondition>
+        </Condition>
+      </ConditionGroup>
+    </StopTrigger>
+  </Storyboard>
+</OpenSCENARIO>

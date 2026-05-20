@@ -1,0 +1,39 @@
+{
+  "element": "AbsoluteTargetLane",
+  "description": "Schema-derived AbsoluteTargetLane element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "LaneChangeTarget",
+      "type_ref": "AbsoluteTargetLane",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "LaneChangeTarget"
+  ],
+  "required_attributes": [
+    {
+      "name": "value",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "layer",
+      "type": "LaneLayerType"
+    }
+  ],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "layer": [
+      "permanent",
+      "temporary"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L240; knowledge/raw/schema/OpenSCENARIO.xsd#L750; knowledge/raw/schema/OpenSCENARIO.xsd#L1427"
+}

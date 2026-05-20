@@ -1,0 +1,96 @@
+{
+  "element": "PositionStart",
+  "description": "Schema-derived PositionStart element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "WorldPosition",
+        "RelativeWorldPosition",
+        "RelativeObjectPosition",
+        "RoadPosition",
+        "RelativeRoadPosition",
+        "LanePosition",
+        "RelativeLanePosition",
+        "RoutePosition",
+        "GeoPosition",
+        "TrajectoryPosition"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: WorldPosition, RelativeWorldPosition, RelativeObjectPosition, RoadPosition, RelativeRoadPosition, LanePosition, RelativeLanePosition, RoutePosition, GeoPosition, TrajectoryPosition."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "ClothoidSplineSegment",
+      "type_ref": "Position",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "ClothoidSplineSegment"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "WorldPosition",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "RelativeWorldPosition",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "RelativeObjectPosition",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "RoadPosition",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "RelativeRoadPosition",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "LanePosition",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "RelativeLanePosition",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "RoutePosition",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "GeoPosition",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "TrajectoryPosition",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "WorldPosition|RelativeWorldPosition|RelativeObjectPosition|RoadPosition|RelativeRoadPosition|LanePosition|RelativeLanePosition|RoutePosition|GeoPosition|TrajectoryPosition"
+  ],
+  "multiplicity": {
+    "WorldPosition": "1..1",
+    "RelativeWorldPosition": "1..1",
+    "RelativeObjectPosition": "1..1",
+    "RoadPosition": "1..1",
+    "RelativeRoadPosition": "1..1",
+    "LanePosition": "1..1",
+    "RelativeLanePosition": "1..1",
+    "RoutePosition": "1..1",
+    "GeoPosition": "1..1",
+    "TrajectoryPosition": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L993; knowledge/raw/schema/OpenSCENARIO.xsd#L1827"
+}

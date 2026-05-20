@@ -1,0 +1,29 @@
+{
+  "element": "OffroadCondition",
+  "description": "Schema-derived OffroadCondition element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "EntityCondition",
+      "type_ref": "OffroadCondition",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "EntityCondition"
+  ],
+  "required_attributes": [
+    {
+      "name": "duration",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1218; knowledge/raw/schema/OpenSCENARIO.xsd#L1615"
+}

@@ -1,0 +1,33 @@
+{
+  "element": "VariableDeclarations",
+  "description": "Schema-derived VariableDeclarations element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "ScenarioDefinition",
+      "type_ref": "VariableDeclarations",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "ScenarioDefinition"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "VariableDeclaration",
+      "cardinality": "0..unbounded"
+    }
+  ],
+  "child_order": [
+    "VariableDeclaration"
+  ],
+  "multiplicity": {
+    "VariableDeclaration": "0..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2086; knowledge/raw/schema/OpenSCENARIO.xsd#L2578"
+}

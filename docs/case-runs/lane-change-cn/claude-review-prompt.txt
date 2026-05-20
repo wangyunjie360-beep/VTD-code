@@ -1,0 +1,190 @@
+Review this OpenSCENARIO generation case. Focus on whether the XML
+matches the stated intent and whether the tool evidence supports the
+generation decisions. Keep the review concise.
+
+Intent:
+Generate a VTD OpenSCENARIO case on an urban road in China: ego vehicle starts at 30 km/h; the scenario trigger is simulation time 5 seconds; at that trigger the ego vehicle performs a lane change to the left by one lane; the simulation stops at 20 seconds. Keep the XML minimal but schema-valid.
+
+Tool evidence summary:
+[
+  {
+    "step": 1,
+    "tool": "build_generation_packet",
+    "status": "ok",
+    "summary": "primary_elements=ScenarioObject,Storyboard,LaneChangeAction"
+  },
+  {
+    "step": 2,
+    "tool": "retrieve_spec_invalid_kind",
+    "status": "expected_error",
+    "summary": "ValueError: Unsupported retrieve_spec kind: schema. Expected one of ['attribute', 'concept', 'element', 'error']."
+  },
+  {
+    "step": 3,
+    "tool": "retrieve_spec",
+    "status": "ok",
+    "summary": "hits=6"
+  },
+  {
+    "step": 4,
+    "tool": "get_element_schema:ScenarioObject",
+    "status": "ok",
+    "summary": "{'element': 'ScenarioObject', 'description': 'Schema-derived ScenarioObject element with context-dependent type variants captured from the local XSD.', 'content"
+  },
+  {
+    "step": 5,
+    "tool": "get_element_schema:Vehicle",
+    "status": "ok",
+    "summary": "{'element': 'Vehicle', 'description': 'Schema-derived Vehicle element with context-dependent type variants captured from the local XSD.', 'content_model_kind': "
+  },
+  {
+    "step": 6,
+    "tool": "get_element_schema:Storyboard",
+    "status": "ok",
+    "summary": "{'element': 'Storyboard', 'description': 'Schema-derived Storyboard element with context-dependent type variants captured from the local XSD.', 'content_model_k"
+  },
+  {
+    "step": 7,
+    "tool": "get_element_schema:LaneChangeAction",
+    "status": "ok",
+    "summary": "{'element': 'LaneChangeAction', 'description': 'Schema-derived LaneChangeAction element with context-dependent type variants captured from the local XSD.', 'con"
+  },
+  {
+    "step": 8,
+    "tool": "get_element_schema:SimulationTimeCondition",
+    "status": "ok",
+    "summary": "{'element': 'SimulationTimeCondition', 'description': \"Simulation-time trigger condition. It compares the running storyboard's simulation time against a require"
+  },
+  {
+    "step": 9,
+    "tool": "resolve_vtd_name:ego",
+    "status": "ok",
+    "summary": "no_match -> ego"
+  },
+  {
+    "step": 10,
+    "tool": "retrieve_vtd_asset:traffic_light_model",
+    "status": "ok",
+    "summary": "hits=5"
+  },
+  {
+    "step": 11,
+    "tool": "recommend_vtd_candidates:TrafficLight01",
+    "status": "ok",
+    "summary": "name_resolution=approximate_match -> SgTrafficLight01"
+  },
+  {
+    "step": 12,
+    "tool": "validate_xml",
+    "status": "ok",
+    "summary": "ok=True, errors=0"
+  },
+  {
+    "step": 13,
+    "tool": "check_xml_intent_consistency",
+    "status": "ok",
+    "summary": "intent_consistent=True, missing=[]"
+  }
+]
+
+XML:
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSCENARIO>
+  <FileHeader revMajor="1" revMinor="1" date="2026-05-19T00:00:00" description="CN urban ego lane change full-flow case" author="Codex"/>
+  <ParameterDeclarations/>
+  <CatalogLocations/>
+  <RoadNetwork/>
+  <Entities>
+    <ScenarioObject name="ego">
+      <Vehicle name="egoVehicle" vehicleCategory="car">
+        <BoundingBox>
+          <Center x="1.5" y="0.0" z="0.9"/>
+          <Dimensions width="1.9" length="4.7" height="1.6"/>
+        </BoundingBox>
+        <Performance maxSpeed="69.44" maxAcceleration="8.0" maxDeceleration="8.0"/>
+        <Axles>
+          <FrontAxle maxSteering="0.48" wheelDiameter="0.68" trackWidth="1.62" positionX="2.9" positionZ="0.34"/>
+          <RearAxle maxSteering="0.0" wheelDiameter="0.68" trackWidth="1.62" positionX="0.0" positionZ="0.34"/>
+        </Axles>
+        <Properties/>
+      </Vehicle>
+    </ScenarioObject>
+  </Entities>
+  <Storyboard>
+    <Init>
+      <Actions>
+        <Private entityRef="ego">
+          <PrivateAction>
+            <TeleportAction>
+              <Position>
+                <LanePosition roadId="1" laneId="-2" s="100.0" offset="0.0"/>
+              </Position>
+            </TeleportAction>
+          </PrivateAction>
+          <PrivateAction>
+            <LongitudinalAction>
+              <SpeedAction>
+                <SpeedActionDynamics dynamicsShape="step" dynamicsDimension="time" value="0.0"/>
+                <SpeedActionTarget>
+                  <AbsoluteTargetSpeed value="8.33"/>
+                </SpeedActionTarget>
+              </SpeedAction>
+            </LongitudinalAction>
+          </PrivateAction>
+        </Private>
+      </Actions>
+    </Init>
+    <Story name="MainStory">
+      <Act name="MainAct">
+        <ManeuverGroup name="EgoLaneChangeGroup" maximumExecutionCount="1">
+          <Actors selectTriggeringEntities="false">
+            <EntityRef entityRef="ego"/>
+          </Actors>
+          <Maneuver name="EgoManeuver">
+            <Event name="EgoLaneChangeLeft" priority="overwrite">
+              <Action name="EgoLaneChangeAction">
+                <PrivateAction>
+                  <LateralAction>
+                    <LaneChangeAction>
+                      <LaneChangeActionDynamics dynamicsShape="sinusoidal" dynamicsDimension="time" value="2.5"/>
+                      <LaneChangeTarget>
+                        <AbsoluteTargetLane value="-1"/>
+                      </LaneChangeTarget>
+                    </LaneChangeAction>
+                  </LateralAction>
+                </PrivateAction>
+              </Action>
+              <StartTrigger>
+                <ConditionGroup>
+                  <Condition name="LaneChangeAtFiveSeconds" delay="0.0" conditionEdge="rising">
+                    <ByValueCondition>
+                      <SimulationTimeCondition value="5.0" rule="greaterThan"/>
+                    </ByValueCondition>
+                  </Condition>
+                </ConditionGroup>
+              </StartTrigger>
+            </Event>
+          </Maneuver>
+        </ManeuverGroup>
+        <StartTrigger>
+          <ConditionGroup>
+            <Condition name="ActStart" delay="0.0" conditionEdge="rising">
+              <ByValueCondition>
+                <SimulationTimeCondition value="0.0" rule="greaterThan"/>
+              </ByValueCondition>
+            </Condition>
+          </ConditionGroup>
+        </StartTrigger>
+      </Act>
+    </Story>
+    <StopTrigger>
+      <ConditionGroup>
+        <Condition name="StopAtTwentySeconds" delay="0.0" conditionEdge="rising">
+          <ByValueCondition>
+            <SimulationTimeCondition value="20.0" rule="greaterThan"/>
+          </ByValueCondition>
+        </Condition>
+      </ConditionGroup>
+    </StopTrigger>
+  </Storyboard>
+</OpenSCENARIO>

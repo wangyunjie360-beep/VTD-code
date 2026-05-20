@@ -1,0 +1,60 @@
+{
+  "element": "EntityRef",
+  "description": "Schema-derived EntityRef element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Actors",
+      "type_ref": "EntityRef",
+      "deprecated": false
+    },
+    {
+      "parent_context": "CollisionCondition",
+      "type_ref": "EntityRef",
+      "deprecated": false
+    },
+    {
+      "parent_context": "RelativeClearanceCondition",
+      "type_ref": "EntityRef",
+      "deprecated": false
+    },
+    {
+      "parent_context": "Members",
+      "type_ref": "EntityRef",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TimeToCollisionConditionTarget",
+      "type_ref": "EntityRef",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TriggeringEntities",
+      "type_ref": "EntityRef",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Actors",
+    "CollisionCondition",
+    "Members",
+    "RelativeClearanceCondition",
+    "TimeToCollisionConditionTarget",
+    "TriggeringEntities"
+  ],
+  "required_attributes": [
+    {
+      "name": "entityRef",
+      "type": "String",
+      "reference_kind": "entity"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L798; knowledge/raw/schema/OpenSCENARIO.xsd#L1004; knowledge/raw/schema/OpenSCENARIO.xsd#L1256; knowledge/raw/schema/OpenSCENARIO.xsd#L1928; knowledge/raw/schema/OpenSCENARIO.xsd#L2109; knowledge/raw/schema/OpenSCENARIO.xsd#L2290; knowledge/raw/schema/OpenSCENARIO.xsd#L2504"
+}

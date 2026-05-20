@@ -1,0 +1,30 @@
+{
+  "element": "TrailerRef",
+  "description": "Entity reference branch used by Trailer to point at an existing trailer object.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Trailer",
+      "type_ref": "EntityRef",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Trailer"
+  ],
+  "required_attributes": [
+    {
+      "name": "entityRef",
+      "type": "String",
+      "reference_kind": "entity"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1256; knowledge/raw/schema/OpenSCENARIO.xsd#L2441"
+}

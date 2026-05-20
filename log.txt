@@ -1,0 +1,175 @@
+esmini GIT REV: v2.60.0-0-77b4bbc0
+esmini GIT TAG: v2.60.0
+esmini GIT BRANCH: tags/v2.60.0^0
+esmini BUILD VERSION: 5977
+[] [info] Loaded D:\wyj\OPenscenario\scenarios\highway_edge_merge_controller_ready.xosc
+[2026-03-19 12:56:04]
+[] [info] Player options: --osc D:\wyj\OPenscenario\scenarios\highway_edge_merge_controller_ready.xosc --camera_mode orbit --fixed_timestep 0.05 --ground_plane auto --headless --info_text 1 --logfile_path log.txt --log_level info --text_scale 1.0 --traj_filter 0.1 
+[] [info] Run simulation decoupled from realtime, with fixed timestep: 0.05
+[] [info] Generated seed 1832267766
+[] [info] Loading D:/wyj/OPenscenario/scenarios/highway_edge_merge_controller_ready.xosc (v1.1)
+[] [info] 0 variables
+[] [info] Loaded OpenDRIVE: D:/wyj/OPenscenario/roads/highway_edge_merge.xodr
+[] [info] 3D model search paths attempted for file car_white.osgb:
+[] [info]   car_white.osgb
+[] [info]   D:/wyj/OPenscenario/scenarios/./car_white.osgb
+[] [info]   D:\wyj\OPenscenario\tools\esmini-v2.60.0\esmini\bin/../resources/models//./car_white.osgb
+[] [info]   D:/wyj/OPenscenario/scenarios/../models/./car_white.osgb
+[] [warn] 3D model car_white.osgb not located, using specified file path
+[] [info] Assigned 3D model car_white.osgb to vehicle EgoVehicle
+[] [info] 3D model search paths attempted for file car_red.osgb:
+[] [info]   car_red.osgb
+[] [info]   D:/wyj/OPenscenario/scenarios/./car_red.osgb
+[] [info]   D:\wyj\OPenscenario\tools\esmini-v2.60.0\esmini\bin/../resources/models//./car_red.osgb
+[] [info]   D:/wyj/OPenscenario/scenarios/../models/./car_red.osgb
+[] [warn] 3D model car_red.osgb not located, using specified file path
+[] [info] Assigned 3D model car_red.osgb to vehicle BreakdownVehicle
+[] [info] 3D model search paths attempted for file car_red.osgb:
+[] [info]   car_red.osgb
+[] [info]   D:/wyj/OPenscenario/scenarios/./car_red.osgb
+[] [info]   D:\wyj\OPenscenario\tools\esmini-v2.60.0\esmini\bin/../resources/models//./car_red.osgb
+[] [info]   D:/wyj/OPenscenario/scenarios/../models/./car_red.osgb
+[] [warn] 3D model car_red.osgb not located, using specified file path
+[] [info] Assigned 3D model car_red.osgb to vehicle LeftCruiserVehicle
+[] [info] 3D model search paths attempted for file car_red.osgb:
+[] [info]   car_red.osgb
+[] [info]   D:/wyj/OPenscenario/scenarios/./car_red.osgb
+[] [info]   D:\wyj\OPenscenario\tools\esmini-v2.60.0\esmini\bin/../resources/models//./car_red.osgb
+[] [info]   D:/wyj/OPenscenario/scenarios/../models/./car_red.osgb
+[] [warn] 3D model car_red.osgb not located, using specified file path
+[] [info] Assigned 3D model car_red.osgb to vehicle RearApproacherVehicle
+[] [info] 3D model search paths attempted for file car_red.osgb:
+[] [info]   car_red.osgb
+[] [info]   D:/wyj/OPenscenario/scenarios/./car_red.osgb
+[] [info]   D:\wyj\OPenscenario\tools\esmini-v2.60.0\esmini\bin/../resources/models//./car_red.osgb
+[] [info]   D:/wyj/OPenscenario/scenarios/../models/./car_red.osgb
+[] [warn] 3D model car_red.osgb not located, using specified file path
+[] [info] Assigned 3D model car_red.osgb to vehicle RampMergingVehicle
+[] [info] 0 parameters
+[0.000] [info] Init Ego TeleportAction initState -> startTransition -> runningState
+[0.000] [info] Starting teleport Action
+[0.000] [info] Ego New position:
+[0.000] [info] Pos(300.00, -5.62, 0.00) Rot(0.00, 0.00, 0.00) roadId 1 laneId -2 s 300.00 offset 0.00 t -5.62
+[0.000] [info] Init Ego LongitudinalAction initState -> startTransition -> runningState
+[0.000] [info] Init BreakdownCar TeleportAction initState -> startTransition -> runningState
+[0.000] [info] Starting teleport Action
+[0.000] [info] BreakdownCar New position:
+[0.000] [info] Pos(470.00, -5.28, 0.00) Rot(0.12, 0.00, 0.00) roadId 1 laneId -2 s 470.00 offset 0.35 t -5.28
+[0.000] [info] Init BreakdownCar LongitudinalAction initState -> startTransition -> runningState
+[0.000] [info] Init LeftCruiser TeleportAction initState -> startTransition -> runningState
+[0.000] [info] Starting teleport Action
+[0.000] [info] LeftCruiser New position:
+[0.000] [info] Pos(392.00, -1.88, 0.00) Rot(0.00, 0.00, 0.00) roadId 1 laneId -1 s 392.00 offset 0.00 t -1.88
+[0.000] [info] Init LeftCruiser LongitudinalAction initState -> startTransition -> runningState
+[0.000] [info] Init RearApproacher TeleportAction initState -> startTransition -> runningState
+[0.000] [info] Starting teleport Action
+[0.000] [info] RearApproacher New position:
+[0.000] [info] Pos(220.00, -1.88, 0.00) Rot(0.00, 0.00, 0.00) roadId 1 laneId -1 s 220.00 offset 0.00 t -1.88
+[0.000] [info] Init RearApproacher LongitudinalAction initState -> startTransition -> runningState
+[0.000] [info] Init RampMergingCar TeleportAction initState -> startTransition -> runningState
+[0.000] [info] Starting teleport Action
+[0.000] [info] RampMergingCar New position:
+[0.000] [info] Pos(335.00, -9.38, 0.00) Rot(0.00, 0.00, 0.00) roadId 1 laneId -3 s 335.00 offset 0.00 t -9.38
+[0.000] [info] Init RampMergingCar LongitudinalAction initState -> startTransition -> runningState
+[0.000] [info] storyBoard initState -> startTransition -> runningState
+[0.000] [info] MainStory initState -> startTransition -> runningState
+[0.000] [info] MainAct initState -> initToStandbyTransition -> standbyState
+[0.000] [info] Init Ego TeleportAction runningState -> endTransition -> completeState
+[0.000] [info] Init Ego LongitudinalAction runningState -> endTransition -> completeState
+[0.000] [info] Init BreakdownCar TeleportAction runningState -> endTransition -> completeState
+[0.000] [info] Init BreakdownCar LongitudinalAction runningState -> endTransition -> completeState
+[0.000] [info] Init LeftCruiser TeleportAction runningState -> endTransition -> completeState
+[0.000] [info] Init LeftCruiser LongitudinalAction runningState -> endTransition -> completeState
+[0.000] [info] Init RearApproacher TeleportAction runningState -> endTransition -> completeState
+[0.000] [info] Init RearApproacher LongitudinalAction runningState -> endTransition -> completeState
+[0.000] [info] Init RampMergingCar TeleportAction runningState -> endTransition -> completeState
+[0.000] [info] Init RampMergingCar LongitudinalAction runningState -> endTransition -> completeState
+[0.050] [info] MainActStart: true, delay: 0.00, 0.0500 > 0.0000, edge: rising
+[0.050] [info] Trigger /------------------------------------------------
+[0.050] [info] Group 0:
+[0.050] [info] MainActStart: true
+[0.050] [info] Trigger  ------------------------------------------------/
+[0.050] [info] MainAct standbyState -> startTransition -> runningState
+[0.050] [info] LeftCruiserGroup initState -> startTransition -> runningState
+[0.050] [info] LeftCruiserManeuver initState -> startTransition -> runningState
+[0.050] [info] LeftCruiserHold initState -> initToStandbyTransition -> standbyState
+[0.050] [info] RearApproacherGroup initState -> startTransition -> runningState
+[0.050] [info] RearApproacherManeuver initState -> startTransition -> runningState
+[0.050] [info] RearApproacherClose initState -> initToStandbyTransition -> standbyState
+[0.050] [info] RearApproacherYield initState -> initToStandbyTransition -> standbyState
+[0.050] [info] RampGroup initState -> startTransition -> runningState
+[0.050] [info] RampManeuver initState -> startTransition -> runningState
+[0.050] [info] RampAccelerate initState -> initToStandbyTransition -> standbyState
+[0.050] [info] RampMergeLeft initState -> initToStandbyTransition -> standbyState
+[0.250] [info] LeftCruiserStart: true, delay: 0.00, 0.2500 > 0.2000, edge: rising
+[0.250] [info] Trigger /------------------------------------------------
+[0.250] [info] Group 0:
+[0.250] [info] LeftCruiserStart: true
+[0.250] [info] Trigger  ------------------------------------------------/
+[0.250] [info] LeftCruiserHold standbyState -> startTransition -> runningState
+[0.250] [info] LeftCruiserKeepSpeed initState -> startTransition -> runningState
+[0.250] [info] RearApproacherStart: true, delay: 0.00, 0.2500 > 0.2000, edge: rising
+[0.250] [info] Trigger /------------------------------------------------
+[0.250] [info] Group 0:
+[0.250] [info] RearApproacherStart: true
+[0.250] [info] Trigger  ------------------------------------------------/
+[0.250] [info] RearApproacherClose standbyState -> startTransition -> runningState
+[0.250] [info] RearApproacherKeepSpeed initState -> startTransition -> runningState
+[1.200] [info] LeftCruiserKeepSpeed runningState -> endTransition -> completeState
+[1.200] [info] LeftCruiserHold complete after 1 execution
+[1.200] [info] LeftCruiserHold runningState -> endTransition -> completeState
+[1.200] [info] LeftCruiserManeuver runningState -> endTransition -> completeState
+[1.200] [info] LeftCruiserGroup complete after 1 execution
+[1.200] [info] LeftCruiserGroup runningState -> endTransition -> completeState
+[1.200] [info] RearApproacherKeepSpeed runningState -> endTransition -> completeState
+[1.200] [info] RearApproacherClose complete after 1 execution
+[1.200] [info] RearApproacherClose runningState -> endTransition -> completeState
+[3.050] [info] RampAccelStart: true, delay: 0.00, 3.0500 > 3.0000, edge: rising
+[3.050] [info] Trigger /------------------------------------------------
+[3.050] [info] Group 0:
+[3.050] [info] RampAccelStart: true
+[3.050] [info] Trigger  ------------------------------------------------/
+[3.050] [info] RampAccelerate standbyState -> startTransition -> runningState
+[3.050] [info] RampAccelerationAction initState -> startTransition -> runningState
+[4.350] [info] RearApproacherYieldStart: true, delay: 0.00, 4.3500 > 4.3000, edge: rising
+[4.350] [info] Trigger /------------------------------------------------
+[4.350] [info] Group 0:
+[4.350] [info] RearApproacherYieldStart: true
+[4.350] [info] Trigger  ------------------------------------------------/
+[4.350] [info] RearApproacherYield standbyState -> startTransition -> runningState
+[4.350] [info] RearApproacherBrakeAction initState -> startTransition -> runningState
+[4.550] [info] RampMergeStart: true, delay: 0.00, 4.5500 > 4.5000, edge: rising
+[4.550] [info] Trigger /------------------------------------------------
+[4.550] [info] Group 0:
+[4.550] [info] RampMergeStart: true
+[4.550] [info] Trigger  ------------------------------------------------/
+[4.550] [info] RampAccelerationAction runningState -> endTransition -> completeState
+[4.550] [info] RampAccelerate complete after 1 execution
+[4.550] [info] RampAccelerate runningState -> endTransition -> completeState
+[4.550] [info] Event RampAccelerate ended, overwritten by event RampMergeLeft
+[4.550] [info] RampMergeLeft standbyState -> startTransition -> runningState
+[4.550] [info] RampMergeAction initState -> startTransition -> runningState
+[5.800] [info] RearApproacherBrakeAction runningState -> endTransition -> completeState
+[5.800] [info] RearApproacherYield complete after 1 execution
+[5.800] [info] RearApproacherYield runningState -> endTransition -> completeState
+[5.800] [info] RearApproacherManeuver runningState -> endTransition -> completeState
+[5.800] [info] RearApproacherGroup complete after 1 execution
+[5.800] [info] RearApproacherGroup runningState -> endTransition -> completeState
+[6.150] [info] CollisionStop: true, delay: 0.00, 1 collision(s): Ego and BreakdownCar, edge: rising
+[6.150] [info] Trigger /------------------------------------------------
+[6.150] [info] Group 0:
+[6.150] [info] CollisionStop: true
+[6.150] [info] Triggering entity 0: Ego
+[6.150] [info] Group 1:
+[6.150] [info] MaxRuntimeStop: false
+[6.150] [info] Trigger  ------------------------------------------------/
+[6.150] [info] RampMergeAction runningState -> stopTransition -> completeState
+[6.150] [info] RampMergeLeft complete after 1 execution
+[6.150] [info] RampMergeLeft runningState -> endTransition -> completeState
+[6.150] [info] RampManeuver runningState -> endTransition -> completeState
+[6.150] [info] RampGroup complete after 1 execution
+[6.150] [info] RampGroup runningState -> endTransition -> completeState
+[6.150] [info] MainAct runningState -> endTransition -> completeState
+[6.150] [info] MainStory runningState -> endTransition -> completeState
+[6.150] [info] storyBoard runningState -> stopTransition -> completeState
+[6.150] [info] Closing

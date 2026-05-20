@@ -1,0 +1,48 @@
+{
+  "element": "RouteRef",
+  "description": "Schema-derived RouteRef element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "Route",
+        "CatalogReference"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: Route, CatalogReference."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "RoutePosition",
+      "type_ref": "RouteRef",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "RoutePosition"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Route",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "CatalogReference",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "Route|CatalogReference"
+  ],
+  "multiplicity": {
+    "Route": "1..1",
+    "CatalogReference": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2063; knowledge/raw/schema/OpenSCENARIO.xsd#L2068"
+}

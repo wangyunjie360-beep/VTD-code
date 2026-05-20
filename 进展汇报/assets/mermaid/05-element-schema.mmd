@@ -1,0 +1,19 @@
+flowchart TD
+    A[element + parent_context] --> B[从 KnowledgeBase 取 ElementRecord]
+    B --> C[build_element_strategy]
+    C --> C1[structure_mode]
+    C --> C2[branch_selection]
+    C --> C3[ordering]
+    C --> C4[required_children]
+    C --> C5[variant_resolution]
+    C --> C6[reference_requirements]
+    C --> C7[repair_priority]
+    B --> D[原始记录字段]
+    C1 --> E[统一返回 payload]
+    C2 --> E
+    C3 --> E
+    C4 --> E
+    C5 --> E
+    C6 --> E
+    C7 --> E
+    D --> E

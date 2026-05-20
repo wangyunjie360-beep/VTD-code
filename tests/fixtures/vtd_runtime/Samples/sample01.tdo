@@ -1,0 +1,4 @@
+TDO 1.0
+SCENARIO sample01
+ROAD_TILE VisualLib/TileLib/Standard/TileRoad01.attr
+STYLE VisualLib/Styles/VTL/Full/TexturePool/TxRoadStandard.rgb

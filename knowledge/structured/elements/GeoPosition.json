@@ -1,0 +1,80 @@
+{
+  "element": "GeoPosition",
+  "description": "Schema-derived GeoPosition element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [
+    "Some contextual variants of this element are deprecated in the local XSD."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "Position",
+      "type_ref": "GeoPosition",
+      "deprecated": true
+    },
+    {
+      "parent_context": "PositionStart",
+      "type_ref": "GeoPosition",
+      "deprecated": true
+    },
+    {
+      "parent_context": "TargetPositionMaster",
+      "type_ref": "GeoPosition",
+      "deprecated": true
+    },
+    {
+      "parent_context": "TargetPosition",
+      "type_ref": "GeoPosition",
+      "deprecated": true
+    }
+  ],
+  "parent_contexts": [
+    "Position",
+    "PositionStart",
+    "TargetPosition",
+    "TargetPositionMaster"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [
+    {
+      "name": "altitude",
+      "type": "Double"
+    },
+    {
+      "name": "height",
+      "type": "Double"
+    },
+    {
+      "name": "latitude",
+      "type": "Double"
+    },
+    {
+      "name": "latitudeDeg",
+      "type": "Double"
+    },
+    {
+      "name": "longitude",
+      "type": "Double"
+    },
+    {
+      "name": "longitudeDeg",
+      "type": "Double"
+    },
+    {
+      "name": "verticalRoadSelection",
+      "type": "Int"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "Orientation",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "Orientation": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1343; knowledge/raw/schema/OpenSCENARIO.xsd#L1837"
+}

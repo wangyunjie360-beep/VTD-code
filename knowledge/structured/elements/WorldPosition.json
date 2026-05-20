@@ -1,0 +1,68 @@
+{
+  "element": "WorldPosition",
+  "description": "Schema-derived WorldPosition element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Position",
+      "type_ref": "WorldPosition",
+      "deprecated": false
+    },
+    {
+      "parent_context": "PositionStart",
+      "type_ref": "WorldPosition",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TargetPositionMaster",
+      "type_ref": "WorldPosition",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TargetPosition",
+      "type_ref": "WorldPosition",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Position",
+    "PositionStart",
+    "TargetPosition",
+    "TargetPositionMaster"
+  ],
+  "required_attributes": [
+    {
+      "name": "x",
+      "type": "Double"
+    },
+    {
+      "name": "y",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "h",
+      "type": "Double"
+    },
+    {
+      "name": "p",
+      "type": "Double"
+    },
+    {
+      "name": "r",
+      "type": "Double"
+    },
+    {
+      "name": "z",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1829; knowledge/raw/schema/OpenSCENARIO.xsd#L2686"
+}

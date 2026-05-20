@@ -1,0 +1,61 @@
+{
+  "element": "ClothoidSplineSegment",
+  "description": "Schema-derived ClothoidSplineSegment element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "ClothoidSpline",
+      "type_ref": "ClothoidSplineSegment",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "ClothoidSpline"
+  ],
+  "required_attributes": [
+    {
+      "name": "curvatureEnd",
+      "type": "Double"
+    },
+    {
+      "name": "curvatureStart",
+      "type": "Double"
+    },
+    {
+      "name": "length",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "hOffset",
+      "type": "Double"
+    },
+    {
+      "name": "timeStart",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "PositionStart",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "MotionStart",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [
+    "PositionStart",
+    "MotionStart"
+  ],
+  "multiplicity": {
+    "PositionStart": "0..1",
+    "MotionStart": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L986; knowledge/raw/schema/OpenSCENARIO.xsd#L991"
+}

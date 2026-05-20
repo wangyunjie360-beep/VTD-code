@@ -1,0 +1,10 @@
+<decalscatter>
+  <scatterjobs>
+    <scatterjob targettexture="standard">
+      <decals>
+        <decal quantity="2" alignment="parallelorthogonal">RdMiscRoadDamagePatch01</decal>
+        <decal quantity="12" alignment="random">RdMiscRoadDamageCrack01</decal>
+      </decals>
+    </scatterjob>
+  </scatterjobs>
+</decalscatter>

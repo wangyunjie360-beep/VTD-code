@@ -1,0 +1,33 @@
+{
+  "element": "VehicleRoleDistribution",
+  "description": "TrafficDefinition child containing one or more VehicleRoleDistributionEntry items.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "TrafficDefinition",
+      "type_ref": "VehicleRoleDistribution",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "TrafficDefinition"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "VehicleRoleDistributionEntry",
+      "cardinality": "1..unbounded"
+    }
+  ],
+  "child_order": [
+    "VehicleRoleDistributionEntry"
+  ],
+  "multiplicity": {
+    "VehicleRoleDistributionEntry": "1..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2325; knowledge/raw/schema/OpenSCENARIO.xsd#L2637"
+}

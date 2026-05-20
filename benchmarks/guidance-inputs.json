@@ -1,0 +1,25 @@
+{
+  "minimal-single-vehicle": {
+    "prompt_file": "benchmarks/prompts/minimal-single-vehicle.md",
+    "query": "storyboard",
+    "element": "Storyboard"
+  },
+  "two-vehicle-follow": {
+    "prompt_file": "benchmarks/prompts/two-vehicle-follow.md",
+    "query": "longitudinal distance action",
+    "element": "LongitudinalDistanceAction",
+    "parent_context": "LongitudinalAction"
+  },
+  "triggered-deceleration": {
+    "prompt_file": "benchmarks/prompts/triggered-deceleration.md",
+    "query": "speed action",
+    "element": "SpeedAction",
+    "parent_context": "LongitudinalAction"
+  },
+  "triggered-lane-change": {
+    "prompt_file": "benchmarks/prompts/triggered-lane-change.md",
+    "query": "lane change action",
+    "element": "LaneChangeAction",
+    "parent_context": "LateralAction"
+  }
+}

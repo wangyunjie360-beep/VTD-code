@@ -1,0 +1,61 @@
+{
+  "element": "TrafficSourceAction",
+  "description": "Deprecated TrafficAction branch that emits traffic from Position; radius and rate are required, TrafficDistribution is optional, and deprecated TrafficDefinition and velocity remain in the local XSD.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [
+    "Some contextual variants of this element are deprecated in the local XSD."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "TrafficAction",
+      "type_ref": "TrafficSourceAction",
+      "deprecated": true
+    }
+  ],
+  "parent_contexts": [
+    "TrafficAction"
+  ],
+  "required_attributes": [
+    {
+      "name": "radius",
+      "type": "Double"
+    },
+    {
+      "name": "rate",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "speed",
+      "type": "Double"
+    },
+    {
+      "name": "velocity",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "Position",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "TrafficDefinition",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "TrafficDistribution",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "Position": "1..1",
+    "TrafficDefinition": "0..1",
+    "TrafficDistribution": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2300; knowledge/raw/schema/OpenSCENARIO.xsd#L2402"
+}

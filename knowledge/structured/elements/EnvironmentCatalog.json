@@ -1,0 +1,31 @@
+{
+  "element": "EnvironmentCatalog",
+  "description": "CatalogLocations child for environment catalogs. The local XSD uses xsd:all with one required Directory.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "CatalogLocations",
+      "type_ref": "EnvironmentCatalogLocation",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "CatalogLocations"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Directory",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "Directory": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L947; knowledge/raw/schema/OpenSCENARIO.xsd#L1280"
+}

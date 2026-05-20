@@ -1,0 +1,60 @@
+{
+  "element": "Trajectory",
+  "description": "Schema-derived Trajectory element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Catalog",
+      "type_ref": "Trajectory",
+      "deprecated": false
+    },
+    {
+      "parent_context": "FollowTrajectoryAction",
+      "type_ref": "Trajectory",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TrajectoryRef",
+      "type_ref": "Trajectory",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Catalog",
+    "FollowTrajectoryAction",
+    "TrajectoryRef"
+  ],
+  "required_attributes": [
+    {
+      "name": "closed",
+      "type": "Boolean"
+    },
+    {
+      "name": "name",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "ParameterDeclarations",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "Shape",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "ParameterDeclarations",
+    "Shape"
+  ],
+  "multiplicity": {
+    "ParameterDeclarations": "0..1",
+    "Shape": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L930; knowledge/raw/schema/OpenSCENARIO.xsd#L1325; knowledge/raw/schema/OpenSCENARIO.xsd#L2458; knowledge/raw/schema/OpenSCENARIO.xsd#L2484"
+}

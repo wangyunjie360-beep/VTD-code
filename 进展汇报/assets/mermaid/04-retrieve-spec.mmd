@@ -1,0 +1,14 @@
+flowchart TD
+    A[自然语言 query] --> B[规范化文本<br/>分词/CamelCase 拆分]
+    B --> C[构建候选集合]
+    C --> C1[element candidates]
+    C --> C2[attribute candidates]
+    C --> C3[concept candidates]
+    C --> C4[error candidates]
+    C1 --> D[打分排序]
+    C2 --> D
+    C3 --> D
+    C4 --> D
+    D --> E[top_k 截断]
+    E --> F[附加 constraints / parent_contexts / strategy_summary]
+    F --> G[返回 hits]

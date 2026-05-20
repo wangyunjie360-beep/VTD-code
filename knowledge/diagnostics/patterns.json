@@ -1,0 +1,48 @@
+[
+  {
+    "category": "namespace_or_root_issue",
+    "regex": "^Element '(?P<element>[^']+)': No matching global declaration available for the validation root\\.$",
+    "fix_advice_template": "Check the root element name and XML namespace on {element} so they match the schema."
+  },
+  {
+    "category": "missing_required_child",
+    "regex": "^Element '(?P<element>[^']+)': Missing child element\\(s\\)\\. Expected is(?P<one_of> one of)? \\( (?P<expected_text>[^)]+) \\)\\.$",
+    "fix_advice_template": "Add {required_child_description} under {element}."
+  },
+  {
+    "category": "missing_required_attribute",
+    "regex": "^Element '(?P<element>[^']+)': The attribute '(?P<attribute>[^']+)' is required but missing\\.$",
+    "fix_advice_template": "Add the required attribute '{attribute}' to {element}."
+  },
+  {
+    "category": "invalid_attribute",
+    "regex": "^Element '(?P<element>[^']+)', attribute '(?P<attribute>[^']+)': The attribute '(?:[^']+)' is not allowed\\.$",
+    "fix_advice_template": "Remove the unsupported attribute '{attribute}' from {element}."
+  },
+  {
+    "category": "invalid_enum_value",
+    "regex": "^Element '(?P<element>[^']+)', attribute '(?P<attribute>[^']+)': '(?P<invalid_value>[^']+)' is not a valid value of the (?:union )?type '(?P<type_name>[^']+)'\\.$",
+    "fix_advice_template": "Change '{attribute}' on {element} from '{invalid_value}' to a value allowed by {type_name}."
+  },
+  {
+    "category": "wrong_child_order",
+    "regex": "^Element '(?P<element>[^']+)': This element is not expected\\. Expected is(?: one of)? \\( (?P<expected_text>[^)]+) \\)\\.$",
+    "fix_advice_template": "Move {element} after the required earlier child element(s): {expected_text}.",
+    "requires_structural_order_match": true,
+    "requires_known_element": true,
+    "requires_expected_known": true,
+    "exclude_expected": [
+      "FileHeader",
+      "ParameterDeclarations",
+      "CatalogLocations",
+      "RoadNetwork",
+      "Entities",
+      "Storyboard"
+    ]
+  },
+  {
+    "category": "unexpected_element",
+    "regex": "^Element '(?P<element>[^']+)': This element is not expected\\. Expected is(?: one of)? \\( (?P<expected_text>[^)]+) \\)\\.$",
+    "fix_advice_template": "Replace, move, or remove {element}. The schema expected {expected_text} at this location."
+  }
+]

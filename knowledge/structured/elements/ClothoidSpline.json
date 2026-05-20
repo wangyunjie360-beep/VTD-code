@@ -1,0 +1,44 @@
+{
+  "element": "ClothoidSpline",
+  "description": "Schema-derived ClothoidSpline element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Shape",
+      "type_ref": "ClothoidSpline",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Shape"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [
+    {
+      "name": "timeEnd",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "ClothoidSplineSegment",
+      "cardinality": "1..unbounded"
+    },
+    {
+      "name": "MotionEnd",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [
+    "ClothoidSplineSegment",
+    "MotionEnd"
+  ],
+  "multiplicity": {
+    "ClothoidSplineSegment": "1..unbounded",
+    "MotionEnd": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L984; knowledge/raw/schema/OpenSCENARIO.xsd#L2129"
+}

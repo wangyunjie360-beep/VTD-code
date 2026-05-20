@@ -1,0 +1,93 @@
+{
+  "element": "ParameterDeclarations",
+  "description": "Schema-derived ParameterDeclarations element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Controller",
+      "type_ref": "ParameterDeclarations",
+      "deprecated": false
+    },
+    {
+      "parent_context": "Environment",
+      "type_ref": "ParameterDeclarations",
+      "deprecated": false
+    },
+    {
+      "parent_context": "Maneuver",
+      "type_ref": "ParameterDeclarations",
+      "deprecated": false
+    },
+    {
+      "parent_context": "MiscObject",
+      "type_ref": "ParameterDeclarations",
+      "deprecated": false
+    },
+    {
+      "parent_context": "Pedestrian",
+      "type_ref": "ParameterDeclarations",
+      "deprecated": false
+    },
+    {
+      "parent_context": "Route",
+      "type_ref": "ParameterDeclarations",
+      "deprecated": false
+    },
+    {
+      "parent_context": "ScenarioDefinition",
+      "type_ref": "ParameterDeclarations",
+      "deprecated": false
+    },
+    {
+      "parent_context": "Story",
+      "type_ref": "ParameterDeclarations",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TrafficDistributionEntry",
+      "type_ref": "ParameterDeclarations",
+      "deprecated": false
+    },
+    {
+      "parent_context": "Trajectory",
+      "type_ref": "ParameterDeclarations",
+      "deprecated": false
+    },
+    {
+      "parent_context": "Vehicle",
+      "type_ref": "ParameterDeclarations",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Controller",
+    "Environment",
+    "Maneuver",
+    "MiscObject",
+    "Pedestrian",
+    "Route",
+    "ScenarioDefinition",
+    "Story",
+    "TrafficDistributionEntry",
+    "Trajectory",
+    "Vehicle"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "ParameterDeclaration",
+      "cardinality": "0..unbounded"
+    }
+  ],
+  "child_order": [
+    "ParameterDeclaration"
+  ],
+  "multiplicity": {
+    "ParameterDeclaration": "0..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1051; knowledge/raw/schema/OpenSCENARIO.xsd#L1267; knowledge/raw/schema/OpenSCENARIO.xsd#L1534; knowledge/raw/schema/OpenSCENARIO.xsd#L1558; knowledge/raw/schema/OpenSCENARIO.xsd#L1729; knowledge/raw/schema/OpenSCENARIO.xsd#L1766; knowledge/raw/schema/OpenSCENARIO.xsd#L2050; knowledge/raw/schema/OpenSCENARIO.xsd#L2085; knowledge/raw/schema/OpenSCENARIO.xsd#L2201; knowledge/raw/schema/OpenSCENARIO.xsd#L2340; knowledge/raw/schema/OpenSCENARIO.xsd#L2460; knowledge/raw/schema/OpenSCENARIO.xsd#L2602"
+}

@@ -1,0 +1,4 @@
+#####################################################################
+# minimal real-style external definition excerpt
+#TAG   ModelName	BoundingBoxX	BoundingBoxY	Filename	Iconpath	CenterX	CenterY	CenterZ	Group	BoundingBoxZ	odrType
+EXTDEF Railing_Post_Plastic_Green_CN_01	0.145	0.099	Railing_Post_Plastic_Green_CN_01.flt	VisualLib/Models/AddOns/CountryCN/Icons/Railing_Post_Plastic_Green_CN_01.xpm	0.078	0.000	-0.097	China/Road-Elements/Posts	1.806	pole

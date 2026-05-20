@@ -1,0 +1,44 @@
+{
+  "element": "Sun",
+  "description": "Deprecated Weather child with required azimuth and elevation.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [
+    "Some contextual variants of this element are deprecated in the local XSD."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "Weather",
+      "type_ref": "Sun",
+      "deprecated": true
+    }
+  ],
+  "parent_contexts": [
+    "Weather"
+  ],
+  "required_attributes": [
+    {
+      "name": "azimuth",
+      "type": "Double"
+    },
+    {
+      "name": "elevation",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "illuminance",
+      "type": "Double"
+    },
+    {
+      "name": "intensity",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2218; knowledge/raw/schema/OpenSCENARIO.xsd#L2669"
+}

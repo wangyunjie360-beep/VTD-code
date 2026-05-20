@@ -1,0 +1,108 @@
+{
+  "artifacts": {
+    "edges": "edges.jsonl",
+    "graphml": "graph.graphml",
+    "manifest": "manifest.json",
+    "nodes": "nodes.jsonl",
+    "ontology": "ontology.md",
+    "query_examples": "examples/query-examples.md",
+    "readme": "README.md",
+    "sample_subgraph": "sample-subgraph.json",
+    "traceability": "traceability.md"
+  },
+  "edge_counts": {
+    "BINDS_TO_VTD_KIND": 3,
+    "HAS_ATTRIBUTE": 474,
+    "HAS_CHILD": 452,
+    "HAS_REPAIR_PATTERN": 775,
+    "REFERENCES": 34,
+    "REQUIRES_CHILD": 251
+  },
+  "edge_total": 1989,
+  "focus_node": "osc-element:TrafficSignalStateAction",
+  "generated_at": "2026-05-12T11:08:45.004179Z",
+  "node_counts": {
+    "BridgeRule": 5,
+    "Country": 11,
+    "DiagnosticPattern": 7,
+    "OSCAttribute": 474,
+    "OSCElement": 301,
+    "ReferenceKind": 9,
+    "VTDAssetKind": 3
+  },
+  "node_total": 810,
+  "output_root": "knowledge/graph_visual",
+  "profile": "visual_core",
+  "project_root": "D:/wyj/OPenscenario",
+  "schema_version": 1,
+  "traceability_summary": {
+    "edge_total": 1989,
+    "edges_with_traceability": 1989,
+    "node_total": 810,
+    "nodes_with_traceability": 810,
+    "source_files": [
+      {
+        "edge_refs": 775,
+        "node_refs": 7,
+        "source_file": "knowledge/diagnostics/patterns.json"
+      },
+      {
+        "edge_refs": 5427,
+        "node_refs": 2270,
+        "source_file": "knowledge/raw/schema/OpenSCENARIO.xsd"
+      },
+      {
+        "edge_refs": 10,
+        "node_refs": 10,
+        "source_file": "knowledge/structured/bridges/osc_vtd/field-bindings.jsonl"
+      },
+      {
+        "edge_refs": 6055,
+        "node_refs": 6055,
+        "source_file": "knowledge/structured/vtd/semantic/asset-families.jsonl"
+      },
+      {
+        "edge_refs": 0,
+        "node_refs": 11,
+        "source_file": "knowledge/structured/vtd/semantic/country-taxonomy.json"
+      }
+    ]
+  },
+  "visual_summary": {
+    "aggregated": {
+      "BINDS_TO_VTD": "BINDS_TO_VTD_KIND",
+      "VTDAssetFamily": "VTDAssetKind"
+    },
+    "description": "Visualization profile that removes name-policy and concrete VTD detail nodes, then aggregates bridge-to-family bindings by VTD asset kind.",
+    "included_edge_types": [
+      "BINDS_TO_VTD_KIND",
+      "HAS_ATTRIBUTE",
+      "HAS_CHILD",
+      "HAS_REPAIR_PATTERN",
+      "REFERENCES",
+      "REQUIRES_CHILD"
+    ],
+    "included_node_types": [
+      "BridgeRule",
+      "Country",
+      "DiagnosticPattern",
+      "OSCAttribute",
+      "OSCElement",
+      "ReferenceKind",
+      "VTDAssetKind"
+    ],
+    "removed_edge_counts": {
+      "APPLIES_TO_COUNTRY": 24486,
+      "BINDS_TO_VTD": 6055,
+      "CONSTRAINS_NAME": 107369,
+      "HAS_VARIANT": 7495,
+      "VARIANT_OF_ASSET": 7495
+    },
+    "removed_node_counts": {
+      "NamePolicy": 43705,
+      "VTDAsset": 7509,
+      "VTDAssetFamily": 7182,
+      "VTDAssetVariant": 7495
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "element": "SpeedProfileAction",
+  "description": "Schema-derived SpeedProfileAction element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "LongitudinalAction",
+      "type_ref": "SpeedProfileAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "LongitudinalAction"
+  ],
+  "required_attributes": [
+    {
+      "name": "followingMode",
+      "type": "FollowingMode"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "entityRef",
+      "type": "String",
+      "reference_kind": "entity"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "DynamicConstraints",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "SpeedProfileEntry",
+      "cardinality": "1..unbounded"
+    }
+  ],
+  "child_order": [
+    "DynamicConstraints",
+    "SpeedProfileEntry"
+  ],
+  "multiplicity": {
+    "DynamicConstraints": "0..1",
+    "SpeedProfileEntry": "1..unbounded"
+  },
+  "enum_constraints": {
+    "followingMode": [
+      "follow",
+      "position"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L206; knowledge/raw/schema/OpenSCENARIO.xsd#L1517; knowledge/raw/schema/OpenSCENARIO.xsd#L2154"
+}

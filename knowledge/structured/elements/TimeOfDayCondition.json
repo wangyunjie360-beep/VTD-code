@@ -1,0 +1,42 @@
+{
+  "element": "TimeOfDayCondition",
+  "description": "Schema-derived TimeOfDayCondition element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "ByValueCondition",
+      "type_ref": "TimeOfDayCondition",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "ByValueCondition"
+  ],
+  "required_attributes": [
+    {
+      "name": "dateTime",
+      "type": "DateTime"
+    },
+    {
+      "name": "rule",
+      "type": "Rule"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "rule": [
+      "equalTo",
+      "greaterThan",
+      "lessThan",
+      "greaterOrEqual",
+      "lessOrEqual",
+      "notEqualTo"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L549; knowledge/raw/schema/OpenSCENARIO.xsd#L913; knowledge/raw/schema/OpenSCENARIO.xsd#L2263"
+}

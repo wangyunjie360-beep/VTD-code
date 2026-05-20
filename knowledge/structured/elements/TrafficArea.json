@@ -1,0 +1,48 @@
+{
+  "element": "TrafficArea",
+  "description": "TrafficAreaAction region selector. Choose Polygon or one or more RoadRange children.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "Polygon",
+        "RoadRange"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: Polygon, RoadRange."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "TrafficAreaAction",
+      "type_ref": "TrafficArea",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "TrafficAreaAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Polygon",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "RoadRange",
+      "cardinality": "1..unbounded"
+    }
+  ],
+  "child_order": [
+    "Polygon|RoadRange"
+  ],
+  "multiplicity": {
+    "Polygon": "1..1",
+    "RoadRange": "1..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2308; knowledge/raw/schema/OpenSCENARIO.xsd#L2317"
+}

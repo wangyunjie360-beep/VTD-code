@@ -1,0 +1,57 @@
+{
+  "element": "DeterministicSingleParameterDistribution",
+  "description": "Parameter-scoped deterministic wrapper. parameterName is required, then choose DistributionSet, DistributionRange, or UserDefinedDistribution.",
+  "content_model_kind": "sequence",
+  "child_groups": [
+    {
+      "members": [
+        "DistributionSet",
+        "DistributionRange",
+        "UserDefinedDistribution"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "DeterministicParameterDistribution",
+      "type_ref": "DeterministicSingleParameterDistribution",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "DeterministicParameterDistribution"
+  ],
+  "required_attributes": [
+    {
+      "name": "parameterName",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "DistributionSet",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "DistributionRange",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "UserDefinedDistribution",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "DistributionSet|DistributionRange|UserDefinedDistribution"
+  ],
+  "multiplicity": {
+    "DistributionSet": "1..1",
+    "DistributionRange": "1..1",
+    "UserDefinedDistribution": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1121; knowledge/raw/schema/OpenSCENARIO.xsd#L1124"
+}

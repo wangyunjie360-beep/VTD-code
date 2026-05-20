@@ -1,0 +1,59 @@
+{
+  "element": "Action",
+  "description": "Event action entry selecting one global, user-defined, or private branch.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "GlobalAction",
+        "UserDefinedAction",
+        "PrivateAction"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: GlobalAction, UserDefinedAction, PrivateAction."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "Event",
+      "type_ref": "Action",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Event"
+  ],
+  "required_attributes": [
+    {
+      "name": "name",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "GlobalAction",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "UserDefinedAction",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "PrivateAction",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [
+    "GlobalAction|UserDefinedAction|PrivateAction"
+  ],
+  "multiplicity": {
+    "GlobalAction": "0..1",
+    "UserDefinedAction": "0..1",
+    "PrivateAction": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L778"
+}

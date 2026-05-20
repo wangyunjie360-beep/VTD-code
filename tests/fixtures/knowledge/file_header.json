@@ -1,0 +1,50 @@
+{
+  "element": "FileHeader",
+  "description": "Provides the scenario metadata header for an OpenSCENARIO document.",
+  "parent_contexts": [
+    "OpenSCENARIO"
+  ],
+  "required_attributes": [
+    {
+      "name": "author",
+      "type": "String"
+    },
+    {
+      "name": "date",
+      "type": "DateTime"
+    },
+    {
+      "name": "description",
+      "type": "String"
+    },
+    {
+      "name": "revMajor",
+      "type": "UnsignedShort"
+    },
+    {
+      "name": "revMinor",
+      "type": "UnsignedShort"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "License",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "Properties",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [
+    "License",
+    "Properties"
+  ],
+  "multiplicity": {
+    "License": "0..1",
+    "Properties": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1300"
+}

@@ -1,0 +1,24 @@
+{
+  "element": "DeleteEntityAction",
+  "description": "Schema-derived DeleteEntityAction element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "EntityAction",
+      "type_ref": "DeleteEntityAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "EntityAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1101; knowledge/raw/schema/OpenSCENARIO.xsd#L1210"
+}

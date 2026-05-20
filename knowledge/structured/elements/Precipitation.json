@@ -1,0 +1,46 @@
+{
+  "element": "Precipitation",
+  "description": "Weather child with required precipitationType; deprecated intensity and current precipitationIntensity are optional amount attributes.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [
+    "Some contextual variants of this element are deprecated in the local XSD."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "Weather",
+      "type_ref": "Precipitation",
+      "deprecated": true
+    }
+  ],
+  "parent_contexts": [
+    "Weather"
+  ],
+  "required_attributes": [
+    {
+      "name": "precipitationType",
+      "type": "PrecipitationType"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "intensity",
+      "type": "Double"
+    },
+    {
+      "name": "precipitationIntensity",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "precipitationType": [
+      "dry",
+      "rain",
+      "snow"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L424; knowledge/raw/schema/OpenSCENARIO.xsd#L1853; knowledge/raw/schema/OpenSCENARIO.xsd#L2671"
+}

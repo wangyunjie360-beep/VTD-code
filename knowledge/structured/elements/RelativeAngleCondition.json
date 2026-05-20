@@ -1,0 +1,60 @@
+{
+  "element": "RelativeAngleCondition",
+  "description": "Schema-derived RelativeAngleCondition element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "EntityCondition",
+      "type_ref": "RelativeAngleCondition",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "EntityCondition"
+  ],
+  "required_attributes": [
+    {
+      "name": "angle",
+      "type": "Double"
+    },
+    {
+      "name": "angleTolerance",
+      "type": "Double"
+    },
+    {
+      "name": "angleType",
+      "type": "AngleType"
+    },
+    {
+      "name": "entityRef",
+      "type": "String",
+      "reference_kind": "entity"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "coordinateSystem",
+      "type": "CoordinateSystem"
+    }
+  ],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "angleType": [
+      "heading",
+      "pitch",
+      "roll"
+    ],
+    "coordinateSystem": [
+      "entity",
+      "lane",
+      "road",
+      "trajectory",
+      "world"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L46; knowledge/raw/schema/OpenSCENARIO.xsd#L147; knowledge/raw/schema/OpenSCENARIO.xsd#L1233; knowledge/raw/schema/OpenSCENARIO.xsd#L1918"
+}

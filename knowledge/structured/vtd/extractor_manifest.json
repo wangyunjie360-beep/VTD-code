@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "phase": "phase1",
+  "allowlist": [
+    {
+      "match": "Tools/resourceDirs.txt",
+      "match_type": "file",
+      "collector": "resource_dirs"
+    },
+    {
+      "match": "VisualLib/Models",
+      "match_type": "directory",
+      "collector": "model_scan",
+      "bucket": "models.jsonl"
+    },
+    {
+      "match": "VisualLib/ModelsPBR",
+      "match_type": "directory",
+      "collector": "model_scan",
+      "bucket": "models.jsonl"
+    },
+    {
+      "match": "VisualLib/Styles",
+      "match_type": "directory",
+      "collector": "style_scan",
+      "bucket": "styles.jsonl"
+    },
+    {
+      "match": "VisualLib/TileLib",
+      "match_type": "directory",
+      "collector": "tile_scan",
+      "bucket": "tiles.jsonl"
+    },
+    {
+      "match": "VisualLib/Models/**/SetupFiles/*.DAT",
+      "match_type": "glob",
+      "collector": "dat_definitions"
+    },
+    {
+      "match": "Tools/pbr_*.xml",
+      "match_type": "glob",
+      "collector": "pbr_objects",
+      "bucket": "models.jsonl"
+    },
+    {
+      "match": "DefaultProject/Config/*.xml",
+      "match_type": "glob",
+      "collector": "config_xml",
+      "bucket": "decals.jsonl"
+    },
+    {
+      "match": "DefaultProject/Config/Macros/*.rmcr",
+      "match_type": "glob",
+      "collector": "macro_scan",
+      "bucket": "macros.jsonl"
+    },
+    {
+      "match": "Samples/*.tdo",
+      "match_type": "glob",
+      "collector": "sample_scan",
+      "bucket": "samples.jsonl"
+    },
+    {
+      "match": "AddOns/**/*.xml",
+      "match_type": "glob",
+      "collector": "addon_xml_descriptor",
+      "bucket": "addons.jsonl"
+    }
+  ],
+  "buckets": {
+    "addons": "addons.jsonl",
+    "decals": "decals.jsonl",
+    "externals": "externals.jsonl",
+    "macros": "macros.jsonl",
+    "models": "models.jsonl",
+    "samples": "samples.jsonl",
+    "signals": "signals.jsonl",
+    "styles": "styles.jsonl",
+    "tiles": "tiles.jsonl"
+  }
+}

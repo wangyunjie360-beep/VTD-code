@@ -1,0 +1,38 @@
+{
+  "element": "Rule",
+  "description": "Modify-rule choice shared by deprecated parameter modify actions and current variable modify actions. Exactly one of AddValue or MultiplyByValue must be selected.",
+  "parent_contexts": [
+    "ModifyAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "AddValue",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "MultiplyByValue",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [
+    "AddValue|MultiplyByValue"
+  ],
+  "multiplicity": {
+    "AddValue": "0..1",
+    "MultiplyByValue": "0..1"
+  },
+  "enum_constraints": {},
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "AddValue",
+        "MultiplyByValue"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1572; knowledge/raw/schema/OpenSCENARIO.xsd#L1737; knowledge/raw/schema/OpenSCENARIO.xsd#L2585; knowledge/raw/schema/OpenSCENARIO.xsd#L2588"
+}

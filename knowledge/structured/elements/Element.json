@@ -1,0 +1,39 @@
+{
+  "element": "Element",
+  "description": "Schema-derived Element element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "DistributionSet",
+      "type_ref": "DistributionSetElement",
+      "deprecated": false
+    },
+    {
+      "parent_context": "ProbabilityDistributionSet",
+      "type_ref": "ProbabilityDistributionSetElement",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "DistributionSet",
+    "ProbabilityDistributionSet"
+  ],
+  "required_attributes": [
+    {
+      "name": "value",
+      "type": "String"
+    },
+    {
+      "name": "weight",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1179; knowledge/raw/schema/OpenSCENARIO.xsd#L1182; knowledge/raw/schema/OpenSCENARIO.xsd#L1887"
+}

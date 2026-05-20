@@ -1,0 +1,85 @@
+{
+  "element": "GlobalAction",
+  "description": "Action branch selecting one global environment, entity, infrastructure, monitor, parameter, traffic, or variable action.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "EnvironmentAction",
+        "EntityAction",
+        "InfrastructureAction",
+        "SetMonitorAction",
+        "ParameterAction",
+        "TrafficAction",
+        "VariableAction"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: EnvironmentAction, EntityAction, InfrastructureAction, SetMonitorAction, ParameterAction, TrafficAction, VariableAction.",
+    "ParameterAction is deprecated within GlobalAction."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "Action",
+      "type_ref": "GlobalAction",
+      "deprecated": false
+    },
+    {
+      "parent_context": "Actions",
+      "type_ref": "GlobalAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Action",
+    "Actions"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "EnvironmentAction",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "EntityAction",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "InfrastructureAction",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "SetMonitorAction",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "ParameterAction",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "TrafficAction",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "VariableAction",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "EnvironmentAction|EntityAction|InfrastructureAction|SetMonitorAction|ParameterAction|TrafficAction|VariableAction"
+  ],
+  "multiplicity": {
+    "EnvironmentAction": "1..1",
+    "EntityAction": "1..1",
+    "InfrastructureAction": "1..1",
+    "SetMonitorAction": "1..1",
+    "ParameterAction": "1..1",
+    "TrafficAction": "1..1",
+    "VariableAction": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L780; knowledge/raw/schema/OpenSCENARIO.xsd#L1361; knowledge/raw/schema/OpenSCENARIO.xsd#L1397"
+}

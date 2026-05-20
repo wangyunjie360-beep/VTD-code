@@ -1,0 +1,37 @@
+{
+  "element": "ColorRgb",
+  "description": "Schema-derived ColorRgb element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Color",
+      "type_ref": "ColorRgb",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Color"
+  ],
+  "required_attributes": [
+    {
+      "name": "blue",
+      "type": "Double"
+    },
+    {
+      "name": "green",
+      "type": "Double"
+    },
+    {
+      "name": "red",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1010; knowledge/raw/schema/OpenSCENARIO.xsd#L1021"
+}

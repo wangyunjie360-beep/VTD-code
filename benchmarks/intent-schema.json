@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OpenSCENARIO Benchmark Intent Capture",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "parsed_intent",
+    "xml_intent_check",
+    "schema_valid",
+    "intent_consistent",
+    "remaining_blockers"
+  ],
+  "properties": {
+    "parsed_intent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "parameters",
+        "entities",
+        "environment",
+        "map_context",
+        "init_actions",
+        "story_actions",
+        "triggers",
+        "stop_conditions",
+        "assumptions"
+      ],
+      "properties": {
+        "parameters": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "entities": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "environment": {
+          "type": "object"
+        },
+        "map_context": {
+          "type": "object"
+        },
+        "init_actions": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "story_actions": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "object"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "triggers": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "object"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "stop_conditions": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "object"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "assumptions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "xml_intent_check": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "matched",
+        "missing",
+        "extra"
+      ],
+      "properties": {
+        "matched": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "missing": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "extra": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "schema_valid": {
+      "type": "boolean"
+    },
+    "intent_consistent": {
+      "type": "boolean"
+    },
+    "remaining_blockers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

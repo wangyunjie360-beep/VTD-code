@@ -1,0 +1,34 @@
+{
+  "element": "TrafficSignalControllerAction",
+  "description": "Traffic signal controller phase switch with required trafficSignalControllerRef and phase.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "TrafficSignalAction",
+      "type_ref": "TrafficSignalControllerAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "TrafficSignalAction"
+  ],
+  "required_attributes": [
+    {
+      "name": "phase",
+      "type": "String"
+    },
+    {
+      "name": "trafficSignalControllerRef",
+      "type": "String",
+      "reference_kind": "traffic_signal_controller"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2352; knowledge/raw/schema/OpenSCENARIO.xsd#L2373"
+}

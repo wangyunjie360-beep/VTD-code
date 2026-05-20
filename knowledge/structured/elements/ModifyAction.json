@@ -1,0 +1,35 @@
+{
+  "element": "ModifyAction",
+  "description": "Modify-action branch shared by the deprecated ParameterAction path and the current VariableAction path. It wraps exactly one Rule child.",
+  "parent_contexts": [
+    "ParameterAction",
+    "VariableAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Rule",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "Rule": "1..1"
+  },
+  "enum_constraints": {},
+  "content_model_kind": "all",
+  "contextual_variants": [
+    {
+      "parent_context": "ParameterAction",
+      "type_ref": "ParameterModifyAction",
+      "deprecated": true
+    },
+    {
+      "parent_context": "VariableAction",
+      "type_ref": "VariableModifyAction",
+      "deprecated": false
+    }
+  ],
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1697; knowledge/raw/schema/OpenSCENARIO.xsd#L1734; knowledge/raw/schema/OpenSCENARIO.xsd#L2561; knowledge/raw/schema/OpenSCENARIO.xsd#L2583"
+}

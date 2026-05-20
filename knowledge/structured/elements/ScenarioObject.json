@@ -1,0 +1,75 @@
+{
+  "element": "ScenarioObject",
+  "description": "Schema-derived ScenarioObject element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [
+    {
+      "members": [
+        "CatalogReference",
+        "Vehicle",
+        "Pedestrian",
+        "MiscObject",
+        "ExternalObjectReference"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Entities",
+      "type_ref": "ScenarioObject",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Entities"
+  ],
+  "required_attributes": [
+    {
+      "name": "name",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "CatalogReference",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "Vehicle",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "Pedestrian",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "MiscObject",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "ExternalObjectReference",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "ObjectController",
+      "cardinality": "0..unbounded"
+    }
+  ],
+  "child_order": [
+    "CatalogReference|Vehicle|Pedestrian|MiscObject|ExternalObjectReference",
+    "ObjectController"
+  ],
+  "multiplicity": {
+    "CatalogReference": "1..1",
+    "Vehicle": "1..1",
+    "Pedestrian": "1..1",
+    "MiscObject": "1..1",
+    "ExternalObjectReference": "1..1",
+    "ObjectController": "0..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1203; knowledge/raw/schema/OpenSCENARIO.xsd#L2094"
+}

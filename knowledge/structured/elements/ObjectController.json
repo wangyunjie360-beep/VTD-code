@@ -1,0 +1,71 @@
+{
+  "element": "ObjectController",
+  "description": "Schema-derived ObjectController element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "CatalogReference",
+        "Controller"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: CatalogReference, Controller."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "AssignControllerAction",
+      "type_ref": "ObjectController",
+      "deprecated": false
+    },
+    {
+      "parent_context": "ScenarioObject",
+      "type_ref": "ObjectController",
+      "deprecated": false
+    },
+    {
+      "parent_context": "Trailer",
+      "type_ref": "ObjectController",
+      "deprecated": false
+    },
+    {
+      "parent_context": "ScenarioObjectTemplate",
+      "type_ref": "ObjectController",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "AssignControllerAction",
+    "ScenarioObject",
+    "ScenarioObjectTemplate",
+    "Trailer"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [
+    {
+      "name": "name",
+      "type": "String"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "CatalogReference",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "Controller",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "CatalogReference|Controller"
+  ],
+  "multiplicity": {
+    "CatalogReference": "1..1",
+    "Controller": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L852; knowledge/raw/schema/OpenSCENARIO.xsd#L1608; knowledge/raw/schema/OpenSCENARIO.xsd#L2097; knowledge/raw/schema/OpenSCENARIO.xsd#L2104"
+}

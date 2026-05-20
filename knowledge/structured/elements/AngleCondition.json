@@ -1,0 +1,55 @@
+{
+  "element": "AngleCondition",
+  "description": "Schema-derived AngleCondition element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "EntityCondition",
+      "type_ref": "AngleCondition",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "EntityCondition"
+  ],
+  "required_attributes": [
+    {
+      "name": "angle",
+      "type": "Double"
+    },
+    {
+      "name": "angleTolerance",
+      "type": "Double"
+    },
+    {
+      "name": "angleType",
+      "type": "AngleType"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "coordinateSystem",
+      "type": "CoordinateSystem"
+    }
+  ],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "angleType": [
+      "heading",
+      "pitch",
+      "roll"
+    ],
+    "coordinateSystem": [
+      "entity",
+      "lane",
+      "road",
+      "trajectory",
+      "world"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L46; knowledge/raw/schema/OpenSCENARIO.xsd#L147; knowledge/raw/schema/OpenSCENARIO.xsd#L807; knowledge/raw/schema/OpenSCENARIO.xsd#L1232"
+}

@@ -1,0 +1,33 @@
+{
+  "element": "InitialSpeedRange",
+  "description": "Optional TrafficSwarmAction speed range backed by the shared Range type.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "TrafficSwarmAction",
+      "type_ref": "Range",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "TrafficSwarmAction"
+  ],
+  "required_attributes": [
+    {
+      "name": "lowerLimit",
+      "type": "Double"
+    },
+    {
+      "name": "upperLimit",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1907; knowledge/raw/schema/OpenSCENARIO.xsd#L2426"
+}

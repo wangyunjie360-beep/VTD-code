@@ -1,0 +1,279 @@
+esmini GIT REV: v2.60.0-0-77b4bbc0
+esmini GIT TAG: v2.60.0
+esmini GIT BRANCH: tags/v2.60.0^0
+esmini BUILD VERSION: 5977
+[] [info] Loaded D:\wyj\OPenscenario\scenarios\heavy_rain_night_viaduct_ramp_multihazard.xosc
+[2026-03-25 16:19:17]
+[] [info] Player options: --osc D:\wyj\OPenscenario\scenarios\heavy_rain_night_viaduct_ramp_multihazard.xosc --camera_mode orbit --disable_controllers --fixed_timestep 0.05 --ground_plane auto --headless --info_text 1 --logfile_path log.txt --log_level info --record D:\wyj\OPenscenario\scenarios\heavy_rain_night_viaduct_ramp_multihazard.dat --text_scale 1.0 --traj_filter 0.1 
+[] [info] Run simulation decoupled from realtime, with fixed timestep: 0.05
+[] [info] Disable entity controllers
+[] [info] Generated seed 1739992110
+[] [info] Loading D:/wyj/OPenscenario/scenarios/heavy_rain_night_viaduct_ramp_multihazard.xosc (v1.1)
+[] [info] 0 variables
+[] [info] Loaded OpenDRIVE: ../roads/viaduct_three_lane_ramp_merge.xodr
+[] [info] 3D model search paths attempted for file car_white.osgb:
+[] [info]   car_white.osgb
+[] [info]   D:/wyj/OPenscenario/scenarios/./car_white.osgb
+[] [info]   D:\wyj\OPenscenario\tools\esmini-v2.60.0\esmini\bin/../resources/models//./car_white.osgb
+[] [info]   D:/wyj/OPenscenario/scenarios/../models/./car_white.osgb
+[] [warn] 3D model car_white.osgb not located, using specified file path
+[] [info] Assigned 3D model car_white.osgb to vehicle EgoVehicle
+[] [info] 3D model search paths attempted for file car_red.osgb:
+[] [info]   car_red.osgb
+[] [info]   D:/wyj/OPenscenario/scenarios/./car_red.osgb
+[] [info]   D:\wyj\OPenscenario\tools\esmini-v2.60.0\esmini\bin/../resources/models//./car_red.osgb
+[] [info]   D:/wyj/OPenscenario/scenarios/../models/./car_red.osgb
+[] [warn] 3D model car_red.osgb not located, using specified file path
+[] [info] Assigned 3D model car_red.osgb to vehicle LeadCargoVan
+[] [info] 3D model search paths attempted for file car_red.osgb:
+[] [info]   car_red.osgb
+[] [info]   D:/wyj/OPenscenario/scenarios/./car_red.osgb
+[] [info]   D:\wyj\OPenscenario\tools\esmini-v2.60.0\esmini\bin/../resources/models//./car_red.osgb
+[] [info]   D:/wyj/OPenscenario/scenarios/../models/./car_red.osgb
+[] [warn] 3D model car_red.osgb not located, using specified file path
+[] [info] Assigned 3D model car_red.osgb to vehicle AggressiveLeftSedan
+[] [info] 3D model search paths attempted for file car_red.osgb:
+[] [info]   car_red.osgb
+[] [info]   D:/wyj/OPenscenario/scenarios/./car_red.osgb
+[] [info]   D:\wyj\OPenscenario\tools\esmini-v2.60.0\esmini\bin/../resources/models//./car_red.osgb
+[] [info]   D:/wyj/OPenscenario/scenarios/../models/./car_red.osgb
+[] [warn] 3D model car_red.osgb not located, using specified file path
+[] [info] Assigned 3D model car_red.osgb to vehicle WhiteRampSUV
+[] [info] 3D model search paths attempted for file mc.osgb:
+[] [info]   mc.osgb
+[] [info]   D:/wyj/OPenscenario/scenarios/./mc.osgb
+[] [info]   D:\wyj\OPenscenario\tools\esmini-v2.60.0\esmini\bin/../resources/models//./mc.osgb
+[] [info]   D:/wyj/OPenscenario/scenarios/../models/./mc.osgb
+[] [warn] 3D model mc.osgb not located, using specified file path
+[] [info] Assigned 3D model mc.osgb to vehicle OccludedMotorbike
+[] [info] Parsing global action EnvironmentAction
+[] [info] 0 parameters
+[0.000] [info] Recording data to file D:\wyj\OPenscenario\scenarios\heavy_rain_night_viaduct_ramp_multihazard.dat
+[0.000] [info] Init EnvironmentAction initState -> startTransition -> runningState
+[0.000] [info] Init Ego TeleportAction initState -> startTransition -> runningState
+[0.000] [info] Starting teleport Action
+[0.000] [info] Ego New position:
+[0.000] [info] Pos(300.00, -9.38, 0.00) Rot(0.00, 0.00, 0.00) roadId 1 laneId -3 s 300.00 offset 0.00 t -9.38
+[0.000] [info] Init Ego LongitudinalAction initState -> startTransition -> runningState
+[0.000] [info] Init TruckA TeleportAction initState -> startTransition -> runningState
+[0.000] [info] Starting teleport Action
+[0.000] [info] TruckA New position:
+[0.000] [info] Pos(374.00, -9.38, 0.00) Rot(0.00, 0.00, 0.00) roadId 1 laneId -3 s 374.00 offset 0.00 t -9.38
+[0.000] [info] Init TruckA LongitudinalAction initState -> startTransition -> runningState
+[0.000] [info] Init CarB TeleportAction initState -> startTransition -> runningState
+[0.000] [info] Starting teleport Action
+[0.000] [info] CarB New position:
+[0.000] [info] Pos(302.00, -5.62, 0.00) Rot(0.00, 0.00, 0.00) roadId 1 laneId -2 s 302.00 offset 0.00 t -5.62
+[0.000] [info] Init CarB LongitudinalAction initState -> startTransition -> runningState
+[0.000] [info] Init SuvC TeleportAction initState -> startTransition -> runningState
+[0.000] [info] Starting teleport Action
+[0.000] [info] SuvC New position:
+[0.000] [info] Pos(334.00, -13.12, 0.00) Rot(0.00, 0.00, 0.00) roadId 1 laneId -4 s 334.00 offset 0.00 t -13.12
+[0.000] [info] Init SuvC LongitudinalAction initState -> startTransition -> runningState
+[0.000] [info] Init MotorbikeD TeleportAction initState -> startTransition -> runningState
+[0.000] [info] Starting teleport Action
+[0.000] [info] MotorbikeD New position:
+[0.000] [info] Pos(320.00, -13.12, 0.00) Rot(0.00, 0.00, 0.00) roadId 1 laneId -4 s 320.00 offset 0.00 t -13.12
+[0.000] [info] Init MotorbikeD LongitudinalAction initState -> startTransition -> runningState
+[0.000] [info] Init CrateE TeleportAction initState -> startTransition -> runningState
+[0.000] [info] Starting teleport Action
+[0.000] [info] CrateE New position:
+[0.000] [info] Pos(185.00, -11.33, 0.00) Rot(6.27, 0.00, 0.00) roadId 1 laneId -4 s 185.00 offset 0.00 t -11.33
+[0.000] [info] storyBoard initState -> startTransition -> runningState
+[0.000] [info] MainStory initState -> startTransition -> runningState
+[0.000] [info] MainAct initState -> initToStandbyTransition -> standbyState
+[0.000] [info] Init EnvironmentAction runningState -> stopTransition -> completeState
+[0.000] [info] Init Ego TeleportAction runningState -> endTransition -> completeState
+[0.000] [info] Init Ego LongitudinalAction runningState -> endTransition -> completeState
+[0.000] [info] Init TruckA TeleportAction runningState -> endTransition -> completeState
+[0.000] [info] Init TruckA LongitudinalAction runningState -> endTransition -> completeState
+[0.000] [info] Init CarB TeleportAction runningState -> endTransition -> completeState
+[0.000] [info] Init CarB LongitudinalAction runningState -> endTransition -> completeState
+[0.000] [info] Init SuvC TeleportAction runningState -> endTransition -> completeState
+[0.000] [info] Init SuvC LongitudinalAction runningState -> endTransition -> completeState
+[0.000] [info] Init MotorbikeD TeleportAction runningState -> endTransition -> completeState
+[0.000] [info] Init MotorbikeD LongitudinalAction runningState -> endTransition -> completeState
+[0.000] [info] Init CrateE TeleportAction runningState -> endTransition -> completeState
+[0.050] [info] MainActStart: true, delay: 0.00, 0.0500 > 0.0000, edge: rising
+[0.050] [info] Trigger /------------------------------------------------
+[0.050] [info] Group 0:
+[0.050] [info] MainActStart: true
+[0.050] [info] Trigger  ------------------------------------------------/
+[0.050] [info] MainAct standbyState -> startTransition -> runningState
+[0.050] [info] TruckAGroup initState -> startTransition -> runningState
+[0.050] [info] TruckAManeuver initState -> startTransition -> runningState
+[0.050] [info] TruckAHoldSpeed initState -> initToStandbyTransition -> standbyState
+[0.050] [info] TruckAHydroplaneBrake initState -> initToStandbyTransition -> standbyState
+[0.050] [info] TruckAHydroplaneDrift initState -> initToStandbyTransition -> standbyState
+[0.050] [info] CarBGroup initState -> startTransition -> runningState
+[0.050] [info] CarBManeuver initState -> startTransition -> runningState
+[0.050] [info] CarBParallelHold initState -> initToStandbyTransition -> standbyState
+[0.050] [info] SuvCGroup initState -> startTransition -> runningState
+[0.050] [info] SuvCManeuver initState -> startTransition -> runningState
+[0.050] [info] SuvCHoldSpeed initState -> initToStandbyTransition -> standbyState
+[0.050] [info] SuvCForcedMerge initState -> initToStandbyTransition -> standbyState
+[0.050] [info] SuvCCompressionBrake initState -> initToStandbyTransition -> standbyState
+[0.050] [info] MotorbikeDGroup initState -> startTransition -> runningState
+[0.050] [info] MotorbikeDManeuver initState -> startTransition -> runningState
+[0.050] [info] MotorbikeDHoldSpeed initState -> initToStandbyTransition -> standbyState
+[0.050] [info] MotorbikeDCutIn initState -> initToStandbyTransition -> standbyState
+[0.050] [info] MotorbikeDSurge initState -> initToStandbyTransition -> standbyState
+[0.050] [info] CrateEGroup initState -> startTransition -> runningState
+[0.050] [info] CrateEManeuver initState -> startTransition -> runningState
+[0.050] [info] CrateEDrop initState -> initToStandbyTransition -> standbyState
+[0.050] [info] CrateEDrift initState -> initToStandbyTransition -> standbyState
+[0.250] [info] TruckAHoldStart: true, delay: 0.00, 0.2500 > 0.2000, edge: rising
+[0.250] [info] Trigger /------------------------------------------------
+[0.250] [info] Group 0:
+[0.250] [info] TruckAHoldStart: true
+[0.250] [info] Trigger  ------------------------------------------------/
+[0.250] [info] TruckAHoldSpeed standbyState -> startTransition -> runningState
+[0.250] [info] TruckAHoldSpeedAction initState -> startTransition -> runningState
+[0.250] [info] CarBHoldStart: true, delay: 0.00, 0.2500 > 0.2000, edge: rising
+[0.250] [info] Trigger /------------------------------------------------
+[0.250] [info] Group 0:
+[0.250] [info] CarBHoldStart: true
+[0.250] [info] Trigger  ------------------------------------------------/
+[0.250] [info] CarBParallelHold standbyState -> startTransition -> runningState
+[0.250] [info] CarBHoldSpeedAction initState -> startTransition -> runningState
+[0.250] [info] SuvCHoldStart: true, delay: 0.00, 0.2500 > 0.2000, edge: rising
+[0.250] [info] Trigger /------------------------------------------------
+[0.250] [info] Group 0:
+[0.250] [info] SuvCHoldStart: true
+[0.250] [info] Trigger  ------------------------------------------------/
+[0.250] [info] SuvCHoldSpeed standbyState -> startTransition -> runningState
+[0.250] [info] SuvCHoldSpeedAction initState -> startTransition -> runningState
+[0.250] [info] MotorbikeDHoldStart: true, delay: 0.00, 0.2500 > 0.2000, edge: rising
+[0.250] [info] Trigger /------------------------------------------------
+[0.250] [info] Group 0:
+[0.250] [info] MotorbikeDHoldStart: true
+[0.250] [info] Trigger  ------------------------------------------------/
+[0.250] [info] MotorbikeDHoldSpeed standbyState -> startTransition -> runningState
+[0.250] [info] MotorbikeDHoldSpeedAction initState -> startTransition -> runningState
+[0.800] [info] CarBHoldSpeedAction runningState -> endTransition -> completeState
+[0.800] [info] CarBParallelHold complete after 1 execution
+[0.800] [info] CarBParallelHold runningState -> endTransition -> completeState
+[0.800] [info] CarBManeuver runningState -> endTransition -> completeState
+[0.800] [info] CarBGroup complete after 1 execution
+[0.800] [info] CarBGroup runningState -> endTransition -> completeState
+[1.000] [info] TruckAHoldSpeedAction runningState -> endTransition -> completeState
+[1.000] [info] TruckAHoldSpeed complete after 1 execution
+[1.000] [info] TruckAHoldSpeed runningState -> endTransition -> completeState
+[1.000] [info] SuvCHoldSpeedAction runningState -> endTransition -> completeState
+[1.000] [info] SuvCHoldSpeed complete after 1 execution
+[1.000] [info] SuvCHoldSpeed runningState -> endTransition -> completeState
+[1.000] [info] MotorbikeDHoldSpeedAction runningState -> endTransition -> completeState
+[1.000] [info] MotorbikeDHoldSpeed complete after 1 execution
+[1.000] [info] MotorbikeDHoldSpeed runningState -> endTransition -> completeState
+[2.450] [info] TruckAHydroplaneBrakeTrigger: true, delay: 0.00, rel_dist: 59.87 < 60.00, edge: rising
+[2.450] [info] Trigger /------------------------------------------------
+[2.450] [info] Group 0:
+[2.450] [info] TruckAHydroplaneBrakeTrigger: true
+[2.450] [info] Triggering entity 0: Ego
+[2.450] [info] Trigger  ------------------------------------------------/
+[2.450] [info] TruckAHydroplaneBrake standbyState -> startTransition -> runningState
+[2.450] [info] TruckABrakeAction initState -> startTransition -> runningState
+[2.450] [info] TruckADriftTrigger: true, delay: 0.00, rel_dist: 59.87 < 60.00, edge: rising
+[2.450] [info] Trigger /------------------------------------------------
+[2.450] [info] Group 0:
+[2.450] [info] TruckADriftTrigger: true
+[2.450] [info] Triggering entity 0: Ego
+[2.450] [info] Trigger  ------------------------------------------------/
+[2.450] [info] Other events ongoing, TruckAHydroplaneDrift will run in parallel
+[2.450] [info] TruckAHydroplaneDrift standbyState -> startTransition -> runningState
+[2.450] [info] TruckADriftAction initState -> startTransition -> runningState
+[3.600] [info] TruckABrakeAction runningState -> endTransition -> completeState
+[3.600] [info] TruckAHydroplaneBrake complete after 1 execution
+[3.600] [info] TruckAHydroplaneBrake runningState -> endTransition -> completeState
+[4.250] [info] TruckADriftAction runningState -> endTransition -> completeState
+[4.250] [info] TruckAHydroplaneDrift complete after 1 execution
+[4.250] [info] TruckAHydroplaneDrift runningState -> endTransition -> completeState
+[4.250] [info] TruckAManeuver runningState -> endTransition -> completeState
+[4.250] [info] TruckAGroup complete after 1 execution
+[4.250] [info] TruckAGroup runningState -> endTransition -> completeState
+[4.600] [info] SuvCForcedMergeTrigger: true, delay: 0.00, rel_dist: 45.82 < 46.00, edge: rising
+[4.600] [info] Trigger /------------------------------------------------
+[4.600] [info] Group 0:
+[4.600] [info] SuvCForcedMergeTrigger: true
+[4.600] [info] Triggering entity 0: Ego
+[4.600] [info] Trigger  ------------------------------------------------/
+[4.600] [info] SuvCForcedMerge standbyState -> startTransition -> runningState
+[4.600] [info] SuvCMergeAction initState -> startTransition -> runningState
+[4.600] [info] SuvCBrakeTrigger: true, delay: 0.00, rel_dist: 45.82 < 46.00, edge: rising
+[4.600] [info] Trigger /------------------------------------------------
+[4.600] [info] Group 0:
+[4.600] [info] SuvCBrakeTrigger: true
+[4.600] [info] Triggering entity 0: Ego
+[4.600] [info] Trigger  ------------------------------------------------/
+[4.600] [info] Other events ongoing, SuvCCompressionBrake will run in parallel
+[4.600] [info] SuvCCompressionBrake standbyState -> startTransition -> runningState
+[4.600] [info] SuvCBrakeAction initState -> startTransition -> runningState
+[5.950] [info] SuvCBrakeAction runningState -> endTransition -> completeState
+[5.950] [info] SuvCCompressionBrake complete after 1 execution
+[5.950] [info] SuvCCompressionBrake runningState -> endTransition -> completeState
+[6.200] [info] MotorbikeDCutInTrigger: true, delay: 0.00, rel_dist: 33.82 < 34.00, edge: rising
+[6.200] [info] Trigger /------------------------------------------------
+[6.200] [info] Group 0:
+[6.200] [info] MotorbikeDCutInTrigger: true
+[6.200] [info] Triggering entity 0: Ego
+[6.200] [info] Trigger  ------------------------------------------------/
+[6.200] [info] MotorbikeDCutIn standbyState -> startTransition -> runningState
+[6.200] [info] MotorbikeDCutInAction initState -> startTransition -> runningState
+[6.200] [info] MotorbikeDSurgeTrigger: true, delay: 0.00, rel_dist: 33.82 < 34.00, edge: rising
+[6.200] [info] Trigger /------------------------------------------------
+[6.200] [info] Group 0:
+[6.200] [info] MotorbikeDSurgeTrigger: true
+[6.200] [info] Triggering entity 0: Ego
+[6.200] [info] Trigger  ------------------------------------------------/
+[6.200] [info] Other events ongoing, MotorbikeDSurge will run in parallel
+[6.200] [info] MotorbikeDSurge standbyState -> startTransition -> runningState
+[6.200] [info] MotorbikeDSurgeAction initState -> startTransition -> runningState
+[6.750] [info] CrateEDropTrigger: true, delay: 0.00, rel_dist: 29.70 < 30.00, edge: rising
+[6.750] [info] Trigger /------------------------------------------------
+[6.750] [info] Group 0:
+[6.750] [info] CrateEDropTrigger: true
+[6.750] [info] Triggering entity 0: Ego
+[6.750] [info] Trigger  ------------------------------------------------/
+[6.750] [info] CrateEDrop standbyState -> startTransition -> runningState
+[6.750] [info] CrateEDropAction initState -> startTransition -> runningState
+[6.750] [info] Starting teleport Action
+[6.750] [info] CrateE New position:
+[6.750] [info] Pos(447.00, -8.82, 0.00) Rot(0.00, 0.00, 0.00) roadId 1 laneId -3 s 447.00 offset 0.55 t -8.82
+[6.750] [info] SuvCMergeAction runningState -> endTransition -> completeState
+[6.750] [info] SuvCForcedMerge complete after 1 execution
+[6.750] [info] SuvCForcedMerge runningState -> endTransition -> completeState
+[6.750] [info] SuvCManeuver runningState -> endTransition -> completeState
+[6.750] [info] SuvCGroup complete after 1 execution
+[6.750] [info] SuvCGroup runningState -> endTransition -> completeState
+[6.750] [info] CrateEDropAction runningState -> endTransition -> completeState
+[6.750] [info] CrateEDrop complete after 1 execution
+[6.750] [info] CrateEDrop runningState -> endTransition -> completeState
+[6.850] [info] MotorbikeDSurgeAction runningState -> endTransition -> completeState
+[6.850] [info] MotorbikeDSurge complete after 1 execution
+[6.850] [info] MotorbikeDSurge runningState -> endTransition -> completeState
+[7.200] [info] MiscCollisionStop: true, delay: 0.00, 1 collision(s): Ego and CrateE, edge: rising
+[7.200] [info] Trigger /------------------------------------------------
+[7.200] [info] Group 0:
+[7.200] [info] VehicleCollisionStop: false
+[7.200] [info] Group 1:
+[7.200] [info] MiscCollisionStop: true
+[7.200] [info] Triggering entity 0: Ego
+[7.200] [info] Group 2:
+[7.200] [info] SuccessfulClearance: false
+[7.200] [info] Group 3:
+[7.200] [info] MaxRuntimeStop: false
+[7.200] [info] Trigger  ------------------------------------------------/
+[7.200] [info] MotorbikeDCutInAction runningState -> stopTransition -> completeState
+[7.200] [info] MotorbikeDCutIn complete after 1 execution
+[7.200] [info] MotorbikeDCutIn runningState -> endTransition -> completeState
+[7.200] [info] MotorbikeDManeuver runningState -> endTransition -> completeState
+[7.200] [info] MotorbikeDGroup complete after 1 execution
+[7.200] [info] MotorbikeDGroup runningState -> endTransition -> completeState
+[7.200] [info] CrateEDrift standbyState -> stopTransition -> completeState
+[7.200] [info] CrateEManeuver runningState -> endTransition -> completeState
+[7.200] [info] CrateEGroup complete after 1 execution
+[7.200] [info] CrateEGroup runningState -> endTransition -> completeState
+[7.200] [info] MainAct runningState -> endTransition -> completeState
+[7.200] [info] MainStory runningState -> endTransition -> completeState
+[7.200] [info] storyBoard runningState -> stopTransition -> completeState
+[7.200] [info] Closing

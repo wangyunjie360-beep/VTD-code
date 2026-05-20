@@ -1,0 +1,39 @@
+{
+  "element": "Entities",
+  "description": "Schema-derived Entities element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "ScenarioDefinition",
+      "type_ref": "Entities",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "ScenarioDefinition"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "ScenarioObject",
+      "cardinality": "0..unbounded"
+    },
+    {
+      "name": "EntitySelection",
+      "cardinality": "0..unbounded"
+    }
+  ],
+  "child_order": [
+    "ScenarioObject",
+    "EntitySelection"
+  ],
+  "multiplicity": {
+    "ScenarioObject": "0..unbounded",
+    "EntitySelection": "0..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1201; knowledge/raw/schema/OpenSCENARIO.xsd#L2090"
+}

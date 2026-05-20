@@ -1,0 +1,39 @@
+{
+  "element": "MotionEnd",
+  "description": "Schema-derived MotionEnd element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Clothoid",
+      "type_ref": "Motion",
+      "deprecated": false
+    },
+    {
+      "parent_context": "ClothoidSpline",
+      "type_ref": "Motion",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Clothoid",
+    "ClothoidSpline"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [
+    {
+      "name": "acceleration_longitudinal",
+      "type": "Double"
+    },
+    {
+      "name": "speed_longitudinal",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L973; knowledge/raw/schema/OpenSCENARIO.xsd#L987; knowledge/raw/schema/OpenSCENARIO.xsd#L1588"
+}

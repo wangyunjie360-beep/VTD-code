@@ -1,0 +1,32 @@
+{
+  "element": "ValueConstraint",
+  "description": "Single value constraint inside a ConstraintGroup. It compares a String-valued candidate against the supplied rule and value.",
+  "parent_contexts": [
+    "ConstraintGroup"
+  ],
+  "required_attributes": [
+    {
+      "name": "rule",
+      "type": "Rule"
+    },
+    {
+      "name": "value",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "rule": [
+      "equalTo",
+      "greaterThan",
+      "lessThan",
+      "greaterOrEqual",
+      "lessOrEqual",
+      "notEqualTo"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L549; knowledge/raw/schema/OpenSCENARIO.xsd#L2544; knowledge/raw/schema/OpenSCENARIO.xsd#L2550"
+}

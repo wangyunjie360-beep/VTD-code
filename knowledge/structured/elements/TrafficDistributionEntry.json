@@ -1,0 +1,61 @@
+{
+  "element": "TrafficDistributionEntry",
+  "description": "Weighted traffic entry. EntityDistribution is required and may be followed by Properties and ParameterDeclarations.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Catalog",
+      "type_ref": "TrafficDistributionEntry",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TrafficDistribution",
+      "type_ref": "TrafficDistributionEntry",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Catalog",
+    "TrafficDistribution"
+  ],
+  "required_attributes": [
+    {
+      "name": "weight",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "name",
+      "type": "String"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "EntityDistribution",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "Properties",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "ParameterDeclarations",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [
+    "EntityDistribution",
+    "Properties",
+    "ParameterDeclarations"
+  ],
+  "multiplicity": {
+    "EntityDistribution": "1..1",
+    "Properties": "0..1",
+    "ParameterDeclarations": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L932; knowledge/raw/schema/OpenSCENARIO.xsd#L2332; knowledge/raw/schema/OpenSCENARIO.xsd#L2336"
+}

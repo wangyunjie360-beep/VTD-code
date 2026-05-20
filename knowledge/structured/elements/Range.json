@@ -1,0 +1,63 @@
+{
+  "element": "Range",
+  "description": "Schema-derived Range element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "DistributionRange",
+      "type_ref": "Range",
+      "deprecated": false
+    },
+    {
+      "parent_context": "Bin",
+      "type_ref": "Range",
+      "deprecated": false
+    },
+    {
+      "parent_context": "LogNormalDistribution",
+      "type_ref": "Range",
+      "deprecated": false
+    },
+    {
+      "parent_context": "NormalDistribution",
+      "type_ref": "Range",
+      "deprecated": false
+    },
+    {
+      "parent_context": "PoissonDistribution",
+      "type_ref": "Range",
+      "deprecated": false
+    },
+    {
+      "parent_context": "UniformDistribution",
+      "type_ref": "Range",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Bin",
+    "DistributionRange",
+    "LogNormalDistribution",
+    "NormalDistribution",
+    "PoissonDistribution",
+    "UniformDistribution"
+  ],
+  "required_attributes": [
+    {
+      "name": "lowerLimit",
+      "type": "Double"
+    },
+    {
+      "name": "upperLimit",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1173; knowledge/raw/schema/OpenSCENARIO.xsd#L1381; knowledge/raw/schema/OpenSCENARIO.xsd#L1508; knowledge/raw/schema/OpenSCENARIO.xsd#L1596; knowledge/raw/schema/OpenSCENARIO.xsd#L1812; knowledge/raw/schema/OpenSCENARIO.xsd#L1907; knowledge/raw/schema/OpenSCENARIO.xsd#L2510"
+}

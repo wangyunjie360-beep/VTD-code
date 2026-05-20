@@ -1,0 +1,94 @@
+{
+  "element": "Orientation",
+  "description": "Schema-derived Orientation element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "GeoPosition",
+      "type_ref": "Orientation",
+      "deprecated": false
+    },
+    {
+      "parent_context": "LanePosition",
+      "type_ref": "Orientation",
+      "deprecated": false
+    },
+    {
+      "parent_context": "RelativeLanePosition",
+      "type_ref": "Orientation",
+      "deprecated": false
+    },
+    {
+      "parent_context": "RelativeObjectPosition",
+      "type_ref": "Orientation",
+      "deprecated": false
+    },
+    {
+      "parent_context": "RelativeRoadPosition",
+      "type_ref": "Orientation",
+      "deprecated": false
+    },
+    {
+      "parent_context": "RelativeWorldPosition",
+      "type_ref": "Orientation",
+      "deprecated": false
+    },
+    {
+      "parent_context": "RoadPosition",
+      "type_ref": "Orientation",
+      "deprecated": false
+    },
+    {
+      "parent_context": "RoutePosition",
+      "type_ref": "Orientation",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TrajectoryPosition",
+      "type_ref": "Orientation",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "GeoPosition",
+    "LanePosition",
+    "RelativeLanePosition",
+    "RelativeObjectPosition",
+    "RelativeRoadPosition",
+    "RelativeWorldPosition",
+    "RoadPosition",
+    "RoutePosition",
+    "TrajectoryPosition"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [
+    {
+      "name": "h",
+      "type": "Double"
+    },
+    {
+      "name": "p",
+      "type": "Double"
+    },
+    {
+      "name": "r",
+      "type": "Double"
+    },
+    {
+      "name": "type",
+      "type": "ReferenceContext"
+    }
+  ],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "type": [
+      "absolute",
+      "relative"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L455; knowledge/raw/schema/OpenSCENARIO.xsd#L1345; knowledge/raw/schema/OpenSCENARIO.xsd#L1449; knowledge/raw/schema/OpenSCENARIO.xsd#L1632; knowledge/raw/schema/OpenSCENARIO.xsd#L1946; knowledge/raw/schema/OpenSCENARIO.xsd#L1960; knowledge/raw/schema/OpenSCENARIO.xsd#L1969; knowledge/raw/schema/OpenSCENARIO.xsd#L2005; knowledge/raw/schema/OpenSCENARIO.xsd#L2036; knowledge/raw/schema/OpenSCENARIO.xsd#L2064; knowledge/raw/schema/OpenSCENARIO.xsd#L2476"
+}

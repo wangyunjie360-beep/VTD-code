@@ -1,0 +1,72 @@
+{
+  "element": "RelativeLanePosition",
+  "description": "Schema-derived RelativeLanePosition element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Position",
+      "type_ref": "RelativeLanePosition",
+      "deprecated": false
+    },
+    {
+      "parent_context": "PositionStart",
+      "type_ref": "RelativeLanePosition",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TargetPositionMaster",
+      "type_ref": "RelativeLanePosition",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TargetPosition",
+      "type_ref": "RelativeLanePosition",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Position",
+    "PositionStart",
+    "TargetPosition",
+    "TargetPositionMaster"
+  ],
+  "required_attributes": [
+    {
+      "name": "dLane",
+      "type": "Int"
+    },
+    {
+      "name": "entityRef",
+      "type": "String",
+      "reference_kind": "entity"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "ds",
+      "type": "Double"
+    },
+    {
+      "name": "dsLane",
+      "type": "Double"
+    },
+    {
+      "name": "offset",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "Orientation",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "Orientation": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1835; knowledge/raw/schema/OpenSCENARIO.xsd#L1944"
+}

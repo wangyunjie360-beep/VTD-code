@@ -1,0 +1,45 @@
+{
+  "element": "RearAxle",
+  "description": "Schema-derived RearAxle element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Axles",
+      "type_ref": "Axle",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Axles"
+  ],
+  "required_attributes": [
+    {
+      "name": "maxSteering",
+      "type": "Double"
+    },
+    {
+      "name": "positionX",
+      "type": "Double"
+    },
+    {
+      "name": "positionZ",
+      "type": "Double"
+    },
+    {
+      "name": "trackWidth",
+      "type": "Double"
+    },
+    {
+      "name": "wheelDiameter",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L868; knowledge/raw/schema/OpenSCENARIO.xsd#L878"
+}

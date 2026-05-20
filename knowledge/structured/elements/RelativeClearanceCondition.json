@@ -1,0 +1,57 @@
+{
+  "element": "RelativeClearanceCondition",
+  "description": "Schema-derived RelativeClearanceCondition element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "EntityCondition",
+      "type_ref": "RelativeClearanceCondition",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "EntityCondition"
+  ],
+  "required_attributes": [
+    {
+      "name": "freeSpace",
+      "type": "Boolean"
+    },
+    {
+      "name": "oppositeLanes",
+      "type": "Boolean"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "distanceBackward",
+      "type": "Double"
+    },
+    {
+      "name": "distanceForward",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "RelativeLaneRange",
+      "cardinality": "0..unbounded"
+    },
+    {
+      "name": "EntityRef",
+      "cardinality": "0..unbounded"
+    }
+  ],
+  "child_order": [
+    "RelativeLaneRange",
+    "EntityRef"
+  ],
+  "multiplicity": {
+    "RelativeLaneRange": "0..unbounded",
+    "EntityRef": "0..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1231; knowledge/raw/schema/OpenSCENARIO.xsd#L1925"
+}

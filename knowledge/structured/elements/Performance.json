@@ -1,0 +1,46 @@
+{
+  "element": "Performance",
+  "description": "Schema-derived Performance element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Vehicle",
+      "type_ref": "Performance",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Vehicle"
+  ],
+  "required_attributes": [
+    {
+      "name": "maxAcceleration",
+      "type": "Double"
+    },
+    {
+      "name": "maxDeceleration",
+      "type": "Double"
+    },
+    {
+      "name": "maxSpeed",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "maxAccelerationRate",
+      "type": "Double"
+    },
+    {
+      "name": "maxDecelerationRate",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1794; knowledge/raw/schema/OpenSCENARIO.xsd#L2604"
+}

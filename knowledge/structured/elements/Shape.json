@@ -1,0 +1,60 @@
+{
+  "element": "Shape",
+  "description": "Schema-derived Shape element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "Polyline",
+        "Clothoid",
+        "ClothoidSpline",
+        "Nurbs"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: Polyline, Clothoid, ClothoidSpline, Nurbs."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "Trajectory",
+      "type_ref": "Shape",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Trajectory"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Polyline",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "Clothoid",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "ClothoidSpline",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "Nurbs",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "Polyline|Clothoid|ClothoidSpline|Nurbs"
+  ],
+  "multiplicity": {
+    "Polyline": "1..1",
+    "Clothoid": "1..1",
+    "ClothoidSpline": "1..1",
+    "Nurbs": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2125; knowledge/raw/schema/OpenSCENARIO.xsd#L2461"
+}

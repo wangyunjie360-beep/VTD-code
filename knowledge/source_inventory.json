@@ -1,0 +1,24 @@
+{
+  "sources": [
+    {
+      "id": "osc-docs",
+      "kind": "doc",
+      "path": "knowledge/raw/docs"
+    },
+    {
+      "id": "osc-schema",
+      "kind": "schema",
+      "path": "knowledge/raw/schema"
+    },
+    {
+      "id": "osc-validator",
+      "kind": "validator",
+      "path": "knowledge/raw/validator"
+    },
+    {
+      "id": "vtd-runtime",
+      "kind": "runtime",
+      "path": "knowledge/structured/vtd"
+    }
+  ]
+}

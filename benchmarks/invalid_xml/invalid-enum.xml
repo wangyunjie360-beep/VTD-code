@@ -1,0 +1,26 @@
+<OpenScenario>
+  <FileHeader
+    author="task8"
+    date="2026-03-20T00:00:00"
+    description="Invalid fixture: Condition.conditionEdge uses an unsupported enum value."
+    revMajor="1"
+    revMinor="4"
+  />
+  <CatalogLocations />
+  <RoadNetwork />
+  <Entities />
+  <Storyboard>
+    <Init>
+      <Actions />
+    </Init>
+    <StopTrigger>
+      <ConditionGroup>
+        <Condition name="stop-after-time" delay="0" conditionEdge="sideways">
+          <ByValueCondition>
+            <SimulationTimeCondition value="5" rule="greaterThan" />
+          </ByValueCondition>
+        </Condition>
+      </ConditionGroup>
+    </StopTrigger>
+  </Storyboard>
+</OpenScenario>

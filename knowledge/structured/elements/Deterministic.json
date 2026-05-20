@@ -1,0 +1,46 @@
+{
+  "element": "Deterministic",
+  "description": "DistributionDefinition wrapper containing one or more DeterministicMultiParameterDistribution or DeterministicSingleParameterDistribution branches.",
+  "content_model_kind": "sequence",
+  "child_groups": [
+    {
+      "members": [
+        "DeterministicMultiParameterDistribution",
+        "DeterministicSingleParameterDistribution"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "DistributionDefinition",
+      "type_ref": "Deterministic",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "DistributionDefinition"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "DeterministicMultiParameterDistribution",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "DeterministicSingleParameterDistribution",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "DeterministicMultiParameterDistribution|DeterministicSingleParameterDistribution"
+  ],
+  "multiplicity": {
+    "DeterministicMultiParameterDistribution": "1..1",
+    "DeterministicSingleParameterDistribution": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1103; knowledge/raw/schema/OpenSCENARIO.xsd#L1167"
+}

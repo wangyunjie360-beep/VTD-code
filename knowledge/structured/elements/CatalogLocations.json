@@ -1,0 +1,71 @@
+{
+  "element": "CatalogLocations",
+  "description": "Schema-derived CatalogLocations element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "ScenarioDefinition",
+      "type_ref": "CatalogLocations",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "ScenarioDefinition"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "VehicleCatalog",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "ControllerCatalog",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "PedestrianCatalog",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "MiscObjectCatalog",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "EnvironmentCatalog",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "ManeuverCatalog",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "TrajectoryCatalog",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "RouteCatalog",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "TrafficDistributionEntryCatalog",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "VehicleCatalog": "0..1",
+    "ControllerCatalog": "0..1",
+    "PedestrianCatalog": "0..1",
+    "MiscObjectCatalog": "0..1",
+    "EnvironmentCatalog": "0..1",
+    "ManeuverCatalog": "0..1",
+    "TrajectoryCatalog": "0..1",
+    "RouteCatalog": "0..1",
+    "TrafficDistributionEntryCatalog": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L941; knowledge/raw/schema/OpenSCENARIO.xsd#L2088"
+}

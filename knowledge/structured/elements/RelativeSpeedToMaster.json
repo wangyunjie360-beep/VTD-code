@@ -1,0 +1,60 @@
+{
+  "element": "RelativeSpeedToMaster",
+  "description": "Schema-derived RelativeSpeedToMaster element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [
+    {
+      "members": [
+        "TargetDistanceSteadyState",
+        "TargetTimeSteadyState"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "FinalSpeed",
+      "type_ref": "RelativeSpeedToMaster",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "FinalSpeed"
+  ],
+  "required_attributes": [
+    {
+      "name": "speedTargetValueType",
+      "type": "SpeedTargetValueType"
+    },
+    {
+      "name": "value",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "TargetDistanceSteadyState",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "TargetTimeSteadyState",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "TargetDistanceSteadyState|TargetTimeSteadyState"
+  ],
+  "multiplicity": {
+    "TargetDistanceSteadyState": "1..1",
+    "TargetTimeSteadyState": "1..1"
+  },
+  "enum_constraints": {
+    "speedTargetValueType": [
+      "delta",
+      "factor"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L566; knowledge/raw/schema/OpenSCENARIO.xsd#L1314; knowledge/raw/schema/OpenSCENARIO.xsd#L1981"
+}

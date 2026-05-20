@@ -1,0 +1,48 @@
+{
+  "element": "Members",
+  "description": "Schema-derived Members element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "EntityRef",
+        "ByType"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: EntityRef, ByType."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "EntitySelection",
+      "type_ref": "SelectedEntities",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "EntitySelection"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "EntityRef",
+      "cardinality": "1..unbounded"
+    },
+    {
+      "name": "ByType",
+      "cardinality": "1..unbounded"
+    }
+  ],
+  "child_order": [
+    "EntityRef|ByType"
+  ],
+  "multiplicity": {
+    "EntityRef": "1..unbounded",
+    "ByType": "1..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1261; knowledge/raw/schema/OpenSCENARIO.xsd#L2107"
+}

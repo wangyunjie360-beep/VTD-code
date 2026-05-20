@@ -1,0 +1,38 @@
+{
+  "element": "FromLaneCoordinates",
+  "description": "Schema-derived FromLaneCoordinates element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "InRoutePosition",
+      "type_ref": "PositionInLaneCoordinates",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "InRoutePosition"
+  ],
+  "required_attributes": [
+    {
+      "name": "laneId",
+      "type": "String"
+    },
+    {
+      "name": "pathS",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "laneOffset",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1406; knowledge/raw/schema/OpenSCENARIO.xsd#L1841"
+}

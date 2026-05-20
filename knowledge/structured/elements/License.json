@@ -1,0 +1,38 @@
+{
+  "element": "License",
+  "description": "Schema-derived License element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "FileHeader",
+      "type_ref": "License",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "FileHeader"
+  ],
+  "required_attributes": [
+    {
+      "name": "name",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "resource",
+      "type": "String"
+    },
+    {
+      "name": "spdxId",
+      "type": "String"
+    }
+  ],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1302; knowledge/raw/schema/OpenSCENARIO.xsd#L1475"
+}

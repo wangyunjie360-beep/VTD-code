@@ -1,0 +1,26 @@
+{
+  "element": "AbsoluteTargetSpeed",
+  "description": "Absolute speed target selected by SpeedActionTarget.",
+  "contextual_variants": [
+    {
+      "parent_context": "SpeedActionTarget",
+      "type_ref": "AbsoluteTargetSpeed",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "SpeedActionTarget"
+  ],
+  "required_attributes": [
+    {
+      "name": "value",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L757"
+}

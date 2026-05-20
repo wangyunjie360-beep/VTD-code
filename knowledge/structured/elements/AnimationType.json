@@ -1,0 +1,60 @@
+{
+  "element": "AnimationType",
+  "description": "Schema-derived AnimationType element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "ComponentAnimation",
+        "PedestrianAnimation",
+        "AnimationFile",
+        "UserDefinedAnimation"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: ComponentAnimation, PedestrianAnimation, AnimationFile, UserDefinedAnimation."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "AnimationAction",
+      "type_ref": "AnimationType",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "AnimationAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "ComponentAnimation",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "PedestrianAnimation",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "AnimationFile",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "UserDefinedAnimation",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "ComponentAnimation|PedestrianAnimation|AnimationFile|UserDefinedAnimation"
+  ],
+  "multiplicity": {
+    "ComponentAnimation": "1..1",
+    "PedestrianAnimation": "1..1",
+    "AnimationFile": "1..1",
+    "UserDefinedAnimation": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L815; knowledge/raw/schema/OpenSCENARIO.xsd#L830"
+}

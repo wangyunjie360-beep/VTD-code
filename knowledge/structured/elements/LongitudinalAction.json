@@ -1,0 +1,52 @@
+{
+  "element": "LongitudinalAction",
+  "description": "Choice wrapper for longitudinal control. Exactly one of SpeedAction, LongitudinalDistanceAction, or SpeedProfileAction may be present.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "SpeedAction",
+        "LongitudinalDistanceAction",
+        "SpeedProfileAction"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: SpeedAction, LongitudinalDistanceAction, SpeedProfileAction."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "PrivateAction",
+      "type_ref": "LongitudinalAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "PrivateAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "SpeedAction",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "LongitudinalDistanceAction",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "SpeedProfileAction",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "SpeedAction": "0..1",
+    "LongitudinalDistanceAction": "0..1",
+    "SpeedProfileAction": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1513"
+}

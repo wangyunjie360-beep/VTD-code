@@ -1,0 +1,48 @@
+{
+  "element": "EnvironmentAction",
+  "description": "Global environment action wrapper. Exactly one inline Environment or CatalogReference must be selected.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "Environment",
+        "CatalogReference"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: Environment, CatalogReference."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "GlobalAction",
+      "type_ref": "EnvironmentAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "GlobalAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Environment",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "CatalogReference",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "Environment|CatalogReference"
+  ],
+  "multiplicity": {
+    "Environment": "1..1",
+    "CatalogReference": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1274; knowledge/raw/schema/OpenSCENARIO.xsd#L1363"
+}

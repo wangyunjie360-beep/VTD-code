@@ -1,0 +1,33 @@
+{
+  "element": "TrafficSignals",
+  "description": "RoadNetwork child containing zero or more TrafficSignalController entries.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "RoadNetwork",
+      "type_ref": "TrafficSignals",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "RoadNetwork"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "TrafficSignalController",
+      "cardinality": "0..unbounded"
+    }
+  ],
+  "child_order": [
+    "TrafficSignalController"
+  ],
+  "multiplicity": {
+    "TrafficSignalController": "0..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2030; knowledge/raw/schema/OpenSCENARIO.xsd#L2368"
+}

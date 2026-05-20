@@ -1,0 +1,92 @@
+{
+  "element": "DistanceCondition",
+  "description": "Schema-derived DistanceCondition element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [
+    "Some contextual variants of this element are deprecated in the local XSD."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "EntityCondition",
+      "type_ref": "DistanceCondition",
+      "deprecated": true
+    }
+  ],
+  "parent_contexts": [
+    "EntityCondition"
+  ],
+  "required_attributes": [
+    {
+      "name": "freespace",
+      "type": "Boolean"
+    },
+    {
+      "name": "rule",
+      "type": "Rule"
+    },
+    {
+      "name": "value",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "alongRoute",
+      "type": "Boolean"
+    },
+    {
+      "name": "coordinateSystem",
+      "type": "CoordinateSystem"
+    },
+    {
+      "name": "relativeDistanceType",
+      "type": "RelativeDistanceType"
+    },
+    {
+      "name": "routingAlgorithm",
+      "type": "RoutingAlgorithm"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "Position",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "Position": "1..1"
+  },
+  "enum_constraints": {
+    "rule": [
+      "equalTo",
+      "greaterThan",
+      "lessThan",
+      "greaterOrEqual",
+      "lessOrEqual",
+      "notEqualTo"
+    ],
+    "coordinateSystem": [
+      "entity",
+      "lane",
+      "road",
+      "trajectory",
+      "world"
+    ],
+    "relativeDistanceType": [
+      "lateral",
+      "longitudinal",
+      "cartesianDistance",
+      "euclidianDistance"
+    ],
+    "routingAlgorithm": [
+      "assignedRoute",
+      "fastest",
+      "leastIntersections",
+      "shortest",
+      "undefined"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L147; knowledge/raw/schema/OpenSCENARIO.xsd#L468; knowledge/raw/schema/OpenSCENARIO.xsd#L533; knowledge/raw/schema/OpenSCENARIO.xsd#L549; knowledge/raw/schema/OpenSCENARIO.xsd#L1151; knowledge/raw/schema/OpenSCENARIO.xsd#L1229"
+}

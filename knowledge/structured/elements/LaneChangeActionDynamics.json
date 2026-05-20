@@ -1,0 +1,58 @@
+{
+  "element": "LaneChangeActionDynamics",
+  "description": "Schema-derived LaneChangeActionDynamics element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "LaneChangeAction",
+      "type_ref": "TransitionDynamics",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "LaneChangeAction"
+  ],
+  "required_attributes": [
+    {
+      "name": "dynamicsDimension",
+      "type": "DynamicsDimension"
+    },
+    {
+      "name": "dynamicsShape",
+      "type": "DynamicsShape"
+    },
+    {
+      "name": "value",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "followingMode",
+      "type": "FollowingMode"
+    }
+  ],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "dynamicsDimension": [
+      "distance",
+      "rate",
+      "time"
+    ],
+    "dynamicsShape": [
+      "cubic",
+      "linear",
+      "sinusoidal",
+      "step"
+    ],
+    "followingMode": [
+      "follow",
+      "position"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L177; knowledge/raw/schema/OpenSCENARIO.xsd#L191; knowledge/raw/schema/OpenSCENARIO.xsd#L206; knowledge/raw/schema/OpenSCENARIO.xsd#L1419; knowledge/raw/schema/OpenSCENARIO.xsd#L2488"
+}

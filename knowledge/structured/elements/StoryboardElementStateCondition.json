@@ -1,0 +1,56 @@
+{
+  "element": "StoryboardElementStateCondition",
+  "description": "Schema-derived StoryboardElementStateCondition element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "ByValueCondition",
+      "type_ref": "StoryboardElementStateCondition",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "ByValueCondition"
+  ],
+  "required_attributes": [
+    {
+      "name": "state",
+      "type": "StoryboardElementState"
+    },
+    {
+      "name": "storyboardElementRef",
+      "type": "String",
+      "reference_kind": "storyboard_element"
+    },
+    {
+      "name": "storyboardElementType",
+      "type": "StoryboardElementType"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "state": [
+      "completeState",
+      "endTransition",
+      "runningState",
+      "skipTransition",
+      "standbyState",
+      "startTransition",
+      "stopTransition"
+    ],
+    "storyboardElementType": [
+      "act",
+      "action",
+      "event",
+      "maneuver",
+      "maneuverGroup",
+      "story"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L579; knowledge/raw/schema/OpenSCENARIO.xsd#L597; knowledge/raw/schema/OpenSCENARIO.xsd#L915; knowledge/raw/schema/OpenSCENARIO.xsd#L2213"
+}

@@ -1,0 +1,101 @@
+{
+  "element": "Pedestrian",
+  "description": "Schema-derived Pedestrian element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [
+    "Some contextual variants of this element are deprecated in the local XSD."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "Catalog",
+      "type_ref": "Pedestrian",
+      "deprecated": true
+    },
+    {
+      "parent_context": "EntityObject",
+      "type_ref": "Pedestrian",
+      "deprecated": true
+    }
+  ],
+  "parent_contexts": [
+    "Catalog",
+    "EntityObject"
+  ],
+  "required_attributes": [
+    {
+      "name": "mass",
+      "type": "Double"
+    },
+    {
+      "name": "name",
+      "type": "String"
+    },
+    {
+      "name": "pedestrianCategory",
+      "type": "PedestrianCategory"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "model",
+      "type": "String"
+    },
+    {
+      "name": "model3d",
+      "type": "String"
+    },
+    {
+      "name": "role",
+      "type": "Role"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "ParameterDeclarations",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "BoundingBox",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "Properties",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "ParameterDeclarations": "0..1",
+    "BoundingBox": "1..1",
+    "Properties": "0..1"
+  },
+  "enum_constraints": {
+    "pedestrianCategory": [
+      "animal",
+      "pedestrian",
+      "wheelchair"
+    ],
+    "role": [
+      "none",
+      "agriculture",
+      "ambulance",
+      "civil",
+      "construction",
+      "dangerousGoodsTransport",
+      "fire",
+      "fireBrigade",
+      "freightTransport",
+      "garbageCollection",
+      "military",
+      "other",
+      "police",
+      "publicTransport",
+      "roadAssistance",
+      "roadsideAssistance",
+      "specialTransport",
+      "trafficControl"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L361; knowledge/raw/schema/OpenSCENARIO.xsd#L485; knowledge/raw/schema/OpenSCENARIO.xsd#L926; knowledge/raw/schema/OpenSCENARIO.xsd#L1251; knowledge/raw/schema/OpenSCENARIO.xsd#L1764"
+}

@@ -1,0 +1,41 @@
+{
+  "element": "LaneChangeAction",
+  "description": "Schema-derived LaneChangeAction element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "LateralAction",
+      "type_ref": "LaneChangeAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "LateralAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [
+    {
+      "name": "targetLaneOffset",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "LaneChangeActionDynamics",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "LaneChangeTarget",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "LaneChangeActionDynamics": "1..1",
+    "LaneChangeTarget": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1417; knowledge/raw/schema/OpenSCENARIO.xsd#L1459"
+}

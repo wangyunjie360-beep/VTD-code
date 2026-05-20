@@ -1,0 +1,45 @@
+{
+  "element": "VehicleComponent",
+  "description": "Schema-derived VehicleComponent element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "ComponentAnimation",
+      "type_ref": "VehicleComponent",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "ComponentAnimation"
+  ],
+  "required_attributes": [
+    {
+      "name": "vehicleComponentType",
+      "type": "VehicleComponentType"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "vehicleComponentType": [
+      "hood",
+      "trunk",
+      "doorFrontRight",
+      "doorFrontLeft",
+      "doorRearRight",
+      "doorRearLeft",
+      "windowFrontRight",
+      "windowFrontLeft",
+      "windowRearRight",
+      "windowRearLeft",
+      "sideMirrors",
+      "sideMirrorRight",
+      "sideMirrorLeft"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L680; knowledge/raw/schema/OpenSCENARIO.xsd#L1028; knowledge/raw/schema/OpenSCENARIO.xsd#L2631"
+}

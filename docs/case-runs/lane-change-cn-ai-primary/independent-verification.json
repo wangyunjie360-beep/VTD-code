@@ -1,0 +1,21 @@
+{
+  "consistency": {
+    "intent_consistent": true,
+    "remaining_blockers": [],
+    "xml_intent_check": {
+      "extra": [],
+      "matched": [
+        "entity:ego",
+        "lane_change",
+        "speed_change",
+        "simulation_time",
+        "stop_trigger"
+      ],
+      "missing": []
+    }
+  },
+  "validation": {
+    "errors": [],
+    "ok": true
+  }
+}

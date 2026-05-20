@@ -1,0 +1,37 @@
+{
+  "element": "Center",
+  "description": "Schema-derived Center element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "BoundingBox",
+      "type_ref": "Center",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "BoundingBox"
+  ],
+  "required_attributes": [
+    {
+      "name": "x",
+      "type": "Double"
+    },
+    {
+      "name": "y",
+      "type": "Double"
+    },
+    {
+      "name": "z",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L884; knowledge/raw/schema/OpenSCENARIO.xsd#L961"
+}

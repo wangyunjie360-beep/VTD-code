@@ -1,0 +1,13 @@
+flowchart TD
+    A[本地 OpenSCENARIO.xsd] --> B[xsd_inventory.py<br/>清点 element/simpleType/complexType/group]
+    B --> C[xsd_parser.py<br/>逐元素解析]
+    C --> D[抽取属性/子元素/顺序/基数/枚举]
+    C --> E[推断 parent_context / contextual_variants]
+    C --> F[推断 reference_kind / semantic_constraints]
+    D --> G[生成 elements/*.json]
+    E --> G
+    F --> G
+    G --> H[schema_scope.json<br/>记录全量作用域和域划分]
+    G --> I[coverage_report.json<br/>检查缺口和质量]
+    H --> J[Runtime 加载 KnowledgeBase]
+    I --> J

@@ -1,0 +1,90 @@
+{
+  "element": "Weather",
+  "description": "Deprecated Environment child. The local XSD uses xsd:all for Sun, Fog, Precipitation, Wind, and DomeImage, and deprecated cloudState sits beside atmosphericPressure, temperature, and fractionalCloudCover.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [
+    "Some contextual variants of this element are deprecated in the local XSD."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "Environment",
+      "type_ref": "Weather",
+      "deprecated": true
+    }
+  ],
+  "parent_contexts": [
+    "Environment"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [
+    {
+      "name": "atmosphericPressure",
+      "type": "Double"
+    },
+    {
+      "name": "cloudState",
+      "type": "CloudState"
+    },
+    {
+      "name": "fractionalCloudCover",
+      "type": "FractionalCloudCover"
+    },
+    {
+      "name": "temperature",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "Sun",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "Fog",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "Precipitation",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "Wind",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "DomeImage",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "Sun": "0..1",
+    "Fog": "0..1",
+    "Precipitation": "0..1",
+    "Wind": "0..1",
+    "DomeImage": "0..1"
+  },
+  "enum_constraints": {
+    "cloudState": [
+      "cloudy",
+      "free",
+      "overcast",
+      "rainy",
+      "skyOff"
+    ],
+    "fractionalCloudCover": [
+      "zeroOktas",
+      "oneOktas",
+      "twoOktas",
+      "threeOktas",
+      "fourOktas",
+      "fiveOktas",
+      "sixOktas",
+      "sevenOktas",
+      "eightOktas",
+      "nineOktas"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L75; knowledge/raw/schema/OpenSCENARIO.xsd#L219; knowledge/raw/schema/OpenSCENARIO.xsd#L1269; knowledge/raw/schema/OpenSCENARIO.xsd#L2667"
+}

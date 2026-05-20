@@ -1,0 +1,48 @@
+{
+  "element": "TrafficSinkAction",
+  "description": "Deprecated TrafficAction branch that removes traffic near Position; radius is required and deprecated TrafficDefinition is optional.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [
+    "Some contextual variants of this element are deprecated in the local XSD."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "TrafficAction",
+      "type_ref": "TrafficSinkAction",
+      "deprecated": true
+    }
+  ],
+  "parent_contexts": [
+    "TrafficAction"
+  ],
+  "required_attributes": [
+    {
+      "name": "radius",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "rate",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "Position",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "TrafficDefinition",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "Position": "1..1",
+    "TrafficDefinition": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2301; knowledge/raw/schema/OpenSCENARIO.xsd#L2392"
+}

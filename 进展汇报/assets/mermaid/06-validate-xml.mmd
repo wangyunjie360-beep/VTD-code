@@ -1,0 +1,11 @@
+flowchart TD
+    A[XML 字符串] --> B[UTF-8 解析]
+    B --> C{XML 语法正确?}
+    C -->|否| D[返回 XMLSyntaxError 归一化结果]
+    C -->|是| E[加载本地 XMLSchema]
+    E --> F[schema.validate]
+    F --> G{是否通过?}
+    G -->|是| H[返回 ok=true]
+    G -->|否| I[提取 error_log]
+    I --> J[归一化为 line/column/message/rule_hint]
+    J --> K[返回 ok=false + errors]

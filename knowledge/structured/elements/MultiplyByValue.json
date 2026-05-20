@@ -1,0 +1,31 @@
+{
+  "element": "MultiplyByValue",
+  "description": "Multiplicative modify-rule leaf shared by parameter and variable actions. The parameter-side ParameterMultiplyByValueRule variant is deprecated, while VariableMultiplyByValueRule is current.",
+  "parent_contexts": [
+    "Rule"
+  ],
+  "required_attributes": [
+    {
+      "name": "value",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "contextual_variants": [
+    {
+      "parent_context": "Rule",
+      "type_ref": "ParameterMultiplyByValueRule",
+      "deprecated": true
+    },
+    {
+      "parent_context": "Rule",
+      "type_ref": "VariableMultiplyByValueRule",
+      "deprecated": false
+    }
+  ],
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1576; knowledge/raw/schema/OpenSCENARIO.xsd#L1740; knowledge/raw/schema/OpenSCENARIO.xsd#L2591; knowledge/raw/schema/OpenSCENARIO.xsd#L2594"
+}

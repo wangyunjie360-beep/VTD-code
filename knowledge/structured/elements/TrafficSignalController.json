@@ -1,0 +1,47 @@
+{
+  "element": "TrafficSignalController",
+  "description": "TrafficSignals child with required name and zero or more Phase entries.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "TrafficSignals",
+      "type_ref": "TrafficSignalController",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "TrafficSignals"
+  ],
+  "required_attributes": [
+    {
+      "name": "name",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "delay",
+      "type": "Double"
+    },
+    {
+      "name": "reference",
+      "type": "String"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "Phase",
+      "cardinality": "0..unbounded"
+    }
+  ],
+  "child_order": [
+    "Phase"
+  ],
+  "multiplicity": {
+    "Phase": "0..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2360; knowledge/raw/schema/OpenSCENARIO.xsd#L2370"
+}

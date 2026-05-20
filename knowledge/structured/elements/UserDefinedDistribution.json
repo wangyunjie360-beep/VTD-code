@@ -1,0 +1,35 @@
+{
+  "element": "UserDefinedDistribution",
+  "description": "User-supplied distribution hook shared by deterministic single-parameter and stochastic wrappers.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "DeterministicSingleParameterDistributionType",
+      "type_ref": "UserDefinedDistribution",
+      "deprecated": false
+    },
+    {
+      "parent_context": "StochasticDistributionType",
+      "type_ref": "UserDefinedDistribution",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "DeterministicSingleParameterDistributionType",
+    "StochasticDistributionType"
+  ],
+  "required_attributes": [
+    {
+      "name": "type",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1134; knowledge/raw/schema/OpenSCENARIO.xsd#L2196; knowledge/raw/schema/OpenSCENARIO.xsd#L2529"
+}

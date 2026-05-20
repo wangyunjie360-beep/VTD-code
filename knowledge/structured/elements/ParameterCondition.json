@@ -1,0 +1,40 @@
+{
+  "element": "ParameterCondition",
+  "description": "Parameter-based value condition. It compares the referenced parameter's String-valued content using the supplied rule and value.",
+  "parent_contexts": [
+    "ByValueCondition"
+  ],
+  "required_attributes": [
+    {
+      "name": "parameterRef",
+      "type": "String",
+      "reference_kind": "parameter"
+    },
+    {
+      "name": "rule",
+      "type": "Rule"
+    },
+    {
+      "name": "value",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "rule": [
+      "equalTo",
+      "greaterThan",
+      "lessThan",
+      "greaterOrEqual",
+      "lessOrEqual",
+      "notEqualTo"
+    ]
+  },
+  "semantic_constraints": [
+    "parameterRef must point at a declared scenario parameter."
+  ],
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L549; knowledge/raw/schema/OpenSCENARIO.xsd#L912; knowledge/raw/schema/OpenSCENARIO.xsd#L1716"
+}

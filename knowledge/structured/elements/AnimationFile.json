@@ -1,0 +1,38 @@
+{
+  "element": "AnimationFile",
+  "description": "Schema-derived AnimationFile element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "AnimationType",
+      "type_ref": "AnimationFile",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "AnimationType"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [
+    {
+      "name": "timeOffset",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "File",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "File"
+  ],
+  "multiplicity": {
+    "File": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L821; knowledge/raw/schema/OpenSCENARIO.xsd#L834"
+}

@@ -1,0 +1,48 @@
+{
+  "element": "LaneChangeTarget",
+  "description": "Schema-derived LaneChangeTarget element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "RelativeTargetLane",
+        "AbsoluteTargetLane"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: RelativeTargetLane, AbsoluteTargetLane."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "LaneChangeAction",
+      "type_ref": "LaneChangeTarget",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "LaneChangeAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "RelativeTargetLane",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "AbsoluteTargetLane",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "RelativeTargetLane|AbsoluteTargetLane"
+  ],
+  "multiplicity": {
+    "RelativeTargetLane": "1..1",
+    "AbsoluteTargetLane": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1420; knowledge/raw/schema/OpenSCENARIO.xsd#L1424"
+}

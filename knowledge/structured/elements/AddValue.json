@@ -1,0 +1,31 @@
+{
+  "element": "AddValue",
+  "description": "Additive modify-rule leaf shared by parameter and variable actions. The parameter-side ParameterAddValueRule variant is deprecated, while VariableAddValueRule is current.",
+  "parent_contexts": [
+    "Rule"
+  ],
+  "required_attributes": [
+    {
+      "name": "value",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "contextual_variants": [
+    {
+      "parent_context": "Rule",
+      "type_ref": "ParameterAddValueRule",
+      "deprecated": true
+    },
+    {
+      "parent_context": "Rule",
+      "type_ref": "VariableAddValueRule",
+      "deprecated": false
+    }
+  ],
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1575; knowledge/raw/schema/OpenSCENARIO.xsd#L1703; knowledge/raw/schema/OpenSCENARIO.xsd#L2565; knowledge/raw/schema/OpenSCENARIO.xsd#L2590"
+}

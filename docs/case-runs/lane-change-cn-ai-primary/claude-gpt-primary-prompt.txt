@@ -1,0 +1,94 @@
+You are the primary AI scenario generator.
+The local OpenSCENARIO MCP tools are only query, naming, validation, and consistency-check helpers.
+Do not treat the tools as the generator. You draft the XML yourself after querying evidence.
+
+Case request:
+Generate a VTD OpenSCENARIO case on an urban road in China: ego vehicle starts at 30 km/h; the scenario trigger is simulation time 5 seconds; at that trigger the ego vehicle performs a lane change to the left by one lane; the simulation stops at 20 seconds. Keep the XML minimal but schema-valid.
+
+Required workflow:
+1. Call build_generation_packet first.
+2. Resolve the open target-lane question as AbsoluteTargetLane value="-1" and record that assumption.
+3. Query retrieve_spec with kind="element" and get_element_schema before drafting ScenarioObject, Vehicle, Storyboard, LaneChangeAction, and SimulationTimeCondition blocks.
+4. Use at least one VTD naming/asset helper for the ego/runtime naming context.
+5. Draft the XML yourself as the primary AI.
+6. Call validate_xml on the full XML. If it fails, call explain_validation_errors or summarize_validation_repairs, repair only the affected XML, and validate again. Retry at most 3 times.
+7. Call check_xml_intent_consistency on the final XML. Use exactly this intent JSON so the helper can check the requested behavior:
+{
+  "parameters": [],
+  "entities": [
+    {
+      "name": "ego",
+      "type": "Vehicle",
+      "role": "primary"
+    }
+  ],
+  "environment": {},
+  "map_context": {
+    "road_type": "urban",
+    "country_code": "CN"
+  },
+  "init_actions": [
+    {
+      "type": "speed_change",
+      "mode": "initial_speed",
+      "entity": "ego",
+      "value": 8.333333,
+      "unit": "m/s",
+      "source_value": 30,
+      "source_unit": "km/h"
+    }
+  ],
+  "story_actions": [
+    {
+      "type": "speed_change",
+      "mode": "initial_speed",
+      "entity": "ego"
+    },
+    {
+      "type": "lane_change",
+      "entity": "ego",
+      "direction": "left",
+      "target": {
+        "type": "AbsoluteTargetLane",
+        "value": "-1"
+      }
+    }
+  ],
+  "triggers": [
+    {
+      "type": "simulation_time",
+      "value": 5.0,
+      "unit": "s"
+    }
+  ],
+  "stop_conditions": [
+    {
+      "type": "simulation_time",
+      "value": 20.0,
+      "unit": "s"
+    }
+  ],
+  "assumptions": [
+    "The target lane is resolved as AbsoluteTargetLane value=\"-1\"."
+  ]
+}
+Use checklist ["ego", "lane_change", "speed_change", "simulation_time", "stop_trigger"].
+
+Return final output as strict JSON only, no markdown and no code fences, with these keys:
+{
+  "primary_actor": "claude_code_gpt",
+  "model": "gpt-5.5",
+  "request": "Generate a VTD OpenSCENARIO case on an urban road in China: ego vehicle starts at 30 km/h; the scenario trigger is simulation time 5 seconds; at that trigger the ego vehicle performs a lane change to the left by one lane; the simulation stops at 20 seconds. Keep the XML minimal but schema-valid.",
+  "parsed_intent": {},
+  "xml_intent_check": [],
+  "tool_call_summary": [
+    {
+      "tool": "...",
+      "purpose": "..."
+    }
+  ],
+  "validation_ok": true,
+  "intent_consistent": true,
+  "remaining_blockers": [],
+  "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>..."
+}

@@ -1,0 +1,68 @@
+{
+  "element": "RelativeObjectPosition",
+  "description": "Schema-derived RelativeObjectPosition element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Position",
+      "type_ref": "RelativeObjectPosition",
+      "deprecated": false
+    },
+    {
+      "parent_context": "PositionStart",
+      "type_ref": "RelativeObjectPosition",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TargetPositionMaster",
+      "type_ref": "RelativeObjectPosition",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TargetPosition",
+      "type_ref": "RelativeObjectPosition",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Position",
+    "PositionStart",
+    "TargetPosition",
+    "TargetPositionMaster"
+  ],
+  "required_attributes": [
+    {
+      "name": "dx",
+      "type": "Double"
+    },
+    {
+      "name": "dy",
+      "type": "Double"
+    },
+    {
+      "name": "entityRef",
+      "type": "String",
+      "reference_kind": "entity"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "dz",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "Orientation",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "Orientation": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1831; knowledge/raw/schema/OpenSCENARIO.xsd#L1958"
+}

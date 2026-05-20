@@ -1,0 +1,40 @@
+{
+  "element": "VariableCondition",
+  "description": "Variable-based value condition. It compares the referenced variable's String-valued content using the supplied rule and value.",
+  "parent_contexts": [
+    "ByValueCondition"
+  ],
+  "required_attributes": [
+    {
+      "name": "variableRef",
+      "type": "String",
+      "reference_kind": "variable"
+    },
+    {
+      "name": "rule",
+      "type": "Rule"
+    },
+    {
+      "name": "value",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "rule": [
+      "equalTo",
+      "greaterThan",
+      "lessThan",
+      "greaterOrEqual",
+      "lessOrEqual",
+      "notEqualTo"
+    ]
+  },
+  "semantic_constraints": [
+    "variableRef must point at a declared scenario variable."
+  ],
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L549; knowledge/raw/schema/OpenSCENARIO.xsd#L919; knowledge/raw/schema/OpenSCENARIO.xsd#L2568"
+}

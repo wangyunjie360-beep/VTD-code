@@ -1,0 +1,44 @@
+{
+  "element": "LightStateAction",
+  "description": "Schema-derived LightStateAction element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "AppearanceAction",
+      "type_ref": "LightStateAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "AppearanceAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [
+    {
+      "name": "transitionTime",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "LightType",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "LightState",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "LightType",
+    "LightState"
+  ],
+  "multiplicity": {
+    "LightType": "1..1",
+    "LightState": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L840; knowledge/raw/schema/OpenSCENARIO.xsd#L1493"
+}

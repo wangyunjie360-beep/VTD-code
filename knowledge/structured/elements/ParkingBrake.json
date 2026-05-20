@@ -1,0 +1,58 @@
+{
+  "element": "ParkingBrake",
+  "description": "Override parking-brake input with an optional BrakePercent or BrakeForce branch and a deprecated scalar value attribute.",
+  "content_model_kind": "sequence",
+  "child_groups": [
+    {
+      "members": [
+        "BrakePercent",
+        "BrakeForce"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "The scalar value attribute is deprecated."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "OverrideControllerValueAction",
+      "type_ref": "OverrideParkingBrakeAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "OverrideControllerValueAction"
+  ],
+  "required_attributes": [
+    {
+      "name": "active",
+      "type": "Boolean"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "value",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "BrakePercent",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "BrakeForce",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "BrakePercent|BrakeForce"
+  ],
+  "multiplicity": {
+    "BrakePercent": "1..1",
+    "BrakeForce": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1657; knowledge/raw/schema/OpenSCENARIO.xsd#L1671"
+}

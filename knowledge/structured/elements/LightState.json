@@ -1,0 +1,57 @@
+{
+  "element": "LightState",
+  "description": "Schema-derived LightState element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "LightStateAction",
+      "type_ref": "LightState",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "LightStateAction"
+  ],
+  "required_attributes": [
+    {
+      "name": "mode",
+      "type": "LightMode"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "flashingOffDuration",
+      "type": "Double"
+    },
+    {
+      "name": "flashingOnDuration",
+      "type": "Double"
+    },
+    {
+      "name": "luminousIntensity",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "Color",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [
+    "Color"
+  ],
+  "multiplicity": {
+    "Color": "0..1"
+  },
+  "enum_constraints": {
+    "mode": [
+      "on",
+      "off",
+      "flashing"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L267; knowledge/raw/schema/OpenSCENARIO.xsd#L1484; knowledge/raw/schema/OpenSCENARIO.xsd#L1496"
+}

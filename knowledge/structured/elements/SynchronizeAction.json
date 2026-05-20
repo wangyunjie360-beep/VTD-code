@@ -1,0 +1,56 @@
+{
+  "element": "SynchronizeAction",
+  "description": "Schema-derived SynchronizeAction element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "PrivateAction",
+      "type_ref": "SynchronizeAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "PrivateAction"
+  ],
+  "required_attributes": [
+    {
+      "name": "masterEntityRef",
+      "type": "String",
+      "reference_kind": "entity"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "targetTolerance",
+      "type": "Double"
+    },
+    {
+      "name": "targetToleranceMaster",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "TargetPositionMaster",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "TargetPosition",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "FinalSpeed",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "TargetPositionMaster": "1..1",
+    "TargetPosition": "1..1",
+    "FinalSpeed": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1874; knowledge/raw/schema/OpenSCENARIO.xsd#L2226"
+}

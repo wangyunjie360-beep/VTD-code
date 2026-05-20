@@ -1,0 +1,51 @@
+{
+  "element": "RoadCondition",
+  "description": "Schema-derived RoadCondition element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Environment",
+      "type_ref": "RoadCondition",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Environment"
+  ],
+  "required_attributes": [
+    {
+      "name": "frictionScaleFactor",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "wetness",
+      "type": "Wetness"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "Properties",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [
+    "Properties"
+  ],
+  "multiplicity": {
+    "Properties": "0..1"
+  },
+  "enum_constraints": {
+    "wetness": [
+      "dry",
+      "moist",
+      "wetWithPuddles",
+      "lowFlooded",
+      "highFlooded"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L728; knowledge/raw/schema/OpenSCENARIO.xsd#L1270; knowledge/raw/schema/OpenSCENARIO.xsd#L2012"
+}

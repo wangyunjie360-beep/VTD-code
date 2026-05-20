@@ -1,0 +1,79 @@
+{
+  "element": "TrafficSwarmAction",
+  "description": "Deprecated TrafficAction branch centered on CentralObject. It requires the swarm ellipse attributes and can add TrafficDistribution, InitialSpeedRange, DirectionOfTravelDistribution, and deprecated TrafficDefinition.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [
+    "Some contextual variants of this element are deprecated in the local XSD."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "TrafficAction",
+      "type_ref": "TrafficSwarmAction",
+      "deprecated": true
+    }
+  ],
+  "parent_contexts": [
+    "TrafficAction"
+  ],
+  "required_attributes": [
+    {
+      "name": "innerRadius",
+      "type": "Double"
+    },
+    {
+      "name": "numberOfVehicles",
+      "type": "UnsignedInt"
+    },
+    {
+      "name": "offset",
+      "type": "Double"
+    },
+    {
+      "name": "semiMajorAxis",
+      "type": "Double"
+    },
+    {
+      "name": "semiMinorAxis",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "velocity",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "CentralObject",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "TrafficDefinition",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "TrafficDistribution",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "InitialSpeedRange",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "DirectionOfTravelDistribution",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "CentralObject": "1..1",
+    "TrafficDefinition": "0..1",
+    "TrafficDistribution": "0..1",
+    "InitialSpeedRange": "0..1",
+    "DirectionOfTravelDistribution": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2302; knowledge/raw/schema/OpenSCENARIO.xsd#L2419"
+}

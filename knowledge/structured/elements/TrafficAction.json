@@ -1,0 +1,71 @@
+{
+  "element": "TrafficAction",
+  "description": "Global traffic action wrapper. Exactly one of TrafficSourceAction, TrafficSinkAction, TrafficSwarmAction, TrafficAreaAction, or TrafficStopAction must be selected.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "TrafficSourceAction",
+        "TrafficSinkAction",
+        "TrafficSwarmAction",
+        "TrafficAreaAction",
+        "TrafficStopAction"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: TrafficSourceAction, TrafficSinkAction, TrafficSwarmAction, TrafficAreaAction, TrafficStopAction."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "GlobalAction",
+      "type_ref": "TrafficAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "GlobalAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [
+    {
+      "name": "trafficName",
+      "type": "String"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "TrafficSourceAction",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "TrafficSinkAction",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "TrafficSwarmAction",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "TrafficAreaAction",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "TrafficStopAction",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "TrafficSourceAction|TrafficSinkAction|TrafficSwarmAction|TrafficAreaAction|TrafficStopAction"
+  ],
+  "multiplicity": {
+    "TrafficSourceAction": "1..1",
+    "TrafficSinkAction": "1..1",
+    "TrafficSwarmAction": "1..1",
+    "TrafficAreaAction": "1..1",
+    "TrafficStopAction": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1370; knowledge/raw/schema/OpenSCENARIO.xsd#L2298"
+}

@@ -1,0 +1,60 @@
+{
+  "element": "Route",
+  "description": "Schema-derived Route element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "AssignRouteAction",
+      "type_ref": "Route",
+      "deprecated": false
+    },
+    {
+      "parent_context": "Catalog",
+      "type_ref": "Route",
+      "deprecated": false
+    },
+    {
+      "parent_context": "RouteRef",
+      "type_ref": "Route",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "AssignRouteAction",
+    "Catalog",
+    "RouteRef"
+  ],
+  "required_attributes": [
+    {
+      "name": "closed",
+      "type": "Boolean"
+    },
+    {
+      "name": "name",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "ParameterDeclarations",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "Waypoint",
+      "cardinality": "2..unbounded"
+    }
+  ],
+  "child_order": [
+    "ParameterDeclarations",
+    "Waypoint"
+  ],
+  "multiplicity": {
+    "ParameterDeclarations": "0..1",
+    "Waypoint": "2..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L861; knowledge/raw/schema/OpenSCENARIO.xsd#L931; knowledge/raw/schema/OpenSCENARIO.xsd#L2048; knowledge/raw/schema/OpenSCENARIO.xsd#L2070"
+}

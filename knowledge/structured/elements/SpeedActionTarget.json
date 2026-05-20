@@ -1,0 +1,48 @@
+{
+  "element": "SpeedActionTarget",
+  "description": "Choice wrapper for absolute or relative speed targets.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "RelativeTargetSpeed",
+        "AbsoluteTargetSpeed"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: RelativeTargetSpeed, AbsoluteTargetSpeed."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "SpeedAction",
+      "type_ref": "SpeedActionTarget",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "SpeedAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "RelativeTargetSpeed",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "AbsoluteTargetSpeed",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [
+    "RelativeTargetSpeed|AbsoluteTargetSpeed"
+  ],
+  "multiplicity": {
+    "RelativeTargetSpeed": "0..1",
+    "AbsoluteTargetSpeed": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2143"
+}

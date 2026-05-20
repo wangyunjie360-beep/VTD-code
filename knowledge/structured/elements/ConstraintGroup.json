@@ -1,0 +1,24 @@
+{
+  "element": "ConstraintGroup",
+  "description": "Ordered group of one or more ValueConstraint entries attached to a ParameterDeclaration.",
+  "parent_contexts": [
+    "ParameterDeclaration"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "ValueConstraint",
+      "cardinality": "1..*"
+    }
+  ],
+  "child_order": [
+    "ValueConstraint"
+  ],
+  "multiplicity": {
+    "ValueConstraint": "1..*"
+  },
+  "enum_constraints": {},
+  "content_model_kind": "sequence",
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1723; knowledge/raw/schema/OpenSCENARIO.xsd#L2548"
+}

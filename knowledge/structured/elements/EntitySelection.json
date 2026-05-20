@@ -1,0 +1,38 @@
+{
+  "element": "EntitySelection",
+  "description": "Schema-derived EntitySelection element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Entities",
+      "type_ref": "EntitySelection",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Entities"
+  ],
+  "required_attributes": [
+    {
+      "name": "name",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Members",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "Members"
+  ],
+  "multiplicity": {
+    "Members": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1204; knowledge/raw/schema/OpenSCENARIO.xsd#L1259"
+}

@@ -1,0 +1,174 @@
+{
+  "prompt_path": "D:/wyj/OPenscenario/benchmarks/prompts/minimal-single-vehicle.md",
+  "prompt_text": "# Minimal Single Vehicle\n\n## User Request\nCreate the smallest reasonable OpenSCENARIO XML scenario for one vehicle named `ego`. The vehicle should start already on the road, continue at a steady speed, and the scenario should stop after 5 seconds of simulation time.\n\n## Coverage Expectations\n- One scenario object for `ego`\n- Conservative init behavior with no unnecessary catalogs or controllers\n- A time-based stop condition\n- No extra actors, weather, or traffic complexity unless schema-required\n",
+  "guidance": {
+    "query": "storyboard",
+    "element": "Storyboard",
+    "parent_context": null,
+    "retrieval_hits": [
+      {
+        "title": "Storyboard",
+        "kind": "element",
+        "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2091; knowledge/raw/schema/OpenSCENARIO.xsd#L2206",
+        "source_paths": [
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L2091",
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L2206"
+        ],
+        "summary": "Schema-derived Storyboard element with context-dependent type variants captured from the local XSD.",
+        "constraints": [
+          "Required children: Init",
+          "Content model: sequence",
+          "Child order: Init -> Story -> StopTrigger",
+          "Contextual variants: ScenarioDefinition -> Storyboard"
+        ],
+        "parent_contexts": [
+          "ScenarioDefinition"
+        ],
+        "strategy_summary": [
+          "Resolve contextual variant before emitting this shared element name.",
+          "Preserve child order: Init -> Story -> StopTrigger.",
+          "Keep required children present: Init."
+        ]
+      },
+      {
+        "title": "Init",
+        "kind": "element",
+        "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1390; knowledge/raw/schema/OpenSCENARIO.xsd#L2208",
+        "source_paths": [
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L1390",
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L2208"
+        ],
+        "summary": "Schema-derived Init element with context-dependent type variants captured from the local XSD.",
+        "constraints": [
+          "Required children: Actions",
+          "Content model: sequence",
+          "Child order: Actions",
+          "Contextual variants: Storyboard -> Init"
+        ],
+        "parent_contexts": [
+          "Storyboard"
+        ],
+        "strategy_summary": [
+          "Resolve contextual variant before emitting this shared element name.",
+          "Preserve child order: Actions.",
+          "Keep required children present: Actions."
+        ]
+      },
+      {
+        "title": "OpenSCENARIO",
+        "kind": "element",
+        "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L14; knowledge/raw/schema/OpenSCENARIO.xsd#L1618",
+        "source_paths": [
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L14",
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L1618"
+        ],
+        "summary": "Schema-derived OpenSCENARIO element with context-dependent type variants captured from the local XSD.",
+        "constraints": [
+          "Required children: FileHeader, CatalogLocations, RoadNetwork, Entities, Storyboard, Catalog, ParameterValueDistribution",
+          "Content model: sequence",
+          "Choice groups: ParameterDeclarations | VariableDeclarations | MonitorDeclarations | CatalogLocations | RoadNetwork | Entities | Storyboard | Catalog | ParameterValueDistribution",
+          "Child order: FileHeader -> ParameterDeclarations|VariableDeclarations|MonitorDeclarations|CatalogLocations|RoadNetwork|Entities|Storyboard|Catalog|ParameterValueDistribution",
+          "Contextual variants: OpenScenario"
+        ],
+        "strategy_summary": [
+          "Resolve contextual variant before emitting this shared element name.",
+          "Preserve child order: FileHeader -> ParameterDeclarations|VariableDeclarations|MonitorDeclarations|CatalogLocations|RoadNetwork|Entities|Storyboard|Catalog|ParameterValueDistribution.",
+          "Keep required children present: FileHeader, CatalogLocations, RoadNetwork, Entities, Storyboard, Catalog, ParameterValueDistribution."
+        ]
+      }
+    ],
+    "element_schema": {
+      "element": "Storyboard",
+      "description": "Schema-derived Storyboard element with context-dependent type variants captured from the local XSD.",
+      "content_model_kind": "sequence",
+      "child_groups": [],
+      "semantic_constraints": [],
+      "contextual_variants": [
+        {
+          "parent_context": "ScenarioDefinition",
+          "type_ref": "Storyboard",
+          "deprecated": false
+        }
+      ],
+      "parent_contexts": [
+        "ScenarioDefinition"
+      ],
+      "required_attributes": [],
+      "optional_attributes": [],
+      "allowed_children": [
+        {
+          "name": "Init",
+          "cardinality": "1..1"
+        },
+        {
+          "name": "Story",
+          "cardinality": "0..unbounded"
+        },
+        {
+          "name": "StopTrigger",
+          "cardinality": "0..1"
+        }
+      ],
+      "child_order": [
+        "Init",
+        "Story",
+        "StopTrigger"
+      ],
+      "multiplicity": {
+        "Init": "1..1",
+        "Story": "0..unbounded",
+        "StopTrigger": "0..1"
+      },
+      "enum_constraints": {},
+      "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2091; knowledge/raw/schema/OpenSCENARIO.xsd#L2206",
+      "strategy": {
+        "structure_mode": "sequence",
+        "branch_selection": {
+          "mode": "none",
+          "groups": []
+        },
+        "ordering": {
+          "mode": "sequence",
+          "child_order": [
+            "Init",
+            "Story",
+            "StopTrigger"
+          ]
+        },
+        "required_children": [
+          "Init"
+        ],
+        "variant_resolution": {
+          "selection_required": true,
+          "parent_context": null,
+          "resolved_variant": null,
+          "preferred_variants": [
+            {
+              "parent_context": "ScenarioDefinition",
+              "type_ref": "Storyboard",
+              "deprecated": false
+            }
+          ],
+          "deprecated_variants": []
+        },
+        "reference_requirements": [],
+        "repair_priority": [
+          "resolve_contextual_variant",
+          "add_required_children",
+          "enforce_sequence_order"
+        ]
+      }
+    },
+    "draft_checklist": [
+      "Resolve contextual variant before emitting this shared element name.",
+      "Preserve child order: Init -> Story -> StopTrigger.",
+      "Keep required children present: Init.",
+      "Preserve child order: Actions.",
+      "Keep required children present: Actions.",
+      "Preserve child order: FileHeader -> ParameterDeclarations|VariableDeclarations|MonitorDeclarations|CatalogLocations|RoadNetwork|Entities|Storyboard|Catalog|ParameterValueDistribution.",
+      "Keep required children present: FileHeader, CatalogLocations, RoadNetwork, Entities, Storyboard, Catalog, ParameterValueDistribution."
+    ],
+    "repair_diagnostics": [],
+    "repair_actions": []
+  }
+}

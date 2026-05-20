@@ -1,0 +1,57 @@
+{
+  "element": "VehicleCategoryDistributionEntry",
+  "description": "Weighted vehicle category entry. The local VehicleCategory enum still accepts deprecated motorbike and truck values.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "VehicleCategoryDistribution",
+      "type_ref": "VehicleCategoryDistributionEntry",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "VehicleCategoryDistribution"
+  ],
+  "required_attributes": [
+    {
+      "name": "category",
+      "type": "VehicleCategory"
+    },
+    {
+      "name": "weight",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "category": [
+      "aircraft",
+      "bicycle",
+      "bus",
+      "car",
+      "heavyTruck",
+      "landVehicle",
+      "micromobilityDevice",
+      "motorbike",
+      "motorcycle",
+      "other",
+      "semitractor",
+      "semitrailer",
+      "standupScooter",
+      "trailer",
+      "train",
+      "tram",
+      "truck",
+      "van",
+      "watercraft",
+      "wheelchair",
+      "workMachine"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L644; knowledge/raw/schema/OpenSCENARIO.xsd#L2624; knowledge/raw/schema/OpenSCENARIO.xsd#L2627"
+}

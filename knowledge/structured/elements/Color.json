@@ -1,0 +1,67 @@
+{
+  "element": "Color",
+  "description": "Schema-derived Color element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "ColorRgb",
+        "ColorCmyk"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: ColorRgb, ColorCmyk."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "LightState",
+      "type_ref": "Color",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "LightState"
+  ],
+  "required_attributes": [
+    {
+      "name": "colorType",
+      "type": "ColorType"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "ColorRgb",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "ColorCmyk",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "ColorRgb|ColorCmyk"
+  ],
+  "multiplicity": {
+    "ColorRgb": "1..1",
+    "ColorCmyk": "1..1"
+  },
+  "enum_constraints": {
+    "colorType": [
+      "other",
+      "red",
+      "yellow",
+      "green",
+      "blue",
+      "violet",
+      "orange",
+      "brown",
+      "black",
+      "grey",
+      "white"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L92; knowledge/raw/schema/OpenSCENARIO.xsd#L1008; knowledge/raw/schema/OpenSCENARIO.xsd#L1486"
+}

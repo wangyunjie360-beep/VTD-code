@@ -1,0 +1,48 @@
+{
+  "element": "AnimationAction",
+  "description": "Schema-derived AnimationAction element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "AppearanceAction",
+      "type_ref": "AnimationAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "AppearanceAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [
+    {
+      "name": "animationDuration",
+      "type": "Double"
+    },
+    {
+      "name": "loop",
+      "type": "Boolean"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "AnimationType",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "AnimationState",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [
+    "AnimationType",
+    "AnimationState"
+  ],
+  "multiplicity": {
+    "AnimationType": "1..1",
+    "AnimationState": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L813; knowledge/raw/schema/OpenSCENARIO.xsd#L841"
+}

@@ -1,0 +1,30 @@
+{
+  "element": "ConnectTrailerAction",
+  "description": "TrailerAction branch that connects a referenced trailer.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "TrailerAction",
+      "type_ref": "ConnectTrailerAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "TrailerAction"
+  ],
+  "required_attributes": [
+    {
+      "name": "trailerRef",
+      "type": "String",
+      "reference_kind": "trailer"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1046; knowledge/raw/schema/OpenSCENARIO.xsd#L2446"
+}

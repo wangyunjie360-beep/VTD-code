@@ -1,0 +1,81 @@
+{
+  "element": "StochasticDistribution",
+  "description": "Parameter-scoped stochastic wrapper. parameterName is required, then choose ProbabilityDistributionSet, NormalDistribution, LogNormalDistribution, UniformDistribution, PoissonDistribution, Histogram, or UserDefinedDistribution.",
+  "content_model_kind": "sequence",
+  "child_groups": [
+    {
+      "members": [
+        "ProbabilityDistributionSet",
+        "NormalDistribution",
+        "LogNormalDistribution",
+        "UniformDistribution",
+        "PoissonDistribution",
+        "Histogram",
+        "UserDefinedDistribution"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Stochastic",
+      "type_ref": "StochasticDistribution",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Stochastic"
+  ],
+  "required_attributes": [
+    {
+      "name": "parameterName",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "ProbabilityDistributionSet",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "NormalDistribution",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "LogNormalDistribution",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "UniformDistribution",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "PoissonDistribution",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "Histogram",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "UserDefinedDistribution",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "ProbabilityDistributionSet|NormalDistribution|LogNormalDistribution|UniformDistribution|PoissonDistribution|Histogram|UserDefinedDistribution"
+  ],
+  "multiplicity": {
+    "ProbabilityDistributionSet": "1..1",
+    "NormalDistribution": "1..1",
+    "LogNormalDistribution": "1..1",
+    "UniformDistribution": "1..1",
+    "PoissonDistribution": "1..1",
+    "Histogram": "1..1",
+    "UserDefinedDistribution": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2177; knowledge/raw/schema/OpenSCENARIO.xsd#L2182"
+}

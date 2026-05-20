@@ -1,0 +1,45 @@
+{
+  "element": "TrafficAreaAction",
+  "description": "TrafficAction branch that couples one TrafficDistribution with one TrafficArea; continuous and numberOfEntities are required.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "TrafficAction",
+      "type_ref": "TrafficAreaAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "TrafficAction"
+  ],
+  "required_attributes": [
+    {
+      "name": "continuous",
+      "type": "Boolean"
+    },
+    {
+      "name": "numberOfEntities",
+      "type": "UnsignedInt"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "TrafficDistribution",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "TrafficArea",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "TrafficDistribution": "1..1",
+    "TrafficArea": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2303; knowledge/raw/schema/OpenSCENARIO.xsd#L2314"
+}

@@ -1,0 +1,33 @@
+{
+  "element": "Motion",
+  "description": "Schema-derived Motion element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Vertex",
+      "type_ref": "Motion",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Vertex"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [
+    {
+      "name": "acceleration_longitudinal",
+      "type": "Double"
+    },
+    {
+      "name": "speed_longitudinal",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1588; knowledge/raw/schema/OpenSCENARIO.xsd#L2649"
+}

@@ -1,0 +1,52 @@
+{
+  "element": "ByType",
+  "description": "Schema-derived ByType element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "CollisionCondition",
+      "type_ref": "ByObjectType",
+      "deprecated": false
+    },
+    {
+      "parent_context": "Members",
+      "type_ref": "ByType",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "CollisionCondition",
+    "Members"
+  ],
+  "required_attributes": [
+    {
+      "name": "objectType",
+      "type": "ObjectType"
+    },
+    {
+      "name": "type",
+      "type": "ObjectType"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "type": [
+      "miscellaneous",
+      "pedestrian",
+      "vehicle",
+      "external"
+    ],
+    "objectType": [
+      "miscellaneous",
+      "pedestrian",
+      "vehicle",
+      "external"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L325; knowledge/raw/schema/OpenSCENARIO.xsd#L907; knowledge/raw/schema/OpenSCENARIO.xsd#L1005; knowledge/raw/schema/OpenSCENARIO.xsd#L2110"
+}

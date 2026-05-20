@@ -1,0 +1,31 @@
+{
+  "element": "TeleportAction",
+  "description": "Instantly relocates the referenced entity to a required Position.",
+  "content_model_kind": "sequence",
+  "contextual_variants": [
+    {
+      "parent_context": "PrivateAction",
+      "type_ref": "TeleportAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "PrivateAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Position",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "Position"
+  ],
+  "multiplicity": {
+    "Position": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2242"
+}

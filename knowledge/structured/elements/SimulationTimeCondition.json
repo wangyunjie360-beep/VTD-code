@@ -1,0 +1,32 @@
+{
+  "element": "SimulationTimeCondition",
+  "description": "Simulation-time trigger condition. It compares the running storyboard's simulation time against a required value using the supplied rule.",
+  "parent_contexts": [
+    "ByValueCondition"
+  ],
+  "required_attributes": [
+    {
+      "name": "rule",
+      "type": "Rule"
+    },
+    {
+      "name": "value",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "rule": [
+      "equalTo",
+      "greaterThan",
+      "lessThan",
+      "greaterOrEqual",
+      "lessOrEqual",
+      "notEqualTo"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L549; knowledge/raw/schema/OpenSCENARIO.xsd#L2133"
+}

@@ -1,0 +1,73 @@
+{
+  "element": "Clothoid",
+  "description": "Schema-derived Clothoid element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [
+    "Some contextual variants of this element are deprecated in the local XSD."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "Shape",
+      "type_ref": "Clothoid",
+      "deprecated": true
+    }
+  ],
+  "parent_contexts": [
+    "Shape"
+  ],
+  "required_attributes": [
+    {
+      "name": "curvature",
+      "type": "Double"
+    },
+    {
+      "name": "length",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "curvatureDot",
+      "type": "Double"
+    },
+    {
+      "name": "curvaturePrime",
+      "type": "Double"
+    },
+    {
+      "name": "startTime",
+      "type": "Double"
+    },
+    {
+      "name": "stopTime",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "Position",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "MotionStart",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "MotionEnd",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [
+    "Position",
+    "MotionStart",
+    "MotionEnd"
+  ],
+  "multiplicity": {
+    "Position": "1..1",
+    "MotionStart": "0..1",
+    "MotionEnd": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L969; knowledge/raw/schema/OpenSCENARIO.xsd#L2128"
+}

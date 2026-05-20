@@ -1,0 +1,42 @@
+{
+  "element": "LogNormalDistribution",
+  "description": "Stochastic distribution branch with required expectedValue and variance plus an optional Range.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "StochasticDistributionType",
+      "type_ref": "LogNormalDistribution",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "StochasticDistributionType"
+  ],
+  "required_attributes": [
+    {
+      "name": "expectedValue",
+      "type": "Double"
+    },
+    {
+      "name": "variance",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Range",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [
+    "Range"
+  ],
+  "multiplicity": {
+    "Range": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1506; knowledge/raw/schema/OpenSCENARIO.xsd#L2192"
+}

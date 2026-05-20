@@ -1,0 +1,43 @@
+{
+  "element": "Stochastic",
+  "description": "DistributionDefinition wrapper that requires numberOfTestRuns and one or more StochasticDistribution children.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "DistributionDefinition",
+      "type_ref": "Stochastic",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "DistributionDefinition"
+  ],
+  "required_attributes": [
+    {
+      "name": "numberOfTestRuns",
+      "type": "UnsignedInt"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "randomSeed",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "StochasticDistribution",
+      "cardinality": "1..unbounded"
+    }
+  ],
+  "child_order": [
+    "StochasticDistribution"
+  ],
+  "multiplicity": {
+    "StochasticDistribution": "1..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1168; knowledge/raw/schema/OpenSCENARIO.xsd#L2175"
+}

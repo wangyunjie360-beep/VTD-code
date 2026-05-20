@@ -1,0 +1,39 @@
+{
+  "element": "ParameterAssignments",
+  "description": "Schema-derived ParameterAssignments element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "CatalogReference",
+      "type_ref": "ParameterAssignments",
+      "deprecated": false
+    },
+    {
+      "parent_context": "CatalogReferences",
+      "type_ref": "ParameterAssignments",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "CatalogReference",
+    "CatalogReferences"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "ParameterAssignment",
+      "cardinality": "0..unbounded"
+    }
+  ],
+  "child_order": [
+    "ParameterAssignment"
+  ],
+  "multiplicity": {
+    "ParameterAssignment": "0..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L956; knowledge/raw/schema/OpenSCENARIO.xsd#L1711"
+}

@@ -1,0 +1,29 @@
+{
+  "element": "TargetDistanceSteadyState",
+  "description": "Schema-derived TargetDistanceSteadyState element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "SteadyState",
+      "type_ref": "TargetDistanceSteadyState",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "SteadyState"
+  ],
+  "required_attributes": [
+    {
+      "name": "distance",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2171; knowledge/raw/schema/OpenSCENARIO.xsd#L2236"
+}

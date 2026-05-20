@@ -1,0 +1,48 @@
+{
+  "element": "TrafficSignalAction",
+  "description": "Infrastructure action wrapper. Exactly one TrafficSignalControllerAction or TrafficSignalStateAction must be selected.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "TrafficSignalControllerAction",
+        "TrafficSignalStateAction"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: TrafficSignalControllerAction, TrafficSignalStateAction."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "InfrastructureAction",
+      "type_ref": "TrafficSignalAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "InfrastructureAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "TrafficSignalControllerAction",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "TrafficSignalStateAction",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "TrafficSignalControllerAction|TrafficSignalStateAction"
+  ],
+  "multiplicity": {
+    "TrafficSignalControllerAction": "1..1",
+    "TrafficSignalStateAction": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1387; knowledge/raw/schema/OpenSCENARIO.xsd#L2350"
+}

@@ -1,0 +1,38 @@
+{
+  "asset_counts": {
+    "addons": 5,
+    "decals": 78,
+    "externals": 1200,
+    "macros": 14,
+    "models": 534,
+    "samples": 9,
+    "signals": 4626,
+    "styles": 884,
+    "tiles": 159
+  },
+  "asset_total": 7509,
+  "phase": "phase1",
+  "release_name": "RodDistro_6980_Rod4.6.1",
+  "release_root": "D:/wyj/VTD-2020-install/VTD.2020/Runtime/Tools/RodDistro_6980_Rod4.6.1",
+  "rule_counts": {
+    "aliases": 5767,
+    "country-preferences": 2484,
+    "reserved-names": 57787
+  },
+  "rule_total": 66038,
+  "runtime_family": "VTD.2020",
+  "runtime_root": "D:/wyj/VTD-2020-install/VTD.2020/Runtime",
+  "semantic_counts": {
+    "country-taxonomy": 11,
+    "name-policies": 55232
+  },
+  "source_id": "vtd-runtime",
+  "sources": [
+    {
+      "id": "vtd-runtime",
+      "kind": "runtime",
+      "path": "knowledge/structured/vtd"
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,29 @@
+{
+  "element": "ExternalObjectReference",
+  "description": "Schema-derived ExternalObjectReference element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "EntityObject",
+      "type_ref": "ExternalObjectReference",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "EntityObject"
+  ],
+  "required_attributes": [
+    {
+      "name": "name",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1253; knowledge/raw/schema/OpenSCENARIO.xsd#L1294"
+}

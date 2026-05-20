@@ -1,0 +1,45 @@
+{
+  "element": "VehicleLight",
+  "description": "Schema-derived VehicleLight element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "LightType",
+      "type_ref": "VehicleLight",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "LightType"
+  ],
+  "required_attributes": [
+    {
+      "name": "vehicleLightType",
+      "type": "VehicleLightType"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "vehicleLightType": [
+      "daytimeRunningLights",
+      "lowBeam",
+      "highBeam",
+      "fogLights",
+      "fogLightsFront",
+      "fogLightsRear",
+      "brakeLights",
+      "warningLights",
+      "indicatorLeft",
+      "indicatorRight",
+      "reversingLights",
+      "licensePlateIllumination",
+      "specialPurposeLights"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L704; knowledge/raw/schema/OpenSCENARIO.xsd#L1502; knowledge/raw/schema/OpenSCENARIO.xsd#L2634"
+}

@@ -1,0 +1,58 @@
+{
+  "element": "FollowTrajectoryAction",
+  "description": "Schema-derived FollowTrajectoryAction element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [
+    "Some contextual variants of this element are deprecated in the local XSD."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "RoutingAction",
+      "type_ref": "FollowTrajectoryAction",
+      "deprecated": true
+    }
+  ],
+  "parent_contexts": [
+    "RoutingAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [
+    {
+      "name": "initialDistanceOffset",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "Trajectory",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "CatalogReference",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "TimeReference",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "TrajectoryFollowingMode",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "TrajectoryRef",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "Trajectory": "0..1",
+    "CatalogReference": "0..1",
+    "TimeReference": "1..1",
+    "TrajectoryFollowingMode": "1..1",
+    "TrajectoryRef": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1323; knowledge/raw/schema/OpenSCENARIO.xsd#L2077"
+}

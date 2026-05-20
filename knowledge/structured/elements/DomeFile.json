@@ -1,0 +1,29 @@
+{
+  "element": "DomeFile",
+  "description": "Schema-derived DomeFile element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "DomeImage",
+      "type_ref": "File",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "DomeImage"
+  ],
+  "required_attributes": [
+    {
+      "name": "filepath",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1187; knowledge/raw/schema/OpenSCENARIO.xsd#L1297"
+}

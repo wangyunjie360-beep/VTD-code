@@ -1,0 +1,86 @@
+{
+  "element": "Catalog",
+  "description": "Schema-derived Catalog element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "CatalogDefinition",
+      "type_ref": "Catalog",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "CatalogDefinition"
+  ],
+  "required_attributes": [
+    {
+      "name": "name",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Vehicle",
+      "cardinality": "0..unbounded"
+    },
+    {
+      "name": "Controller",
+      "cardinality": "0..unbounded"
+    },
+    {
+      "name": "Pedestrian",
+      "cardinality": "0..unbounded"
+    },
+    {
+      "name": "MiscObject",
+      "cardinality": "0..unbounded"
+    },
+    {
+      "name": "Environment",
+      "cardinality": "0..unbounded"
+    },
+    {
+      "name": "Maneuver",
+      "cardinality": "0..unbounded"
+    },
+    {
+      "name": "Trajectory",
+      "cardinality": "0..unbounded"
+    },
+    {
+      "name": "Route",
+      "cardinality": "0..unbounded"
+    },
+    {
+      "name": "TrafficDistributionEntry",
+      "cardinality": "0..unbounded"
+    }
+  ],
+  "child_order": [
+    "Vehicle",
+    "Controller",
+    "Pedestrian",
+    "MiscObject",
+    "Environment",
+    "Maneuver",
+    "Trajectory",
+    "Route",
+    "TrafficDistributionEntry"
+  ],
+  "multiplicity": {
+    "Vehicle": "0..unbounded",
+    "Controller": "0..unbounded",
+    "Pedestrian": "0..unbounded",
+    "MiscObject": "0..unbounded",
+    "Environment": "0..unbounded",
+    "Maneuver": "0..unbounded",
+    "Trajectory": "0..unbounded",
+    "Route": "0..unbounded",
+    "TrafficDistributionEntry": "0..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L922; knowledge/raw/schema/OpenSCENARIO.xsd#L938"
+}

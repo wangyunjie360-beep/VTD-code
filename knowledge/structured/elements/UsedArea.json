@@ -1,0 +1,33 @@
+{
+  "element": "UsedArea",
+  "description": "Schema-derived UsedArea element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "RoadNetwork",
+      "type_ref": "UsedArea",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "RoadNetwork"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Position",
+      "cardinality": "2..unbounded"
+    }
+  ],
+  "child_order": [
+    "Position"
+  ],
+  "multiplicity": {
+    "Position": "2..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2031; knowledge/raw/schema/OpenSCENARIO.xsd#L2513"
+}

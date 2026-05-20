@@ -1,0 +1,34 @@
+{
+  "element": "BrakeForce",
+  "description": "Schema-derived BrakeForce element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "BrakeInput",
+      "type_ref": "Brake",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "BrakeInput"
+  ],
+  "required_attributes": [
+    {
+      "name": "value",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "maxRate",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L888; knowledge/raw/schema/OpenSCENARIO.xsd#L895"
+}

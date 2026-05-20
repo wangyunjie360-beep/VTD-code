@@ -1,0 +1,24 @@
+{
+  "element": "TrafficStopAction",
+  "description": "TrafficAction branch that stops previously generated traffic without extra payload.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "TrafficAction",
+      "type_ref": "TrafficStopAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "TrafficAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2304; knowledge/raw/schema/OpenSCENARIO.xsd#L2417"
+}

@@ -1,0 +1,34 @@
+{
+  "element": "TrajectoryFollowingMode",
+  "description": "Schema-derived TrajectoryFollowingMode element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "FollowTrajectoryAction",
+      "type_ref": "TrajectoryFollowingMode",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "FollowTrajectoryAction"
+  ],
+  "required_attributes": [
+    {
+      "name": "followingMode",
+      "type": "FollowingMode"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "followingMode": [
+      "follow",
+      "position"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L206; knowledge/raw/schema/OpenSCENARIO.xsd#L1332; knowledge/raw/schema/OpenSCENARIO.xsd#L2471"
+}

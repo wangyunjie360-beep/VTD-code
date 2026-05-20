@@ -1,0 +1,35 @@
+{
+  "element": "File",
+  "description": "Schema-derived File element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "AnimationFile",
+      "type_ref": "File",
+      "deprecated": false
+    },
+    {
+      "parent_context": "Properties",
+      "type_ref": "File",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "AnimationFile",
+    "Properties"
+  ],
+  "required_attributes": [
+    {
+      "name": "filepath",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L823; knowledge/raw/schema/OpenSCENARIO.xsd#L1297; knowledge/raw/schema/OpenSCENARIO.xsd#L1897"
+}

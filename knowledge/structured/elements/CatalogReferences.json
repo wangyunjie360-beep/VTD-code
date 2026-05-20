@@ -1,0 +1,42 @@
+{
+  "element": "CatalogReferences",
+  "description": "Schema-derived CatalogReferences element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "TrafficDistribution",
+      "type_ref": "CatalogReference",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "TrafficDistribution"
+  ],
+  "required_attributes": [
+    {
+      "name": "catalogName",
+      "type": "String"
+    },
+    {
+      "name": "entryName",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "ParameterAssignments",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [
+    "ParameterAssignments"
+  ],
+  "multiplicity": {
+    "ParameterAssignments": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L954; knowledge/raw/schema/OpenSCENARIO.xsd#L2333"
+}

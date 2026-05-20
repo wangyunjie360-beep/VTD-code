@@ -1,0 +1,41 @@
+{
+  "element": "LaneOffsetActionDynamics",
+  "description": "Schema-derived LaneOffsetActionDynamics element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "LaneOffsetAction",
+      "type_ref": "LaneOffsetActionDynamics",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "LaneOffsetAction"
+  ],
+  "required_attributes": [
+    {
+      "name": "dynamicsShape",
+      "type": "DynamicsShape"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "maxLateralAcc",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "dynamicsShape": [
+      "cubic",
+      "linear",
+      "sinusoidal",
+      "step"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L191; knowledge/raw/schema/OpenSCENARIO.xsd#L1432; knowledge/raw/schema/OpenSCENARIO.xsd#L1437"
+}

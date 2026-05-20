@@ -1,0 +1,53 @@
+{
+  "element": "ControllerDistributionEntry",
+  "description": "Weighted controller entry. Choose exactly one inline Controller or CatalogReference.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "Controller",
+        "CatalogReference"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: Controller, CatalogReference."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "ControllerDistribution",
+      "type_ref": "ControllerDistributionEntry",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "ControllerDistribution"
+  ],
+  "required_attributes": [
+    {
+      "name": "weight",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Controller",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "CatalogReference",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "Controller|CatalogReference"
+  ],
+  "multiplicity": {
+    "Controller": "1..1",
+    "CatalogReference": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1071; knowledge/raw/schema/OpenSCENARIO.xsd#L1074"
+}

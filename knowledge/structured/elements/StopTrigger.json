@@ -1,0 +1,25 @@
+{
+  "element": "StopTrigger",
+  "description": "Trigger instance used by Storyboard and Act. It is backed by the shared Trigger type; the schema permits zero ConditionGroup children, but an empty stop trigger never fires.",
+  "content_model_kind": "sequence",
+  "parent_contexts": [
+    "Storyboard",
+    "Act"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "ConditionGroup",
+      "cardinality": "0..*"
+    }
+  ],
+  "child_order": [
+    "ConditionGroup"
+  ],
+  "multiplicity": {
+    "ConditionGroup": "0..*"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L774; knowledge/raw/schema/OpenSCENARIO.xsd#L2210; knowledge/raw/schema/OpenSCENARIO.xsd#L2497"
+}

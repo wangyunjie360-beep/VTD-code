@@ -1,0 +1,6 @@
+<!-- representative odrGateway multi-root snippet -->
+<RDB>
+  <Port name="RDBin" number="48271" type="UDP" />
+</RDB>
+<Config verbose="false" inhibitCurvatureApproximation="false" />
+<Debug enable="true" lightSource="false" driver="false" />

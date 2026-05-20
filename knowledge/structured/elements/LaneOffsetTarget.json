@@ -1,0 +1,48 @@
+{
+  "element": "LaneOffsetTarget",
+  "description": "Schema-derived LaneOffsetTarget element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "RelativeTargetLaneOffset",
+        "AbsoluteTargetLaneOffset"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: RelativeTargetLaneOffset, AbsoluteTargetLaneOffset."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "LaneOffsetAction",
+      "type_ref": "LaneOffsetTarget",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "LaneOffsetAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "RelativeTargetLaneOffset",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "AbsoluteTargetLaneOffset",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "RelativeTargetLaneOffset|AbsoluteTargetLaneOffset"
+  ],
+  "multiplicity": {
+    "RelativeTargetLaneOffset": "1..1",
+    "AbsoluteTargetLaneOffset": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1433; knowledge/raw/schema/OpenSCENARIO.xsd#L1441"
+}

@@ -1,0 +1,48 @@
+{
+  "element": "TimeToCollisionConditionTarget",
+  "description": "Schema-derived TimeToCollisionConditionTarget element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "Position",
+        "EntityRef"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: Position, EntityRef."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "TimeToCollisionCondition",
+      "type_ref": "TimeToCollisionConditionTarget",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "TimeToCollisionCondition"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Position",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "EntityRef",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "Position|EntityRef"
+  ],
+  "multiplicity": {
+    "Position": "1..1",
+    "EntityRef": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2275; knowledge/raw/schema/OpenSCENARIO.xsd#L2287"
+}

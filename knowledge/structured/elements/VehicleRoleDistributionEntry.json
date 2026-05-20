@@ -1,0 +1,54 @@
+{
+  "element": "VehicleRoleDistributionEntry",
+  "description": "Weighted vehicle role entry. The local Role enum still accepts deprecated fire and roadAssistance values.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "VehicleRoleDistribution",
+      "type_ref": "VehicleRoleDistributionEntry",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "VehicleRoleDistribution"
+  ],
+  "required_attributes": [
+    {
+      "name": "role",
+      "type": "Role"
+    },
+    {
+      "name": "weight",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "role": [
+      "none",
+      "agriculture",
+      "ambulance",
+      "civil",
+      "construction",
+      "dangerousGoodsTransport",
+      "fire",
+      "fireBrigade",
+      "freightTransport",
+      "garbageCollection",
+      "military",
+      "other",
+      "police",
+      "publicTransport",
+      "roadAssistance",
+      "roadsideAssistance",
+      "specialTransport",
+      "trafficControl"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L485; knowledge/raw/schema/OpenSCENARIO.xsd#L2639; knowledge/raw/schema/OpenSCENARIO.xsd#L2642"
+}

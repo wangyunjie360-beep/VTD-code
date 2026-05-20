@@ -1,0 +1,62 @@
+{
+  "element": "Phase",
+  "description": "Schema-derived Phase element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "TrafficSignalController",
+      "type_ref": "Phase",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "TrafficSignalController"
+  ],
+  "required_attributes": [
+    {
+      "name": "duration",
+      "type": "Double"
+    },
+    {
+      "name": "name",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "semantics",
+      "type": "TrafficSignalSemantics"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "TrafficSignalState",
+      "cardinality": "0..unbounded"
+    },
+    {
+      "name": "TrafficSignalGroupState",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [
+    "TrafficSignalState",
+    "TrafficSignalGroupState"
+  ],
+  "multiplicity": {
+    "TrafficSignalState": "0..unbounded",
+    "TrafficSignalGroupState": "0..1"
+  },
+  "enum_constraints": {
+    "semantics": [
+      "attention_go",
+      "attention_stop",
+      "caution",
+      "fallback",
+      "go",
+      "stop"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L614; knowledge/raw/schema/OpenSCENARIO.xsd#L1801; knowledge/raw/schema/OpenSCENARIO.xsd#L2362"
+}

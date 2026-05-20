@@ -1,0 +1,48 @@
+{
+  "element": "TimeReference",
+  "description": "FollowTrajectoryAction helper. Exactly one None or Timing branch must be selected.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "None",
+        "Timing"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: None, Timing."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "FollowTrajectoryAction",
+      "type_ref": "TimeReference",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "FollowTrajectoryAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "None",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "Timing",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "None|Timing"
+  ],
+  "multiplicity": {
+    "None": "1..1",
+    "Timing": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1331; knowledge/raw/schema/OpenSCENARIO.xsd#L2267"
+}

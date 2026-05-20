@@ -1,0 +1,33 @@
+{
+  "element": "TimeOfDay",
+  "description": "Environment child with required animation flag and dateTime value.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Environment",
+      "type_ref": "TimeOfDay",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Environment"
+  ],
+  "required_attributes": [
+    {
+      "name": "animation",
+      "type": "Boolean"
+    },
+    {
+      "name": "dateTime",
+      "type": "DateTime"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1268; knowledge/raw/schema/OpenSCENARIO.xsd#L2259"
+}

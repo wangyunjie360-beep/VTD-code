@@ -1,0 +1,143 @@
+{
+  "intent_consistent": true,
+  "model": "gpt-5.5",
+  "parsed_intent": {
+    "assumptions": [
+      "The target lane is resolved as AbsoluteTargetLane value=\"-1\"."
+    ],
+    "entities": [
+      {
+        "name": "ego",
+        "role": "primary",
+        "type": "Vehicle"
+      }
+    ],
+    "environment": {},
+    "init_actions": [
+      {
+        "entity": "ego",
+        "mode": "initial_speed",
+        "source_unit": "km/h",
+        "source_value": 30,
+        "type": "speed_change",
+        "unit": "m/s",
+        "value": 8.333333
+      }
+    ],
+    "map_context": {
+      "country_code": "CN",
+      "road_type": "urban"
+    },
+    "parameters": [],
+    "stop_conditions": [
+      {
+        "type": "simulation_time",
+        "unit": "s",
+        "value": 20.0
+      }
+    ],
+    "story_actions": [
+      {
+        "entity": "ego",
+        "mode": "initial_speed",
+        "type": "speed_change"
+      },
+      {
+        "direction": "left",
+        "entity": "ego",
+        "target": {
+          "type": "AbsoluteTargetLane",
+          "value": "-1"
+        },
+        "type": "lane_change"
+      }
+    ],
+    "triggers": [
+      {
+        "type": "simulation_time",
+        "unit": "s",
+        "value": 5.0
+      }
+    ]
+  },
+  "primary_actor": "claude_code_gpt",
+  "remaining_blockers": [],
+  "request": "Generate a VTD OpenSCENARIO case on an urban road in China: ego vehicle starts at 30 km/h; the scenario trigger is simulation time 5 seconds; at that trigger the ego vehicle performs a lane change to the left by one lane; the simulation stops at 20 seconds. Keep the XML minimal but schema-valid.",
+  "tool_call_summary": [
+    {
+      "purpose": "Collected initial scenario intent, schema plan, VTD plan, naming plan, validation plan, and open target-lane question before drafting.",
+      "tool": "build_generation_packet"
+    },
+    {
+      "purpose": "Queried VTD runtime naming context for ego in a China urban OpenSCENARIO case.",
+      "tool": "build_vtd_guidance"
+    },
+    {
+      "purpose": "Queried VTD runtime asset candidates for the ego naming context.",
+      "tool": "recommend_vtd_candidates"
+    },
+    {
+      "purpose": "Retrieved element evidence for ScenarioObject before drafting.",
+      "tool": "retrieve_spec"
+    },
+    {
+      "purpose": "Retrieved schema details for ScenarioObject before drafting.",
+      "tool": "get_element_schema"
+    },
+    {
+      "purpose": "Retrieved element evidence for Vehicle before drafting.",
+      "tool": "retrieve_spec"
+    },
+    {
+      "purpose": "Retrieved schema details for Vehicle before drafting.",
+      "tool": "get_element_schema"
+    },
+    {
+      "purpose": "Retrieved element evidence for Storyboard before drafting.",
+      "tool": "retrieve_spec"
+    },
+    {
+      "purpose": "Retrieved schema details for Storyboard before drafting.",
+      "tool": "get_element_schema"
+    },
+    {
+      "purpose": "Retrieved element evidence for LaneChangeAction before drafting.",
+      "tool": "retrieve_spec"
+    },
+    {
+      "purpose": "Retrieved schema details for LaneChangeAction before drafting.",
+      "tool": "get_element_schema"
+    },
+    {
+      "purpose": "Retrieved element evidence for SimulationTimeCondition before drafting.",
+      "tool": "retrieve_spec"
+    },
+    {
+      "purpose": "Retrieved schema details for SimulationTimeCondition before drafting.",
+      "tool": "get_element_schema"
+    },
+    {
+      "purpose": "Validated the drafted full OpenSCENARIO XML against schema version 1.4.0.",
+      "tool": "validate_xml"
+    },
+    {
+      "purpose": "Checked final XML against the required intent JSON and checklist.",
+      "tool": "check_xml_intent_consistency"
+    }
+  ],
+  "validation_ok": true,
+  "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OpenSCENARIO>\n  <FileHeader revMajor=\"1\" revMinor=\"4\" date=\"2026-05-19T00:00:00\" description=\"China urban ego lane change left at 5 seconds\" author=\"claude_code_gpt\"/>\n  <CatalogLocations/>\n  <RoadNetwork/>\n  <Entities>\n    <ScenarioObject name=\"ego\">\n      <Vehicle name=\"ego_vehicle\" vehicleCategory=\"car\">\n        <BoundingBox>\n          <Center x=\"1.5\" y=\"0.0\" z=\"0.9\"/>\n          <Dimensions width=\"1.8\" length=\"4.5\" height=\"1.8\"/>\n        </BoundingBox>\n        <Performance maxSpeed=\"69.444\" maxAcceleration=\"10.0\" maxDeceleration=\"10.0\"/>\n        <Axles>\n          <FrontAxle maxSteering=\"0.5\" wheelDiameter=\"0.6\" trackWidth=\"1.6\" positionX=\"3.0\" positionZ=\"0.3\"/>\n          <RearAxle maxSteering=\"0.0\" wheelDiameter=\"0.6\" trackWidth=\"1.6\" positionX=\"0.0\" positionZ=\"0.3\"/>\n        </Axles>\n      </Vehicle>\n    </ScenarioObject>\n  </Entities>\n  <Storyboard>\n    <Init>\n      <Actions>\n        <Private entityRef=\"ego\">\n          <PrivateAction>\n            <LongitudinalAction>\n              <SpeedAction>\n                <SpeedActionDynamics dynamicsShape=\"step\" value=\"0.0\" dynamicsDimension=\"time\"/>\n                <SpeedActionTarget>\n                  <AbsoluteTargetSpeed value=\"8.333333\"/>\n                </SpeedActionTarget>\n              </SpeedAction>\n            </LongitudinalAction>\n          </PrivateAction>\n        </Private>\n      </Actions>\n    </Init>\n    <Story name=\"LaneChangeStory\">\n      <Act name=\"LaneChangeAct\">\n        <ManeuverGroup name=\"LaneChangeGroup\" maximumExecutionCount=\"1\">\n          <Actors selectTriggeringEntities=\"false\">\n            <EntityRef entityRef=\"ego\"/>\n          </Actors>\n          <Maneuver name=\"LaneChangeManeuver\">\n            <Event name=\"LaneChangeEvent\" priority=\"overwrite\">\n              <Action name=\"LaneChangeLeft\">\n                <PrivateAction>\n                  <LateralAction>\n                    <LaneChangeAction>\n                      <LaneChangeActionDynamics dynamicsShape=\"sinusoidal\" value=\"3.0\" dynamicsDimension=\"time\"/>\n                      <LaneChangeTarget>\n                        <AbsoluteTargetLane value=\"-1\"/>\n                      </LaneChangeTarget>\n                    </LaneChangeAction>\n                  </LateralAction>\n                </PrivateAction>\n              </Action>\n              <StartTrigger>\n                <ConditionGroup>\n                  <Condition name=\"StartAtFiveSeconds\" delay=\"0.0\" conditionEdge=\"rising\">\n                    <ByValueCondition>\n                      <SimulationTimeCondition value=\"5.0\" rule=\"greaterOrEqual\"/>\n                    </ByValueCondition>\n                  </Condition>\n                </ConditionGroup>\n              </StartTrigger>\n            </Event>\n          </Maneuver>\n        </ManeuverGroup>\n        <StartTrigger>\n          <ConditionGroup>\n            <Condition name=\"ActStartAtFiveSeconds\" delay=\"0.0\" conditionEdge=\"rising\">\n              <ByValueCondition>\n                <SimulationTimeCondition value=\"5.0\" rule=\"greaterOrEqual\"/>\n              </ByValueCondition>\n            </Condition>\n          </ConditionGroup>\n        </StartTrigger>\n        <StopTrigger/>\n      </Act>\n    </Story>\n    <StopTrigger>\n      <ConditionGroup>\n        <Condition name=\"StopAtTwentySeconds\" delay=\"0.0\" conditionEdge=\"rising\">\n          <ByValueCondition>\n            <SimulationTimeCondition value=\"20.0\" rule=\"greaterOrEqual\"/>\n          </ByValueCondition>\n        </Condition>\n      </ConditionGroup>\n    </StopTrigger>\n  </Storyboard>\n</OpenSCENARIO>",
+  "xml_intent_check": [
+    {
+      "extra": [],
+      "matched": [
+        "entity:ego",
+        "lane_change",
+        "speed_change",
+        "simulation_time",
+        "stop_trigger"
+      ],
+      "missing": []
+    }
+  ]
+}

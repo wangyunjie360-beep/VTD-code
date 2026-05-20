@@ -1,0 +1,44 @@
+{
+  "element": "Vertex",
+  "description": "Schema-derived Vertex element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Polyline",
+      "type_ref": "Vertex",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Polyline"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [
+    {
+      "name": "time",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "Position",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "Motion",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [
+    "Position",
+    "Motion"
+  ],
+  "multiplicity": {
+    "Position": "1..1",
+    "Motion": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1823; knowledge/raw/schema/OpenSCENARIO.xsd#L2646"
+}

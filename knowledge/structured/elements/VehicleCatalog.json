@@ -1,0 +1,31 @@
+{
+  "element": "VehicleCatalog",
+  "description": "Schema-derived VehicleCatalog element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "CatalogLocations",
+      "type_ref": "VehicleCatalogLocation",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "CatalogLocations"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Directory",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "Directory": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L943; knowledge/raw/schema/OpenSCENARIO.xsd#L2617"
+}

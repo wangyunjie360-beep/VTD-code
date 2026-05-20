@@ -1,0 +1,57 @@
+{
+  "element": "ParameterDeclaration",
+  "description": "Schema-derived ParameterDeclaration element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "ParameterDeclarations",
+      "type_ref": "ParameterDeclaration",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "ParameterDeclarations"
+  ],
+  "required_attributes": [
+    {
+      "name": "name",
+      "type": "String"
+    },
+    {
+      "name": "parameterType",
+      "type": "ParameterType"
+    },
+    {
+      "name": "value",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "ConstraintGroup",
+      "cardinality": "0..unbounded"
+    }
+  ],
+  "child_order": [
+    "ConstraintGroup"
+  ],
+  "multiplicity": {
+    "ConstraintGroup": "0..unbounded"
+  },
+  "enum_constraints": {
+    "parameterType": [
+      "boolean",
+      "dateTime",
+      "double",
+      "integer",
+      "string",
+      "unsignedInt",
+      "unsignedShort",
+      "int"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L340; knowledge/raw/schema/OpenSCENARIO.xsd#L1721; knowledge/raw/schema/OpenSCENARIO.xsd#L1731"
+}

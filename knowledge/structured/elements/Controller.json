@@ -1,0 +1,74 @@
+{
+  "element": "Controller",
+  "description": "Schema-derived Controller element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "AssignControllerAction",
+      "type_ref": "Controller",
+      "deprecated": false
+    },
+    {
+      "parent_context": "Catalog",
+      "type_ref": "Controller",
+      "deprecated": false
+    },
+    {
+      "parent_context": "ControllerDistributionEntry",
+      "type_ref": "Controller",
+      "deprecated": false
+    },
+    {
+      "parent_context": "ObjectController",
+      "type_ref": "Controller",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "AssignControllerAction",
+    "Catalog",
+    "ControllerDistributionEntry",
+    "ObjectController"
+  ],
+  "required_attributes": [
+    {
+      "name": "name",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "controllerType",
+      "type": "ControllerType"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "ParameterDeclarations",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "Properties",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "ParameterDeclarations": "0..1",
+    "Properties": "0..1"
+  },
+  "enum_constraints": {
+    "controllerType": [
+      "lateral",
+      "longitudinal",
+      "lighting",
+      "animation",
+      "movement",
+      "appearance",
+      "all"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L129; knowledge/raw/schema/OpenSCENARIO.xsd#L846; knowledge/raw/schema/OpenSCENARIO.xsd#L925; knowledge/raw/schema/OpenSCENARIO.xsd#L1049; knowledge/raw/schema/OpenSCENARIO.xsd#L1076; knowledge/raw/schema/OpenSCENARIO.xsd#L1611"
+}

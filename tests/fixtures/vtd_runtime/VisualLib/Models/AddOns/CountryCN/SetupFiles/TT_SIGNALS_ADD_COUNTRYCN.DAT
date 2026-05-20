@@ -1,0 +1,4 @@
+#####################################################################
+# minimal real-style signal definition excerpt
+#TAG   ModelName	Comment	Filename	Light.	Ele.	KMW-Type	vires-Type	HAV	HAV-Subnr.	Initial	Iconpath	Group	Number	Value	Limit	Unit	Width
+SIGDEF Sg101Gefahrstelle01.flt	CN_Sg101_Gefahrenstelle01	CN_Sg101_Gefahrenstelle01.flt	0.30	0.62	STATIC	STATIC	101	-1	-1	VisualLib/Models/AddOns/CountryCN/Icons/CN_Sg101_Gefahrenstelle01.xpm	CN-Signs-S	-1	-1.00	0	none	0.85

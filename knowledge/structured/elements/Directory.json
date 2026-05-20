@@ -1,0 +1,77 @@
+{
+  "element": "Directory",
+  "description": "Schema-derived Directory element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "ControllerCatalog",
+      "type_ref": "Directory",
+      "deprecated": false
+    },
+    {
+      "parent_context": "EnvironmentCatalog",
+      "type_ref": "Directory",
+      "deprecated": false
+    },
+    {
+      "parent_context": "ManeuverCatalog",
+      "type_ref": "Directory",
+      "deprecated": false
+    },
+    {
+      "parent_context": "MiscObjectCatalog",
+      "type_ref": "Directory",
+      "deprecated": false
+    },
+    {
+      "parent_context": "PedestrianCatalog",
+      "type_ref": "Directory",
+      "deprecated": false
+    },
+    {
+      "parent_context": "RouteCatalog",
+      "type_ref": "Directory",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TrafficDistributionEntryCatalog",
+      "type_ref": "Directory",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TrajectoryCatalog",
+      "type_ref": "Directory",
+      "deprecated": false
+    },
+    {
+      "parent_context": "VehicleCatalog",
+      "type_ref": "Directory",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "ControllerCatalog",
+    "EnvironmentCatalog",
+    "ManeuverCatalog",
+    "MiscObjectCatalog",
+    "PedestrianCatalog",
+    "RouteCatalog",
+    "TrafficDistributionEntryCatalog",
+    "TrajectoryCatalog",
+    "VehicleCatalog"
+  ],
+  "required_attributes": [
+    {
+      "name": "path",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1066; knowledge/raw/schema/OpenSCENARIO.xsd#L1146; knowledge/raw/schema/OpenSCENARIO.xsd#L1282; knowledge/raw/schema/OpenSCENARIO.xsd#L1541; knowledge/raw/schema/OpenSCENARIO.xsd#L1569; knowledge/raw/schema/OpenSCENARIO.xsd#L1788; knowledge/raw/schema/OpenSCENARIO.xsd#L2058; knowledge/raw/schema/OpenSCENARIO.xsd#L2347; knowledge/raw/schema/OpenSCENARIO.xsd#L2468; knowledge/raw/schema/OpenSCENARIO.xsd#L2619"
+}

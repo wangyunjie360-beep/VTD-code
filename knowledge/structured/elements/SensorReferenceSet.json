@@ -1,0 +1,33 @@
+{
+  "element": "SensorReferenceSet",
+  "description": "Schema-derived SensorReferenceSet element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "VisibilityAction",
+      "type_ref": "SensorReferenceSet",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "VisibilityAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "SensorReference",
+      "cardinality": "1..unbounded"
+    }
+  ],
+  "child_order": [
+    "SensorReference"
+  ],
+  "multiplicity": {
+    "SensorReference": "1..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2116; knowledge/raw/schema/OpenSCENARIO.xsd#L2655"
+}

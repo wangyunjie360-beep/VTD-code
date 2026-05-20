@@ -1,0 +1,44 @@
+{
+  "element": "RelativeTargetLane",
+  "description": "Schema-derived RelativeTargetLane element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "LaneChangeTarget",
+      "type_ref": "RelativeTargetLane",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "LaneChangeTarget"
+  ],
+  "required_attributes": [
+    {
+      "name": "entityRef",
+      "type": "String",
+      "reference_kind": "entity"
+    },
+    {
+      "name": "value",
+      "type": "Int"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "layer",
+      "type": "LaneLayerType"
+    }
+  ],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "layer": [
+      "permanent",
+      "temporary"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L240; knowledge/raw/schema/OpenSCENARIO.xsd#L1426; knowledge/raw/schema/OpenSCENARIO.xsd#L1988"
+}

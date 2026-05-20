@@ -1,0 +1,39 @@
+{
+  "element": "Polyline",
+  "description": "Schema-derived Polyline element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Shape",
+      "type_ref": "Polyline",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Shape"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Vertex",
+      "cardinality": "2..unbounded"
+    },
+    {
+      "name": "Interpolation",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [
+    "Vertex",
+    "Interpolation"
+  ],
+  "multiplicity": {
+    "Vertex": "2..unbounded",
+    "Interpolation": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1821; knowledge/raw/schema/OpenSCENARIO.xsd#L2127"
+}

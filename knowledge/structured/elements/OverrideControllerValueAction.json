@@ -1,0 +1,56 @@
+{
+  "element": "OverrideControllerValueAction",
+  "description": "ControllerAction all-group for optional throttle, brake, clutch, parking brake, steering wheel, and gear overrides.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "ControllerAction",
+      "type_ref": "OverrideControllerValueAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "ControllerAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Throttle",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "Brake",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "Clutch",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "ParkingBrake",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "SteeringWheel",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "Gear",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "Throttle": "0..1",
+    "Brake": "0..1",
+    "Clutch": "0..1",
+    "ParkingBrake": "0..1",
+    "SteeringWheel": "0..1",
+    "Gear": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1060; knowledge/raw/schema/OpenSCENARIO.xsd#L1652"
+}

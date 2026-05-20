@@ -1,0 +1,50 @@
+{
+  "element": "Act",
+  "description": "Schema-derived Act element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Story",
+      "type_ref": "Act",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Story"
+  ],
+  "required_attributes": [
+    {
+      "name": "name",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "ManeuverGroup",
+      "cardinality": "1..unbounded"
+    },
+    {
+      "name": "StartTrigger",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "StopTrigger",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [
+    "ManeuverGroup",
+    "StartTrigger",
+    "StopTrigger"
+  ],
+  "multiplicity": {
+    "ManeuverGroup": "1..unbounded",
+    "StartTrigger": "0..1",
+    "StopTrigger": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L770; knowledge/raw/schema/OpenSCENARIO.xsd#L2202"
+}

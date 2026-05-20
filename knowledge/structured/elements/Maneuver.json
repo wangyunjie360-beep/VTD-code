@@ -1,0 +1,50 @@
+{
+  "element": "Maneuver",
+  "description": "Schema-derived Maneuver element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Catalog",
+      "type_ref": "Maneuver",
+      "deprecated": false
+    },
+    {
+      "parent_context": "ManeuverGroup",
+      "type_ref": "Maneuver",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Catalog",
+    "ManeuverGroup"
+  ],
+  "required_attributes": [
+    {
+      "name": "name",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "ParameterDeclarations",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "Event",
+      "cardinality": "1..unbounded"
+    }
+  ],
+  "child_order": [
+    "ParameterDeclarations",
+    "Event"
+  ],
+  "multiplicity": {
+    "ParameterDeclarations": "0..1",
+    "Event": "1..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L929; knowledge/raw/schema/OpenSCENARIO.xsd#L1532; knowledge/raw/schema/OpenSCENARIO.xsd#L1548"
+}

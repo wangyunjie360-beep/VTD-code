@@ -1,0 +1,4 @@
+MACRO Town_500m
+  TILE Standard/TileRoad01.attr
+  DECAL decalScatterConfig01.xml
+ENDMACRO

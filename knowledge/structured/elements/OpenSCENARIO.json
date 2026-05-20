@@ -1,0 +1,92 @@
+{
+  "element": "OpenSCENARIO",
+  "description": "Schema-derived OpenSCENARIO element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [
+    {
+      "members": [
+        "ParameterDeclarations",
+        "VariableDeclarations",
+        "MonitorDeclarations",
+        "CatalogLocations",
+        "RoadNetwork",
+        "Entities",
+        "Storyboard",
+        "Catalog",
+        "ParameterValueDistribution"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "",
+      "type_ref": "OpenScenario",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "FileHeader",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "ParameterDeclarations",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "VariableDeclarations",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "MonitorDeclarations",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "CatalogLocations",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "RoadNetwork",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "Entities",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "Storyboard",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "Catalog",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "ParameterValueDistribution",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "FileHeader",
+    "ParameterDeclarations|VariableDeclarations|MonitorDeclarations|CatalogLocations|RoadNetwork|Entities|Storyboard|Catalog|ParameterValueDistribution"
+  ],
+  "multiplicity": {
+    "FileHeader": "1..1",
+    "ParameterDeclarations": "0..1",
+    "VariableDeclarations": "0..1",
+    "MonitorDeclarations": "0..1",
+    "CatalogLocations": "1..1",
+    "RoadNetwork": "1..1",
+    "Entities": "1..1",
+    "Storyboard": "1..1",
+    "Catalog": "1..1",
+    "ParameterValueDistribution": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L14; knowledge/raw/schema/OpenSCENARIO.xsd#L1618"
+}

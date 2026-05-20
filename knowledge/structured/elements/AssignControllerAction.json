@@ -1,0 +1,72 @@
+{
+  "element": "AssignControllerAction",
+  "description": "Controller assignment choice between deprecated direct/controller catalog branches and ObjectController.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "Controller",
+        "CatalogReference",
+        "ObjectController"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: Controller, CatalogReference, ObjectController.",
+    "Controller and CatalogReference child branches are deprecated."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "ControllerAction",
+      "type_ref": "AssignControllerAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "ControllerAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [
+    {
+      "name": "activateAnimation",
+      "type": "Boolean"
+    },
+    {
+      "name": "activateLateral",
+      "type": "Boolean"
+    },
+    {
+      "name": "activateLighting",
+      "type": "Boolean"
+    },
+    {
+      "name": "activateLongitudinal",
+      "type": "Boolean"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "Controller",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "CatalogReference",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "ObjectController",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [
+    "Controller|CatalogReference|ObjectController"
+  ],
+  "multiplicity": {
+    "Controller": "0..1",
+    "CatalogReference": "0..1",
+    "ObjectController": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L844; knowledge/raw/schema/OpenSCENARIO.xsd#L1059"
+}

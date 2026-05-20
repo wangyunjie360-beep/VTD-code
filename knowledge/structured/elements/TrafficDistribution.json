@@ -1,0 +1,60 @@
+{
+  "element": "TrafficDistribution",
+  "description": "Traffic generation choice that may contain one or more TrafficDistributionEntry groups, one or more CatalogReferences aliases, or both branches.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "TrafficDistributionEntry",
+        "CatalogReferences"
+      ],
+      "cardinality": "1..2"
+    }
+  ],
+  "semantic_constraints": [
+    "Select 1 to 2 branches from: TrafficDistributionEntry, CatalogReferences."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "TrafficAreaAction",
+      "type_ref": "TrafficDistribution",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TrafficSourceAction",
+      "type_ref": "TrafficDistribution",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TrafficSwarmAction",
+      "type_ref": "TrafficDistribution",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "TrafficAreaAction",
+    "TrafficSourceAction",
+    "TrafficSwarmAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "TrafficDistributionEntry",
+      "cardinality": "1..unbounded"
+    },
+    {
+      "name": "CatalogReferences",
+      "cardinality": "1..unbounded"
+    }
+  ],
+  "child_order": [
+    "TrafficDistributionEntry|CatalogReferences"
+  ],
+  "multiplicity": {
+    "TrafficDistributionEntry": "1..unbounded",
+    "CatalogReferences": "1..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2316; knowledge/raw/schema/OpenSCENARIO.xsd#L2330; knowledge/raw/schema/OpenSCENARIO.xsd#L2408; knowledge/raw/schema/OpenSCENARIO.xsd#L2425"
+}

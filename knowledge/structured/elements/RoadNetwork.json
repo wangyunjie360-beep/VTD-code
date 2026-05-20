@@ -1,0 +1,51 @@
+{
+  "element": "RoadNetwork",
+  "description": "Schema-derived RoadNetwork element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "ScenarioDefinition",
+      "type_ref": "RoadNetwork",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "ScenarioDefinition"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "LogicFile",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "SceneGraphFile",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "TrafficSignals",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "UsedArea",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [
+    "LogicFile",
+    "SceneGraphFile",
+    "TrafficSignals",
+    "UsedArea"
+  ],
+  "multiplicity": {
+    "LogicFile": "0..1",
+    "SceneGraphFile": "0..1",
+    "TrafficSignals": "0..1",
+    "UsedArea": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2026; knowledge/raw/schema/OpenSCENARIO.xsd#L2089"
+}

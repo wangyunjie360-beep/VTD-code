@@ -1,0 +1,127 @@
+{
+  "alias_to_country": {
+    "at": "AT",
+    "br": "BR",
+    "ca": "CA",
+    "ch": "CH",
+    "china": "CN",
+    "cn": "CN",
+    "cna": "CNA",
+    "fr": "FR",
+    "fra": "FR",
+    "france": "FR",
+    "it": "IT",
+    "japan": "Japan",
+    "jpn": "JPN",
+    "prc": "CN",
+    "us": "US",
+    "usa": "US"
+  },
+  "countries": {
+    "AT": {
+      "aliases": [
+        "at"
+      ],
+      "canonical_code": "AT",
+      "observed_values": [
+        "AT"
+      ]
+    },
+    "BR": {
+      "aliases": [
+        "br"
+      ],
+      "canonical_code": "BR",
+      "observed_values": [
+        "BR"
+      ]
+    },
+    "CA": {
+      "aliases": [
+        "ca"
+      ],
+      "canonical_code": "CA",
+      "observed_values": [
+        "CA"
+      ]
+    },
+    "CH": {
+      "aliases": [
+        "ch"
+      ],
+      "canonical_code": "CH",
+      "observed_values": [
+        "CH"
+      ]
+    },
+    "CN": {
+      "aliases": [
+        "china",
+        "cn",
+        "prc"
+      ],
+      "canonical_code": "CN",
+      "observed_values": [
+        "CN"
+      ]
+    },
+    "CNA": {
+      "aliases": [
+        "cna"
+      ],
+      "canonical_code": "CNA",
+      "observed_values": [
+        "CNA"
+      ]
+    },
+    "FR": {
+      "aliases": [
+        "fr",
+        "fra",
+        "france"
+      ],
+      "canonical_code": "FR",
+      "observed_values": [
+        "FR"
+      ]
+    },
+    "IT": {
+      "aliases": [
+        "it"
+      ],
+      "canonical_code": "IT",
+      "observed_values": [
+        "IT"
+      ]
+    },
+    "JPN": {
+      "aliases": [
+        "jpn"
+      ],
+      "canonical_code": "JPN",
+      "observed_values": [
+        "JPN"
+      ]
+    },
+    "Japan": {
+      "aliases": [
+        "japan"
+      ],
+      "canonical_code": "Japan",
+      "observed_values": [
+        "Japan"
+      ]
+    },
+    "US": {
+      "aliases": [
+        "us",
+        "usa"
+      ],
+      "canonical_code": "US",
+      "observed_values": [
+        "US"
+      ]
+    }
+  },
+  "version": 1
+}

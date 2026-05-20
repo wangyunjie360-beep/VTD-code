@@ -1,0 +1,48 @@
+{
+  "element": "ComponentAnimation",
+  "description": "Schema-derived ComponentAnimation element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "VehicleComponent",
+        "UserDefinedComponent"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: VehicleComponent, UserDefinedComponent."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "AnimationType",
+      "type_ref": "ComponentAnimation",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "AnimationType"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "VehicleComponent",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "UserDefinedComponent",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "VehicleComponent|UserDefinedComponent"
+  ],
+  "multiplicity": {
+    "VehicleComponent": "1..1",
+    "UserDefinedComponent": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L832; knowledge/raw/schema/OpenSCENARIO.xsd#L1026"
+}

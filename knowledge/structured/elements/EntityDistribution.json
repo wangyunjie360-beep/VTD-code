@@ -1,0 +1,33 @@
+{
+  "element": "EntityDistribution",
+  "description": "TrafficDistributionEntry child containing one or more weighted EntityDistributionEntry items.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "TrafficDistributionEntry",
+      "type_ref": "EntityDistribution",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "TrafficDistributionEntry"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "EntityDistributionEntry",
+      "cardinality": "1..unbounded"
+    }
+  ],
+  "child_order": [
+    "EntityDistributionEntry"
+  ],
+  "multiplicity": {
+    "EntityDistributionEntry": "1..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1236; knowledge/raw/schema/OpenSCENARIO.xsd#L2338"
+}

@@ -1,0 +1,9 @@
+[project]
+name = "vtd-code"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["lxml", "mcp[cli]<2", "pytest"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

@@ -1,0 +1,164 @@
+{
+  "prompt_path": "D:/wyj/OPenscenario/benchmarks/prompts/triggered-deceleration.md",
+  "prompt_text": "# Triggered Deceleration\n\n## User Request\nCreate an OpenSCENARIO XML scenario where `ego` drives at a steady speed until a trigger fires, then decelerates smoothly to a slower target speed. Use a conservative trigger and keep the document minimal.\n\n## Coverage Expectations\n- One vehicle with clear init speed\n- One trigger that starts the deceleration behavior\n- A deceleration action that changes speed without adding unrelated maneuvers\n- A bounded stop condition or explicit end state\n",
+  "guidance": {
+    "query": "speed action",
+    "element": "SpeedAction",
+    "parent_context": "LongitudinalAction",
+    "retrieval_hits": [
+      {
+        "title": "SpeedAction",
+        "kind": "element",
+        "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2137",
+        "source_paths": [
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L2137"
+        ],
+        "summary": "Speed-control action. Both SpeedActionDynamics and SpeedActionTarget are required; the XSD uses xsd:all so child order is not constrained.",
+        "constraints": [
+          "Required children: SpeedActionDynamics, SpeedActionTarget",
+          "Content model: all",
+          "SpeedActionDynamics and SpeedActionTarget are both required.",
+          "Contextual variants: LongitudinalAction -> SpeedAction"
+        ],
+        "parent_contexts": [
+          "LongitudinalAction"
+        ],
+        "strategy_summary": [
+          "Use variant for LongitudinalAction: SpeedAction.",
+          "Keep required children present: SpeedActionDynamics, SpeedActionTarget."
+        ]
+      },
+      {
+        "title": "SpeedActionDynamics",
+        "kind": "element",
+        "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L177; knowledge/raw/schema/OpenSCENARIO.xsd#L191; knowledge/raw/schema/OpenSCENARIO.xsd#L206; knowledge/raw/schema/OpenSCENARIO.xsd#L2139; knowledge/raw/schema/OpenSCENARIO.xsd#L2488",
+        "source_paths": [
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L177",
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L191",
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L206",
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L2139",
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L2488"
+        ],
+        "summary": "Transition dynamics used by SpeedAction. This element name is an alias over the shared TransitionDynamics type.",
+        "constraints": [
+          "Required attributes: dynamicsDimension, dynamicsShape, value",
+          "Contextual variants: SpeedAction -> TransitionDynamics"
+        ],
+        "parent_contexts": [
+          "SpeedAction"
+        ],
+        "strategy_summary": [
+          "Resolve contextual variant before emitting this shared element name."
+        ]
+      },
+      {
+        "title": "SpeedActionTarget",
+        "kind": "element",
+        "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2143",
+        "source_paths": [
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L2143"
+        ],
+        "summary": "Choice wrapper for absolute or relative speed targets.",
+        "constraints": [
+          "Content model: choice",
+          "Choice groups: RelativeTargetSpeed | AbsoluteTargetSpeed",
+          "Child order: RelativeTargetSpeed|AbsoluteTargetSpeed",
+          "Select exactly one of: RelativeTargetSpeed, AbsoluteTargetSpeed.",
+          "Contextual variants: SpeedAction -> SpeedActionTarget"
+        ],
+        "parent_contexts": [
+          "SpeedAction"
+        ],
+        "strategy_summary": [
+          "Resolve contextual variant before emitting this shared element name.",
+          "Select exactly one branch from: RelativeTargetSpeed, AbsoluteTargetSpeed.",
+          "Preserve child order: RelativeTargetSpeed|AbsoluteTargetSpeed."
+        ]
+      }
+    ],
+    "element_schema": {
+      "element": "SpeedAction",
+      "description": "Speed-control action. Both SpeedActionDynamics and SpeedActionTarget are required; the XSD uses xsd:all so child order is not constrained.",
+      "content_model_kind": "all",
+      "child_groups": [],
+      "semantic_constraints": [
+        "SpeedActionDynamics and SpeedActionTarget are both required."
+      ],
+      "contextual_variants": [
+        {
+          "parent_context": "LongitudinalAction",
+          "type_ref": "SpeedAction",
+          "deprecated": false
+        }
+      ],
+      "parent_contexts": [
+        "LongitudinalAction"
+      ],
+      "required_attributes": [],
+      "optional_attributes": [],
+      "allowed_children": [
+        {
+          "name": "SpeedActionDynamics",
+          "cardinality": "1..1"
+        },
+        {
+          "name": "SpeedActionTarget",
+          "cardinality": "1..1"
+        }
+      ],
+      "child_order": [],
+      "multiplicity": {
+        "SpeedActionDynamics": "1..1",
+        "SpeedActionTarget": "1..1"
+      },
+      "enum_constraints": {},
+      "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2137",
+      "strategy": {
+        "structure_mode": "all",
+        "branch_selection": {
+          "mode": "none",
+          "groups": []
+        },
+        "ordering": {
+          "mode": "all",
+          "child_order": []
+        },
+        "required_children": [
+          "SpeedActionDynamics",
+          "SpeedActionTarget"
+        ],
+        "variant_resolution": {
+          "selection_required": true,
+          "parent_context": "LongitudinalAction",
+          "resolved_variant": {
+            "parent_context": "LongitudinalAction",
+            "type_ref": "SpeedAction",
+            "deprecated": false
+          },
+          "preferred_variants": [
+            {
+              "parent_context": "LongitudinalAction",
+              "type_ref": "SpeedAction",
+              "deprecated": false
+            }
+          ],
+          "deprecated_variants": []
+        },
+        "reference_requirements": [],
+        "repair_priority": [
+          "resolve_contextual_variant",
+          "add_required_children"
+        ]
+      }
+    },
+    "draft_checklist": [
+      "Use variant for LongitudinalAction: SpeedAction.",
+      "Keep required children present: SpeedActionDynamics, SpeedActionTarget.",
+      "Resolve contextual variant before emitting this shared element name.",
+      "Select exactly one branch from: RelativeTargetSpeed, AbsoluteTargetSpeed.",
+      "Preserve child order: RelativeTargetSpeed|AbsoluteTargetSpeed."
+    ],
+    "repair_diagnostics": [],
+    "repair_actions": []
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "prompt_path": "D:/wyj/OPenscenario/benchmarks/prompts/two-vehicle-follow.md",
+  "prompt_text": "# Two Vehicle Follow\n\n## User Request\nCreate an OpenSCENARIO XML scenario with two vehicles, `lead` and `ego`, where `ego` follows `lead` in the same lane at a safe distance. Keep the scenario conservative and avoid lane changes or sudden maneuvers.\n\n## Coverage Expectations\n- Two scenario objects with distinct roles\n- Story behavior that keeps `ego` behind `lead`\n- Triggers or stop conditions that bound the run cleanly\n- No extra entities or unsupported behavior beyond the follow scenario\n",
+  "guidance": {
+    "query": "longitudinal distance action",
+    "element": "LongitudinalDistanceAction",
+    "parent_context": "LongitudinalAction",
+    "retrieval_hits": [
+      {
+        "title": "LongitudinalDistanceAction",
+        "kind": "element",
+        "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L147; knowledge/raw/schema/OpenSCENARIO.xsd#L281; knowledge/raw/schema/OpenSCENARIO.xsd#L1516; knowledge/raw/schema/OpenSCENARIO.xsd#L1520",
+        "source_paths": [
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L147",
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L281",
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L1516",
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L1520"
+        ],
+        "summary": "Schema-derived LongitudinalDistanceAction element with context-dependent type variants captured from the local XSD.",
+        "constraints": [
+          "Required attributes: continuous, entityRef, freespace",
+          "Content model: all",
+          "Contextual variants: LongitudinalAction -> LongitudinalDistanceAction"
+        ],
+        "parent_contexts": [
+          "LongitudinalAction"
+        ],
+        "strategy_summary": [
+          "Use variant for LongitudinalAction: LongitudinalDistanceAction.",
+          "Wire required entity reference: entityRef."
+        ]
+      },
+      {
+        "title": "LongitudinalDistanceAction.continuous",
+        "kind": "attribute",
+        "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L147; knowledge/raw/schema/OpenSCENARIO.xsd#L281; knowledge/raw/schema/OpenSCENARIO.xsd#L1516; knowledge/raw/schema/OpenSCENARIO.xsd#L1520",
+        "source_paths": [
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L147",
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L281",
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L1516",
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L1520"
+        ],
+        "summary": "Required attribute 'continuous' on LongitudinalDistanceAction. Type: Boolean. Schema-derived LongitudinalDistanceAction element with context-dependent type variants captured from the local XSD.",
+        "constraints": [
+          "Required on LongitudinalDistanceAction",
+          "Type: Boolean"
+        ],
+        "parent_contexts": [
+          "LongitudinalAction",
+          "LongitudinalDistanceAction"
+        ]
+      },
+      {
+        "title": "LongitudinalDistanceAction.coordinateSystem",
+        "kind": "attribute",
+        "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L147; knowledge/raw/schema/OpenSCENARIO.xsd#L281; knowledge/raw/schema/OpenSCENARIO.xsd#L1516; knowledge/raw/schema/OpenSCENARIO.xsd#L1520",
+        "source_paths": [
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L147",
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L281",
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L1516",
+          "knowledge/raw/schema/OpenSCENARIO.xsd#L1520"
+        ],
+        "summary": "Optional attribute 'coordinateSystem' on LongitudinalDistanceAction. Type: CoordinateSystem. Schema-derived LongitudinalDistanceAction element with context-dependent type variants captured from the local XSD.",
+        "constraints": [
+          "Optional on LongitudinalDistanceAction",
+          "Type: CoordinateSystem",
+          "Allowed values: entity, lane, road, trajectory, world"
+        ],
+        "parent_contexts": [
+          "LongitudinalAction",
+          "LongitudinalDistanceAction"
+        ]
+      }
+    ],
+    "element_schema": {
+      "element": "LongitudinalDistanceAction",
+      "description": "Schema-derived LongitudinalDistanceAction element with context-dependent type variants captured from the local XSD.",
+      "content_model_kind": "all",
+      "child_groups": [],
+      "semantic_constraints": [],
+      "contextual_variants": [
+        {
+          "parent_context": "LongitudinalAction",
+          "type_ref": "LongitudinalDistanceAction",
+          "deprecated": false
+        }
+      ],
+      "parent_contexts": [
+        "LongitudinalAction"
+      ],
+      "required_attributes": [
+        {
+          "name": "continuous",
+          "type": "Boolean"
+        },
+        {
+          "name": "entityRef",
+          "type": "String",
+          "reference_kind": "entity"
+        },
+        {
+          "name": "freespace",
+          "type": "Boolean"
+        }
+      ],
+      "optional_attributes": [
+        {
+          "name": "coordinateSystem",
+          "type": "CoordinateSystem"
+        },
+        {
+          "name": "displacement",
+          "type": "LongitudinalDisplacement"
+        },
+        {
+          "name": "distance",
+          "type": "Double"
+        },
+        {
+          "name": "timeGap",
+          "type": "Double"
+        }
+      ],
+      "allowed_children": [
+        {
+          "name": "DynamicConstraints",
+          "cardinality": "0..1"
+        }
+      ],
+      "child_order": [],
+      "multiplicity": {
+        "DynamicConstraints": "0..1"
+      },
+      "enum_constraints": {
+        "displacement": [
+          "any",
+          "trailingReferencedEntity",
+          "leadingReferencedEntity"
+        ],
+        "coordinateSystem": [
+          "entity",
+          "lane",
+          "road",
+          "trajectory",
+          "world"
+        ]
+      },
+      "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L147; knowledge/raw/schema/OpenSCENARIO.xsd#L281; knowledge/raw/schema/OpenSCENARIO.xsd#L1516; knowledge/raw/schema/OpenSCENARIO.xsd#L1520",
+      "strategy": {
+        "structure_mode": "all",
+        "branch_selection": {
+          "mode": "none",
+          "groups": []
+        },
+        "ordering": {
+          "mode": "all",
+          "child_order": []
+        },
+        "required_children": [],
+        "variant_resolution": {
+          "selection_required": true,
+          "parent_context": "LongitudinalAction",
+          "resolved_variant": {
+            "parent_context": "LongitudinalAction",
+            "type_ref": "LongitudinalDistanceAction",
+            "deprecated": false
+          },
+          "preferred_variants": [
+            {
+              "parent_context": "LongitudinalAction",
+              "type_ref": "LongitudinalDistanceAction",
+              "deprecated": false
+            }
+          ],
+          "deprecated_variants": []
+        },
+        "reference_requirements": [
+          {
+            "name": "entityRef",
+            "reference_kind": "entity",
+            "required": true
+          }
+        ],
+        "repair_priority": [
+          "resolve_contextual_variant",
+          "add_required_references"
+        ]
+      }
+    },
+    "draft_checklist": [
+      "Use variant for LongitudinalAction: LongitudinalDistanceAction.",
+      "Wire required entity reference: entityRef."
+    ],
+    "repair_diagnostics": [],
+    "repair_actions": []
+  }
+}

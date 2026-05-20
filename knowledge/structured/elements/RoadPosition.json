@@ -1,0 +1,62 @@
+{
+  "element": "RoadPosition",
+  "description": "Schema-derived RoadPosition element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Position",
+      "type_ref": "RoadPosition",
+      "deprecated": false
+    },
+    {
+      "parent_context": "PositionStart",
+      "type_ref": "RoadPosition",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TargetPositionMaster",
+      "type_ref": "RoadPosition",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TargetPosition",
+      "type_ref": "RoadPosition",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Position",
+    "PositionStart",
+    "TargetPosition",
+    "TargetPositionMaster"
+  ],
+  "required_attributes": [
+    {
+      "name": "roadId",
+      "type": "String"
+    },
+    {
+      "name": "s",
+      "type": "Double"
+    },
+    {
+      "name": "t",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Orientation",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "Orientation": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1832; knowledge/raw/schema/OpenSCENARIO.xsd#L2034"
+}

@@ -1,0 +1,33 @@
+{
+  "element": "Init",
+  "description": "Schema-derived Init element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Storyboard",
+      "type_ref": "Init",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Storyboard"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Actions",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "Actions"
+  ],
+  "multiplicity": {
+    "Actions": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1390; knowledge/raw/schema/OpenSCENARIO.xsd#L2208"
+}

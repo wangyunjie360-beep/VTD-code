@@ -1,0 +1,32 @@
+{
+  "element": "SetAction",
+  "description": "Set-action leaf shared by the deprecated ParameterAction path and the current VariableAction path.",
+  "parent_contexts": [
+    "ParameterAction",
+    "VariableAction"
+  ],
+  "required_attributes": [
+    {
+      "name": "value",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "contextual_variants": [
+    {
+      "parent_context": "ParameterAction",
+      "type_ref": "ParameterSetAction",
+      "deprecated": true
+    },
+    {
+      "parent_context": "VariableAction",
+      "type_ref": "VariableSetAction",
+      "deprecated": false
+    }
+  ],
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1694; knowledge/raw/schema/OpenSCENARIO.xsd#L1744; knowledge/raw/schema/OpenSCENARIO.xsd#L2560; knowledge/raw/schema/OpenSCENARIO.xsd#L2597"
+}

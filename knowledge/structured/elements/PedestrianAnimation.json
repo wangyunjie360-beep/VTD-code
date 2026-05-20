@@ -1,0 +1,57 @@
+{
+  "element": "PedestrianAnimation",
+  "description": "Schema-derived PedestrianAnimation element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "AnimationType",
+      "type_ref": "PedestrianAnimation",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "AnimationType"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [
+    {
+      "name": "motion",
+      "type": "PedestrianMotionType"
+    },
+    {
+      "name": "userDefinedPedestrianAnimation",
+      "type": "String"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "PedestrianGesture",
+      "cardinality": "0..unbounded"
+    }
+  ],
+  "child_order": [
+    "PedestrianGesture"
+  ],
+  "multiplicity": {
+    "PedestrianGesture": "0..unbounded"
+  },
+  "enum_constraints": {
+    "motion": [
+      "standing",
+      "sitting",
+      "lying",
+      "squatting",
+      "walking",
+      "running",
+      "reeling",
+      "crawling",
+      "cycling",
+      "jumping",
+      "ducking",
+      "bendingDown"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L401; knowledge/raw/schema/OpenSCENARIO.xsd#L833; knowledge/raw/schema/OpenSCENARIO.xsd#L1779"
+}

@@ -1,0 +1,122 @@
+{
+  "element": "EntityCondition",
+  "description": "Choice wrapper for entity-based conditions. Exactly one child condition branch must be selected; local MVP scenarios use CollisionCondition, ReachPositionCondition, and RelativeDistanceCondition.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "EndOfRoadCondition",
+        "CollisionCondition",
+        "OffroadCondition",
+        "TimeHeadwayCondition",
+        "TimeToCollisionCondition",
+        "AccelerationCondition",
+        "StandStillCondition",
+        "SpeedCondition",
+        "RelativeSpeedCondition",
+        "TraveledDistanceCondition",
+        "ReachPositionCondition",
+        "DistanceCondition",
+        "RelativeDistanceCondition",
+        "RelativeClearanceCondition",
+        "AngleCondition",
+        "RelativeAngleCondition"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "parent_contexts": [
+    "ByEntityCondition"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "EndOfRoadCondition",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "CollisionCondition",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "OffroadCondition",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "TimeHeadwayCondition",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "TimeToCollisionCondition",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "AccelerationCondition",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "StandStillCondition",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "SpeedCondition",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "RelativeSpeedCondition",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "TraveledDistanceCondition",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "ReachPositionCondition",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "DistanceCondition",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "RelativeDistanceCondition",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "RelativeClearanceCondition",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "AngleCondition",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "RelativeAngleCondition",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [
+    "EndOfRoadCondition|CollisionCondition|OffroadCondition|TimeHeadwayCondition|TimeToCollisionCondition|AccelerationCondition|StandStillCondition|SpeedCondition|RelativeSpeedCondition|TraveledDistanceCondition|ReachPositionCondition|DistanceCondition|RelativeDistanceCondition|RelativeClearanceCondition|AngleCondition|RelativeAngleCondition"
+  ],
+  "multiplicity": {
+    "EndOfRoadCondition": "0..1",
+    "CollisionCondition": "0..1",
+    "OffroadCondition": "0..1",
+    "TimeHeadwayCondition": "0..1",
+    "TimeToCollisionCondition": "0..1",
+    "AccelerationCondition": "0..1",
+    "StandStillCondition": "0..1",
+    "SpeedCondition": "0..1",
+    "RelativeSpeedCondition": "0..1",
+    "TraveledDistanceCondition": "0..1",
+    "ReachPositionCondition": "0..1",
+    "DistanceCondition": "0..1",
+    "RelativeDistanceCondition": "0..1",
+    "RelativeClearanceCondition": "0..1",
+    "AngleCondition": "0..1",
+    "RelativeAngleCondition": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1214"
+}

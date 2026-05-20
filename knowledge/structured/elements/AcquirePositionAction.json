@@ -1,0 +1,31 @@
+{
+  "element": "AcquirePositionAction",
+  "description": "Schema-derived AcquirePositionAction element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "RoutingAction",
+      "type_ref": "AcquirePositionAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "RoutingAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Position",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "Position": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L765; knowledge/raw/schema/OpenSCENARIO.xsd#L2078"
+}

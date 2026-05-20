@@ -1,0 +1,52 @@
+{
+  "element": "ParameterValueDistribution",
+  "description": "Parameter value distribution root. ScenarioFile is required, followed by exactly one Deterministic or Stochastic wrapper.",
+  "content_model_kind": "sequence",
+  "child_groups": [
+    {
+      "members": [
+        "Deterministic",
+        "Stochastic"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "ParameterValueDistributionDefinition",
+      "type_ref": "ParameterValueDistribution",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "ParameterValueDistributionDefinition"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "ScenarioFile",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "Deterministic",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "Stochastic",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "ScenarioFile",
+    "Deterministic|Stochastic"
+  ],
+  "multiplicity": {
+    "ScenarioFile": "1..1",
+    "Deterministic": "1..1",
+    "Stochastic": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1748; knowledge/raw/schema/OpenSCENARIO.xsd#L1756"
+}

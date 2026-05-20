@@ -1,0 +1,21 @@
+flowchart LR
+    A[ASAM OpenSCENARIO XML V1.4.0 XSD<br/>本地 schema] --> B[XSD Inventory / Parser]
+    A2[标准文档 / 原始资料] --> C[Raw Docs 区]
+    B --> D[结构化知识图谱底座<br/>knowledge/structured/elements/*.json]
+    C --> D
+    D --> E[MCP Runtime]
+    E --> F[retrieve_spec]
+    E --> G[get_element_schema]
+    E --> H[build_xml_guidance]
+    E --> I[validate_xml]
+    E --> J[explain_validation_errors]
+    F --> K[Codex Skill / 外部 Agent 工作流]
+    G --> K
+    H --> K
+    I --> K
+    J --> K
+    K --> L[LLM 生成 OpenSCENARIO XML]
+    L --> I
+    I -->|失败| J
+    J -->|局部修复建议| K
+    I -->|通过| M[VTD 导向场景文件输出]

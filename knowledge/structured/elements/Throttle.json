@@ -1,0 +1,38 @@
+{
+  "element": "Throttle",
+  "description": "Schema-derived Throttle element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "OverrideControllerValueAction",
+      "type_ref": "OverrideThrottleAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "OverrideControllerValueAction"
+  ],
+  "required_attributes": [
+    {
+      "name": "active",
+      "type": "Boolean"
+    },
+    {
+      "name": "value",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "maxRate",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1654; knowledge/raw/schema/OpenSCENARIO.xsd#L1686"
+}

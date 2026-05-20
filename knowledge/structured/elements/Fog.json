@@ -1,0 +1,36 @@
+{
+  "element": "Fog",
+  "description": "Weather child with required visualRange and an optional BoundingBox.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Weather",
+      "type_ref": "Fog",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Weather"
+  ],
+  "required_attributes": [
+    {
+      "name": "visualRange",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "BoundingBox",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "BoundingBox": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1317; knowledge/raw/schema/OpenSCENARIO.xsd#L2670"
+}

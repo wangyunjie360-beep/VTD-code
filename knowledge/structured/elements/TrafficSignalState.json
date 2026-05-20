@@ -1,0 +1,34 @@
+{
+  "element": "TrafficSignalState",
+  "description": "Phase child that assigns a required state to one trafficSignalId.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Phase",
+      "type_ref": "TrafficSignalState",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Phase"
+  ],
+  "required_attributes": [
+    {
+      "name": "state",
+      "type": "String"
+    },
+    {
+      "name": "trafficSignalId",
+      "type": "String",
+      "reference_kind": "traffic_signal"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1803; knowledge/raw/schema/OpenSCENARIO.xsd#L2384"
+}

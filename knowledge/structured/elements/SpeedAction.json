@@ -1,0 +1,37 @@
+{
+  "element": "SpeedAction",
+  "description": "Speed-control action. Both SpeedActionDynamics and SpeedActionTarget are required; the XSD uses xsd:all so child order is not constrained.",
+  "content_model_kind": "all",
+  "semantic_constraints": [
+    "SpeedActionDynamics and SpeedActionTarget are both required."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "LongitudinalAction",
+      "type_ref": "SpeedAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "LongitudinalAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "SpeedActionDynamics",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "SpeedActionTarget",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "SpeedActionDynamics": "1..1",
+    "SpeedActionTarget": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2137"
+}

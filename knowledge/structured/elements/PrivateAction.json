@@ -1,0 +1,102 @@
+{
+  "element": "PrivateAction",
+  "description": "Choice wrapper for entity-private actions. Exactly one child action branch must be selected.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "LongitudinalAction",
+        "LateralAction",
+        "VisibilityAction",
+        "SynchronizeAction",
+        "ActivateControllerAction",
+        "ControllerAction",
+        "TeleportAction",
+        "RoutingAction",
+        "AppearanceAction",
+        "TrailerAction"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: LongitudinalAction, LateralAction, VisibilityAction, SynchronizeAction, ActivateControllerAction, ControllerAction, TeleportAction, RoutingAction, AppearanceAction, TrailerAction."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "Action",
+      "type_ref": "PrivateAction",
+      "deprecated": false
+    },
+    {
+      "parent_context": "Private",
+      "type_ref": "PrivateAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Action",
+    "Private"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "LongitudinalAction",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "LateralAction",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "VisibilityAction",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "SynchronizeAction",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "ActivateControllerAction",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "ControllerAction",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "TeleportAction",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "RoutingAction",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "AppearanceAction",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "TrailerAction",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [
+    "LongitudinalAction|LateralAction|VisibilityAction|SynchronizeAction|ActivateControllerAction|ControllerAction|TeleportAction|RoutingAction|AppearanceAction|TrailerAction"
+  ],
+  "multiplicity": {
+    "LongitudinalAction": "0..1",
+    "LateralAction": "0..1",
+    "VisibilityAction": "0..1",
+    "SynchronizeAction": "0..1",
+    "ActivateControllerAction": "0..1",
+    "ControllerAction": "0..1",
+    "TeleportAction": "0..1",
+    "RoutingAction": "0..1",
+    "AppearanceAction": "0..1",
+    "TrailerAction": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1869"
+}

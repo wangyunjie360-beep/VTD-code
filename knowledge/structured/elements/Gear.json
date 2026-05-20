@@ -1,0 +1,58 @@
+{
+  "element": "Gear",
+  "description": "Override gear input with a ManualGear or AutomaticGear branch and a deprecated scalar number attribute.",
+  "content_model_kind": "sequence",
+  "child_groups": [
+    {
+      "members": [
+        "ManualGear",
+        "AutomaticGear"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "The scalar number attribute is deprecated."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "OverrideControllerValueAction",
+      "type_ref": "OverrideGearAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "OverrideControllerValueAction"
+  ],
+  "required_attributes": [
+    {
+      "name": "active",
+      "type": "Boolean"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "number",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "ManualGear",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "AutomaticGear",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "ManualGear|AutomaticGear"
+  ],
+  "multiplicity": {
+    "ManualGear": "1..1",
+    "AutomaticGear": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1659; knowledge/raw/schema/OpenSCENARIO.xsd#L1662"
+}

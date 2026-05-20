@@ -1,0 +1,33 @@
+{
+  "element": "UniformDistribution",
+  "description": "Stochastic distribution branch with one required Range child.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "StochasticDistributionType",
+      "type_ref": "UniformDistribution",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "StochasticDistributionType"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Range",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "Range"
+  ],
+  "multiplicity": {
+    "Range": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2193; knowledge/raw/schema/OpenSCENARIO.xsd#L2508"
+}

@@ -1,0 +1,138 @@
+{
+  "element": "Vehicle",
+  "description": "Schema-derived Vehicle element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Catalog",
+      "type_ref": "Vehicle",
+      "deprecated": false
+    },
+    {
+      "parent_context": "EntityObject",
+      "type_ref": "Vehicle",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Catalog",
+    "EntityObject"
+  ],
+  "required_attributes": [
+    {
+      "name": "name",
+      "type": "String"
+    },
+    {
+      "name": "vehicleCategory",
+      "type": "VehicleCategory"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "mass",
+      "type": "Double"
+    },
+    {
+      "name": "model3d",
+      "type": "String"
+    },
+    {
+      "name": "role",
+      "type": "Role"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "ParameterDeclarations",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "BoundingBox",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "Performance",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "Axles",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "Properties",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "TrailerHitch",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "TrailerCoupler",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "Trailer",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "ParameterDeclarations": "0..1",
+    "BoundingBox": "1..1",
+    "Performance": "1..1",
+    "Axles": "1..1",
+    "Properties": "0..1",
+    "TrailerHitch": "0..1",
+    "TrailerCoupler": "0..1",
+    "Trailer": "0..1"
+  },
+  "enum_constraints": {
+    "vehicleCategory": [
+      "aircraft",
+      "bicycle",
+      "bus",
+      "car",
+      "heavyTruck",
+      "landVehicle",
+      "micromobilityDevice",
+      "motorbike",
+      "motorcycle",
+      "other",
+      "semitractor",
+      "semitrailer",
+      "standupScooter",
+      "trailer",
+      "train",
+      "tram",
+      "truck",
+      "van",
+      "watercraft",
+      "wheelchair",
+      "workMachine"
+    ],
+    "role": [
+      "none",
+      "agriculture",
+      "ambulance",
+      "civil",
+      "construction",
+      "dangerousGoodsTransport",
+      "fire",
+      "fireBrigade",
+      "freightTransport",
+      "garbageCollection",
+      "military",
+      "other",
+      "police",
+      "publicTransport",
+      "roadAssistance",
+      "roadsideAssistance",
+      "specialTransport",
+      "trafficControl"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L485; knowledge/raw/schema/OpenSCENARIO.xsd#L644; knowledge/raw/schema/OpenSCENARIO.xsd#L924; knowledge/raw/schema/OpenSCENARIO.xsd#L1250; knowledge/raw/schema/OpenSCENARIO.xsd#L2600"
+}

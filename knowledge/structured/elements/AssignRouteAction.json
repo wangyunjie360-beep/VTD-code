@@ -1,0 +1,48 @@
+{
+  "element": "AssignRouteAction",
+  "description": "Schema-derived AssignRouteAction element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "Route",
+        "CatalogReference"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: Route, CatalogReference."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "RoutingAction",
+      "type_ref": "AssignRouteAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "RoutingAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Route",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "CatalogReference",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "Route|CatalogReference"
+  ],
+  "multiplicity": {
+    "Route": "1..1",
+    "CatalogReference": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L859; knowledge/raw/schema/OpenSCENARIO.xsd#L2076"
+}

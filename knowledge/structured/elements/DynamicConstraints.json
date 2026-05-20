@@ -1,0 +1,57 @@
+{
+  "element": "DynamicConstraints",
+  "description": "Schema-derived DynamicConstraints element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "LateralDistanceAction",
+      "type_ref": "DynamicConstraints",
+      "deprecated": false
+    },
+    {
+      "parent_context": "LongitudinalDistanceAction",
+      "type_ref": "DynamicConstraints",
+      "deprecated": false
+    },
+    {
+      "parent_context": "SpeedProfileAction",
+      "type_ref": "DynamicConstraints",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "LateralDistanceAction",
+    "LongitudinalDistanceAction",
+    "SpeedProfileAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [
+    {
+      "name": "maxAcceleration",
+      "type": "Double"
+    },
+    {
+      "name": "maxAccelerationRate",
+      "type": "Double"
+    },
+    {
+      "name": "maxDeceleration",
+      "type": "Double"
+    },
+    {
+      "name": "maxDecelerationRate",
+      "type": "Double"
+    },
+    {
+      "name": "maxSpeed",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1191; knowledge/raw/schema/OpenSCENARIO.xsd#L1466; knowledge/raw/schema/OpenSCENARIO.xsd#L1522; knowledge/raw/schema/OpenSCENARIO.xsd#L2156"
+}

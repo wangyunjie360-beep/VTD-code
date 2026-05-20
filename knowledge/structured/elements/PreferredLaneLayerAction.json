@@ -1,0 +1,34 @@
+{
+  "element": "PreferredLaneLayerAction",
+  "description": "Schema-derived PreferredLaneLayerAction element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "RoutingAction",
+      "type_ref": "PreferredLaneLayerAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "RoutingAction"
+  ],
+  "required_attributes": [
+    {
+      "name": "layer",
+      "type": "LaneLayerType"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "layer": [
+      "permanent",
+      "temporary"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L240; knowledge/raw/schema/OpenSCENARIO.xsd#L1860; knowledge/raw/schema/OpenSCENARIO.xsd#L2080"
+}

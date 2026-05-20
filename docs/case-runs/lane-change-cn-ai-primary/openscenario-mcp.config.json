@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "openscenario": {
+      "args": [
+        "-3.14",
+        "-m",
+        "openscenario_mcp"
+      ],
+      "command": "py"
+    }
+  }
+}

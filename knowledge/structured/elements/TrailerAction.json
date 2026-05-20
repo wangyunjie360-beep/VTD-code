@@ -1,0 +1,48 @@
+{
+  "element": "TrailerAction",
+  "description": "Private-action choice between connecting and disconnecting a trailer.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "ConnectTrailerAction",
+        "DisconnectTrailerAction"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: ConnectTrailerAction, DisconnectTrailerAction."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "PrivateAction",
+      "type_ref": "TrailerAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "PrivateAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "ConnectTrailerAction",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "DisconnectTrailerAction",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "ConnectTrailerAction|DisconnectTrailerAction"
+  ],
+  "multiplicity": {
+    "ConnectTrailerAction": "1..1",
+    "DisconnectTrailerAction": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1882; knowledge/raw/schema/OpenSCENARIO.xsd#L2444"
+}

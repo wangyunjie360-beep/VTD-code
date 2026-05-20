@@ -1,0 +1,16 @@
+flowchart TD
+    A[用户输入自然语言场景需求] --> B[Skill 解析为 parsed_intent]
+    B --> C[生成 xml_intent_check]
+    C --> D[LLM 自主起草 XML]
+    D --> E{结构风险高?}
+    E -->|是| F[调用 retrieve_spec / get_element_schema / build_xml_guidance]
+    E -->|否| G[直接进入校验]
+    F --> G[validate_xml]
+    G --> H{schema 通过?}
+    H -->|否| I[explain_validation_errors]
+    I --> J[依据 repair_strategy 做局部修复]
+    J --> G
+    H -->|是| K[回查 intent consistency]
+    K --> L{与用户意图一致?}
+    L -->|否| M[继续补齐或报告 blocker]
+    L -->|是| N[输出 VTD 导向 OpenSCENARIO XML]

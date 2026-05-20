@@ -1,0 +1,47 @@
+{
+  "parsed_intent": {
+    "parameters": [],
+    "entities": [
+      {
+        "name": "ego",
+        "type": "Vehicle",
+        "role": "primary"
+      }
+    ],
+    "environment": {},
+    "map_context": {
+      "logic_file": "../../roads/highway_edge_merge.xodr",
+      "road_id": "1",
+      "lane_id": "-2"
+    },
+    "init_actions": [
+      {
+        "entity": "ego",
+        "actions": [
+          "teleport to road 1 lane -2 at s=300.0",
+          "set absolute speed to 15.0 m/s"
+        ]
+      }
+    ],
+    "story_actions": [],
+    "triggers": [],
+    "stop_conditions": [
+      "stop when simulation time exceeds 5.0 seconds"
+    ],
+    "assumptions": [
+      "Use the local highway_edge_merge OpenDRIVE asset for a conservative on-road placement."
+    ]
+  },
+  "xml_intent_check": {
+    "matched": [
+      "one scenario object named ego",
+      "conservative init speed with no extra controllers",
+      "time-based stop condition at 5 seconds"
+    ],
+    "missing": [],
+    "extra": []
+  },
+  "schema_valid": true,
+  "intent_consistent": true,
+  "remaining_blockers": []
+}

@@ -1,0 +1,27 @@
+{
+  "case_request": "Generate a VTD OpenSCENARIO case on an urban road in China: ego vehicle starts at 30 km/h; the scenario trigger is simulation time 5 seconds; at that trigger the ego vehicle performs a lane change to the left by one lane; the simulation stops at 20 seconds. Keep the XML minimal but schema-valid.",
+  "claude_artifact": {
+    "artifact_path": "docs/case-runs/lane-change-cn/claude-review.md",
+    "command": "claude -p <prompt>",
+    "finished_at": "2026-05-19T02:22:00.338447Z",
+    "prompt_path": "docs/case-runs/lane-change-cn/claude-review-prompt.txt",
+    "returncode": null,
+    "started_at": "2026-05-19T02:18:53.628137Z",
+    "status": "timeout",
+    "stderr": "",
+    "stdout": "API Error: 503 {\"error\":{\"code\":\"model_not_found\",\"message\":\"No available channel for model claude-opus-4-5-20251101 under group Claude code 特价 (distributor) (request id: 202605190222015792800238268d9d6RVtIJBvD)\",\"type\":\"new_api_error\"}}\n",
+    "timeout_seconds": 60
+  },
+  "intent_consistent": true,
+  "interaction_count": 14,
+  "scenario_path": "docs/case-runs/lane-change-cn/lane_change_cn.xosc",
+  "spec_top_hits": [
+    "LaneChangeAction",
+    "LaneChangeActionDynamics",
+    "SimulationTimeCondition",
+    "LaneChangeTarget",
+    "OpenSCENARIO",
+    "Position"
+  ],
+  "validation_ok": true
+}

@@ -1,0 +1,144 @@
+{
+  "parsed_intent": {
+    "parameters": [],
+    "entities": [
+      {
+        "name": "Ego",
+        "type": "Vehicle",
+        "role": "primary"
+      },
+      {
+        "name": "TruckA",
+        "type": "Vehicle",
+        "role": "lead_vehicle"
+      },
+      {
+        "name": "CarB",
+        "type": "Vehicle",
+        "role": "left_lane_blocker"
+      },
+      {
+        "name": "SuvC",
+        "type": "Vehicle",
+        "role": "ramp_intruder"
+      },
+      {
+        "name": "MotorbikeD",
+        "type": "Vehicle",
+        "role": "occluded_small_target"
+      },
+      {
+        "name": "CrateE",
+        "type": "MiscObject",
+        "role": "dropped_obstacle"
+      }
+    ],
+    "environment": {
+      "time_of_day": "2026-03-25T22:30:00",
+      "weather": "nighttime heavy rain with gusting wind and reduced visibility",
+      "road_condition": "low-flooded elevated merge zone with low friction and glare",
+      "annotations": [
+        "camera visibility reduction",
+        "radar multipath from water and guardrail",
+        "lidar rain noise",
+        "worn and partially missing lane markings near merge",
+        "rotating construction sign intermittently occludes view"
+      ]
+    },
+    "map_context": {
+      "logic_file": "../roads/viaduct_three_lane_ramp_merge.xodr",
+      "road_id": "1",
+      "ego_start_lane_id": "-3",
+      "left_blocking_lane_id": "-2",
+      "merge_lane_id": "-4"
+    },
+    "init_actions": [
+      {
+        "entity": "Ego",
+        "actions": [
+          "teleport to road 1 lane -3 at s=300.0",
+          "set absolute speed to 20.0 m/s"
+        ]
+      },
+      {
+        "entity": "TruckA",
+        "actions": [
+          "teleport to road 1 lane -3 at s=374.0",
+          "set absolute speed to 16.11 m/s"
+        ]
+      },
+      {
+        "entity": "CarB",
+        "actions": [
+          "teleport to road 1 lane -2 at s=302.0",
+          "set absolute speed to 20.83 m/s"
+        ]
+      },
+      {
+        "entity": "SuvC",
+        "actions": [
+          "teleport to road 1 lane -4 at s=334.0",
+          "set absolute speed to 22.22 m/s"
+        ]
+      },
+      {
+        "entity": "MotorbikeD",
+        "actions": [
+          "teleport to road 1 lane -4 at s=320.0",
+          "set absolute speed to 18.0 m/s"
+        ]
+      },
+      {
+        "entity": "CrateE",
+        "actions": [
+          "stage on road 1 lane -4 at s=185.0 until the drop event"
+        ]
+      }
+    ],
+    "story_actions": [
+      "TruckA holds speed, then hydroplanes, drifts laterally within lane, and brakes when Ego closes to 60 m",
+      "CarB remains adjacent in the left lane and does not yield",
+      "SuvC holds high ramp speed, then force-merges into Ego lane and brakes to compress space when Ego closes to 46 m behind TruckA",
+      "MotorbikeD remains occluded on the ramp lane, then quickly cuts into Ego lane and surges when Ego closes to 34 m behind TruckA",
+      "CrateE drops into Ego lane when Ego closes to 30 m behind TruckA, then drifts laterally from pooled water"
+    ],
+    "triggers": [
+      "simulation time > 0.2 seconds starts baseline speed-hold actions",
+      "Ego relative longitudinal distance to TruckA < 60 m starts TruckA hydroplane braking and drift",
+      "Ego relative longitudinal distance to TruckA < 46 m starts SuvC forced merge and compression brake",
+      "Ego relative longitudinal distance to TruckA < 34 m starts MotorbikeD cut-in and surge",
+      "Ego relative longitudinal distance to TruckA < 30 m spawns CrateE into Ego lane",
+      "simulation time > 8.0 seconds repositions CrateE to encode rain-driven drift"
+    ],
+    "stop_conditions": [
+      "stop if Ego collides with any vehicle",
+      "stop if Ego collides with any miscellaneous object",
+      "stop if Ego reaches road 1 lane -3 at s=760.0",
+      "stop when simulation time exceeds 35.0 seconds"
+    ],
+    "assumptions": [
+      "A new simplified OpenDRIVE road is generated because the repository baseline road only had two mainline lanes and did not match the requested three-lane main carriageway.",
+      "Sensor degradation, glare, and intermittent construction-sign occlusion are preserved as Properties metadata because OpenSCENARIO 1.1 does not directly simulate those perception effects.",
+      "The scenario is controller-ready: Ego receives only initialization actions and the surrounding traffic drives the hazard chain."
+    ]
+  },
+  "xml_intent_check": {
+    "matched": [
+      "three mainline lanes with a right-side merge lane in the supporting OpenDRIVE asset",
+      "nighttime heavy-rain environment with low visibility, gusting wind, and reduced friction",
+      "lead cargo van decelerates and destabilizes in pooled water",
+      "left-lane blocker removes the simple left-escape option",
+      "high-speed ramp SUV intrudes into Ego lane",
+      "occluded motorcycle cuts into the shrinking gap",
+      "dark low-reflectivity crate drops into Ego lane and drifts",
+      "collision and bounded runtime stop conditions"
+    ],
+    "missing": [],
+    "extra": [
+      "sensor impairment and construction-sign occlusion are represented as metadata Properties rather than executable dynamics"
+    ]
+  },
+  "schema_valid": true,
+  "intent_consistent": true,
+  "remaining_blockers": []
+}

@@ -1,0 +1,52 @@
+{
+  "parsed_intent": {
+    "parameters": [],
+    "entities": [
+      {
+        "name": "ego",
+        "type": "Vehicle",
+        "role": "primary"
+      }
+    ],
+    "environment": {},
+    "map_context": {
+      "logic_file": "../../roads/highway_edge_merge.xodr",
+      "road_id": "1",
+      "lane_id": "-2"
+    },
+    "init_actions": [
+      {
+        "entity": "ego",
+        "actions": [
+          "teleport to road 1 lane -2 at s=310.0",
+          "set absolute speed to 20.0 m/s"
+        ]
+      }
+    ],
+    "story_actions": [
+      "decelerate ego from 20.0 m/s to 8.0 m/s with linear dynamics over 2.0 seconds"
+    ],
+    "triggers": [
+      "simulation time > 2.0 seconds starts the deceleration event"
+    ],
+    "stop_conditions": [
+      "stop when simulation time exceeds 8.0 seconds"
+    ],
+    "assumptions": [
+      "A simulation-time trigger is the conservative trigger requested by the benchmark prompt."
+    ]
+  },
+  "xml_intent_check": {
+    "matched": [
+      "one ego vehicle with clear init speed",
+      "trigger-based speed reduction after 2 seconds",
+      "absolute target speed of 8.0 m/s",
+      "bounded stop condition at 8 seconds"
+    ],
+    "missing": [],
+    "extra": []
+  },
+  "schema_valid": true,
+  "intent_consistent": true,
+  "remaining_blockers": []
+}

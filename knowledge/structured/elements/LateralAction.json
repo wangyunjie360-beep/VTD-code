@@ -1,0 +1,52 @@
+{
+  "element": "LateralAction",
+  "description": "Choice wrapper for lateral control. Exactly one of LaneChangeAction, LaneOffsetAction, or LateralDistanceAction may be present.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "LaneChangeAction",
+        "LaneOffsetAction",
+        "LateralDistanceAction"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: LaneChangeAction, LaneOffsetAction, LateralDistanceAction."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "PrivateAction",
+      "type_ref": "LateralAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "PrivateAction"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "LaneChangeAction",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "LaneOffsetAction",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "LateralDistanceAction",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "LaneChangeAction": "0..1",
+    "LaneOffsetAction": "0..1",
+    "LateralDistanceAction": "0..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1457"
+}

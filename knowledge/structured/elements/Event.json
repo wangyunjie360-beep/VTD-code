@@ -1,0 +1,60 @@
+{
+  "element": "Event",
+  "description": "Schema-derived Event element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Maneuver",
+      "type_ref": "Event",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Maneuver"
+  ],
+  "required_attributes": [
+    {
+      "name": "name",
+      "type": "String"
+    },
+    {
+      "name": "priority",
+      "type": "Priority"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "maximumExecutionCount",
+      "type": "UnsignedInt"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "Action",
+      "cardinality": "1..unbounded"
+    },
+    {
+      "name": "StartTrigger",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [
+    "Action",
+    "StartTrigger"
+  ],
+  "multiplicity": {
+    "Action": "1..unbounded",
+    "StartTrigger": "0..1"
+  },
+  "enum_constraints": {
+    "priority": [
+      "overwrite",
+      "override",
+      "parallel",
+      "skip"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L438; knowledge/raw/schema/OpenSCENARIO.xsd#L1285; knowledge/raw/schema/OpenSCENARIO.xsd#L1535"
+}

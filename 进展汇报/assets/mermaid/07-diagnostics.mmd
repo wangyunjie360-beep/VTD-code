@@ -1,0 +1,16 @@
+flowchart TD
+    A[validate_xml 返回 errors] --> B[按 regex 分类]
+    B --> C[missing_required_child?]
+    B --> D[missing_required_attribute?]
+    B --> E[wrong_child_order?]
+    B --> F[invalid_attribute / enum?]
+    B --> G[unexpected_element?]
+    C --> H[结合结构化知识做 schema-aware 判断]
+    D --> H
+    E --> H
+    F --> H
+    G --> H
+    H --> I[生成 fix_advice]
+    H --> J[定位 focus_element]
+    J --> K[构建 repair_strategy]
+    K --> L[返回 diagnostics]

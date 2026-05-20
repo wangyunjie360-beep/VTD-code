@@ -1,0 +1,81 @@
+{
+  "element": "Properties",
+  "description": "Schema-derived Properties element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Controller",
+      "type_ref": "Properties",
+      "deprecated": false
+    },
+    {
+      "parent_context": "FileHeader",
+      "type_ref": "Properties",
+      "deprecated": false
+    },
+    {
+      "parent_context": "MiscObject",
+      "type_ref": "Properties",
+      "deprecated": false
+    },
+    {
+      "parent_context": "Pedestrian",
+      "type_ref": "Properties",
+      "deprecated": false
+    },
+    {
+      "parent_context": "RoadCondition",
+      "type_ref": "Properties",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TrafficDistributionEntry",
+      "type_ref": "Properties",
+      "deprecated": false
+    },
+    {
+      "parent_context": "Vehicle",
+      "type_ref": "Properties",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Controller",
+    "FileHeader",
+    "MiscObject",
+    "Pedestrian",
+    "RoadCondition",
+    "TrafficDistributionEntry",
+    "Vehicle"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Property",
+      "cardinality": "0..unbounded"
+    },
+    {
+      "name": "File",
+      "cardinality": "0..unbounded"
+    },
+    {
+      "name": "CustomContent",
+      "cardinality": "0..unbounded"
+    }
+  ],
+  "child_order": [
+    "Property",
+    "File",
+    "CustomContent"
+  ],
+  "multiplicity": {
+    "Property": "0..unbounded",
+    "File": "0..unbounded",
+    "CustomContent": "0..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1052; knowledge/raw/schema/OpenSCENARIO.xsd#L1303; knowledge/raw/schema/OpenSCENARIO.xsd#L1560; knowledge/raw/schema/OpenSCENARIO.xsd#L1768; knowledge/raw/schema/OpenSCENARIO.xsd#L1894; knowledge/raw/schema/OpenSCENARIO.xsd#L2014; knowledge/raw/schema/OpenSCENARIO.xsd#L2339; knowledge/raw/schema/OpenSCENARIO.xsd#L2606"
+}

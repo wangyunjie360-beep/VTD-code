@@ -1,0 +1,54 @@
+{
+  "element": "ManeuverGroup",
+  "description": "Schema-derived ManeuverGroup element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Act",
+      "type_ref": "ManeuverGroup",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Act"
+  ],
+  "required_attributes": [
+    {
+      "name": "maximumExecutionCount",
+      "type": "UnsignedInt"
+    },
+    {
+      "name": "name",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Actors",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "CatalogReference",
+      "cardinality": "0..unbounded"
+    },
+    {
+      "name": "Maneuver",
+      "cardinality": "0..unbounded"
+    }
+  ],
+  "child_order": [
+    "Actors",
+    "CatalogReference",
+    "Maneuver"
+  ],
+  "multiplicity": {
+    "Actors": "1..1",
+    "CatalogReference": "0..unbounded",
+    "Maneuver": "0..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L772; knowledge/raw/schema/OpenSCENARIO.xsd#L1544"
+}

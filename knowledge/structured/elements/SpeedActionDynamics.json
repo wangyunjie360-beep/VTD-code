@@ -1,0 +1,55 @@
+{
+  "element": "SpeedActionDynamics",
+  "description": "Transition dynamics used by SpeedAction. This element name is an alias over the shared TransitionDynamics type.",
+  "contextual_variants": [
+    {
+      "parent_context": "SpeedAction",
+      "type_ref": "TransitionDynamics",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "SpeedAction"
+  ],
+  "required_attributes": [
+    {
+      "name": "dynamicsDimension",
+      "type": "DynamicsDimension"
+    },
+    {
+      "name": "dynamicsShape",
+      "type": "DynamicsShape"
+    },
+    {
+      "name": "value",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "followingMode",
+      "type": "FollowingMode"
+    }
+  ],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "dynamicsDimension": [
+      "distance",
+      "rate",
+      "time"
+    ],
+    "dynamicsShape": [
+      "cubic",
+      "linear",
+      "sinusoidal",
+      "step"
+    ],
+    "followingMode": [
+      "follow",
+      "position"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L177; knowledge/raw/schema/OpenSCENARIO.xsd#L191; knowledge/raw/schema/OpenSCENARIO.xsd#L206; knowledge/raw/schema/OpenSCENARIO.xsd#L2139; knowledge/raw/schema/OpenSCENARIO.xsd#L2488"
+}

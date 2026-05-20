@@ -1,0 +1,64 @@
+{
+  "element": "TrajectoryPosition",
+  "description": "Schema-derived TrajectoryPosition element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Position",
+      "type_ref": "TrajectoryPosition",
+      "deprecated": false
+    },
+    {
+      "parent_context": "PositionStart",
+      "type_ref": "TrajectoryPosition",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TargetPositionMaster",
+      "type_ref": "TrajectoryPosition",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TargetPosition",
+      "type_ref": "TrajectoryPosition",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Position",
+    "PositionStart",
+    "TargetPosition",
+    "TargetPositionMaster"
+  ],
+  "required_attributes": [
+    {
+      "name": "s",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "t",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "Orientation",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "TrajectoryRef",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "Orientation": "0..1",
+    "TrajectoryRef": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1838; knowledge/raw/schema/OpenSCENARIO.xsd#L2474"
+}

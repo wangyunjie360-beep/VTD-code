@@ -1,0 +1,33 @@
+{
+  "element": "ProbabilityDistributionSet",
+  "description": "Stochastic distribution branch containing one or more weighted Element entries.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "StochasticDistributionType",
+      "type_ref": "ProbabilityDistributionSet",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "StochasticDistributionType"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "Element",
+      "cardinality": "1..unbounded"
+    }
+  ],
+  "child_order": [
+    "Element"
+  ],
+  "multiplicity": {
+    "Element": "1..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1885; knowledge/raw/schema/OpenSCENARIO.xsd#L2190"
+}

@@ -1,0 +1,71 @@
+{
+  "element": "LateralDistanceAction",
+  "description": "Schema-derived LateralDistanceAction element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "all",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "LateralAction",
+      "type_ref": "LateralDistanceAction",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "LateralAction"
+  ],
+  "required_attributes": [
+    {
+      "name": "continuous",
+      "type": "Boolean"
+    },
+    {
+      "name": "entityRef",
+      "type": "String",
+      "reference_kind": "entity"
+    },
+    {
+      "name": "freespace",
+      "type": "Boolean"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "coordinateSystem",
+      "type": "CoordinateSystem"
+    },
+    {
+      "name": "displacement",
+      "type": "LateralDisplacement"
+    },
+    {
+      "name": "distance",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "DynamicConstraints",
+      "cardinality": "0..1"
+    }
+  ],
+  "child_order": [],
+  "multiplicity": {
+    "DynamicConstraints": "0..1"
+  },
+  "enum_constraints": {
+    "displacement": [
+      "any",
+      "leftToReferencedEntity",
+      "rightToReferencedEntity"
+    ],
+    "coordinateSystem": [
+      "entity",
+      "lane",
+      "road",
+      "trajectory",
+      "world"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L147; knowledge/raw/schema/OpenSCENARIO.xsd#L253; knowledge/raw/schema/OpenSCENARIO.xsd#L1461; knowledge/raw/schema/OpenSCENARIO.xsd#L1464"
+}

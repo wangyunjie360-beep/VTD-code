@@ -1,0 +1,29 @@
+{
+  "element": "UserDefinedLight",
+  "description": "Schema-derived UserDefinedLight element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "LightType",
+      "type_ref": "UserDefinedLight",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "LightType"
+  ],
+  "required_attributes": [
+    {
+      "name": "userDefinedLightType",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L1503; knowledge/raw/schema/OpenSCENARIO.xsd#L2536"
+}

@@ -1,0 +1,43 @@
+{
+  "element": "RoadCursor",
+  "description": "Schema-derived RoadCursor element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "RoadRange",
+      "type_ref": "RoadCursor",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "RoadRange"
+  ],
+  "required_attributes": [
+    {
+      "name": "roadId",
+      "type": "String"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "s",
+      "type": "Double"
+    }
+  ],
+  "allowed_children": [
+    {
+      "name": "Lane",
+      "cardinality": "0..unbounded"
+    }
+  ],
+  "child_order": [
+    "Lane"
+  ],
+  "multiplicity": {
+    "Lane": "0..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L2019; knowledge/raw/schema/OpenSCENARIO.xsd#L2044"
+}

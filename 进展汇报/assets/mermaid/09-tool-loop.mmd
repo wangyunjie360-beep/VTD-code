@@ -1,0 +1,21 @@
+sequenceDiagram
+    participant U as 用户/Agent
+    participant R as retrieve_spec
+    participant S as get_element_schema
+    participant G as build_xml_guidance
+    participant V as validate_xml
+    participant E as explain_validation_errors
+
+    U->>R: 查询行为/元素/属性/错误主题
+    R-->>U: 候选 hits + strategy_summary
+    U->>S: 查询目标元素完整 schema
+    S-->>U: record + strategy
+    U->>G: 需要组合 guidance 时请求 packet
+    G-->>U: retrieval + schema + repair packet
+    U->>V: 提交 XML 做 schema 校验
+    V-->>U: ok / errors
+    alt 校验失败
+        U->>E: 提交 errors 做诊断
+        E-->>U: diagnostics + repair_strategy
+        U->>V: 局部修复后再次校验
+    end

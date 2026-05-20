@@ -1,0 +1,16 @@
+{
+  "ai_intent_consistent_claim": true,
+  "ai_output": "docs/case-runs/lane-change-cn-ai-primary/ai-primary-output.json",
+  "ai_validation_ok": true,
+  "case_request": "Generate a VTD OpenSCENARIO case on an urban road in China: ego vehicle starts at 30 km/h; the scenario trigger is simulation time 5 seconds; at that trigger the ego vehicle performs a lane change to the left by one lane; the simulation stops at 20 seconds. Keep the XML minimal but schema-valid.",
+  "claude_prompt": "docs/case-runs/lane-change-cn-ai-primary/claude-gpt-primary-prompt.txt",
+  "claude_stream": "docs/case-runs/lane-change-cn-ai-primary/claude-gpt-primary-stream.jsonl",
+  "independent_intent_consistent": true,
+  "independent_validation_ok": true,
+  "interaction_count": 15,
+  "interactions": "docs/case-runs/lane-change-cn-ai-primary/interactions.json",
+  "model": "gpt-5.5",
+  "primary_actor": "claude_code_gpt",
+  "scenario_path": "docs/case-runs/lane-change-cn-ai-primary/lane_change_cn_ai_primary.xosc",
+  "verification": "docs/case-runs/lane-change-cn-ai-primary/independent-verification.json"
+}

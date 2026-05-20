@@ -1,0 +1,74 @@
+{
+  "element": "RelativeDistanceCondition",
+  "description": "Entity-relative distance condition with required entityRef, freespace, relativeDistanceType, rule, and value attributes. Semantic checks typically expect nonnegative distances and route continuity when route-relative options are used.",
+  "parent_contexts": [
+    "EntityCondition"
+  ],
+  "required_attributes": [
+    {
+      "name": "entityRef",
+      "type": "String",
+      "reference_kind": "entity"
+    },
+    {
+      "name": "freespace",
+      "type": "Boolean"
+    },
+    {
+      "name": "relativeDistanceType",
+      "type": "RelativeDistanceType"
+    },
+    {
+      "name": "rule",
+      "type": "Rule"
+    },
+    {
+      "name": "value",
+      "type": "Double"
+    }
+  ],
+  "optional_attributes": [
+    {
+      "name": "coordinateSystem",
+      "type": "CoordinateSystem"
+    },
+    {
+      "name": "routingAlgorithm",
+      "type": "RoutingAlgorithm"
+    }
+  ],
+  "allowed_children": [],
+  "child_order": [],
+  "multiplicity": {},
+  "enum_constraints": {
+    "relativeDistanceType": [
+      "lateral",
+      "longitudinal",
+      "cartesianDistance",
+      "euclidianDistance"
+    ],
+    "rule": [
+      "equalTo",
+      "greaterThan",
+      "lessThan",
+      "greaterOrEqual",
+      "lessOrEqual",
+      "notEqualTo"
+    ],
+    "coordinateSystem": [
+      "entity",
+      "lane",
+      "road",
+      "trajectory",
+      "world"
+    ],
+    "routingAlgorithm": [
+      "assignedRoute",
+      "fastest",
+      "leastIntersections",
+      "shortest",
+      "undefined"
+    ]
+  },
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L147; knowledge/raw/schema/OpenSCENARIO.xsd#L468; knowledge/raw/schema/OpenSCENARIO.xsd#L533; knowledge/raw/schema/OpenSCENARIO.xsd#L549; knowledge/raw/schema/OpenSCENARIO.xsd#L1935"
+}

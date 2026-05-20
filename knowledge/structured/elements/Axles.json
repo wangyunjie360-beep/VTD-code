@@ -1,0 +1,45 @@
+{
+  "element": "Axles",
+  "description": "Schema-derived Axles element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "sequence",
+  "child_groups": [],
+  "semantic_constraints": [],
+  "contextual_variants": [
+    {
+      "parent_context": "Vehicle",
+      "type_ref": "Axles",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "Vehicle"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "FrontAxle",
+      "cardinality": "0..1"
+    },
+    {
+      "name": "RearAxle",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "AdditionalAxle",
+      "cardinality": "0..unbounded"
+    }
+  ],
+  "child_order": [
+    "FrontAxle",
+    "RearAxle",
+    "AdditionalAxle"
+  ],
+  "multiplicity": {
+    "FrontAxle": "0..1",
+    "RearAxle": "1..1",
+    "AdditionalAxle": "0..unbounded"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L875; knowledge/raw/schema/OpenSCENARIO.xsd#L2605"
+}

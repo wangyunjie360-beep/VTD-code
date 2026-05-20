@@ -1,0 +1,174 @@
+{
+  "element": "Position",
+  "description": "Schema-derived Position element with context-dependent type variants captured from the local XSD.",
+  "content_model_kind": "choice",
+  "child_groups": [
+    {
+      "members": [
+        "WorldPosition",
+        "RelativeWorldPosition",
+        "RelativeObjectPosition",
+        "RoadPosition",
+        "RelativeRoadPosition",
+        "LanePosition",
+        "RelativeLanePosition",
+        "RoutePosition",
+        "GeoPosition",
+        "TrajectoryPosition"
+      ],
+      "cardinality": "1..1"
+    }
+  ],
+  "semantic_constraints": [
+    "Select exactly one of: WorldPosition, RelativeWorldPosition, RelativeObjectPosition, RoadPosition, RelativeRoadPosition, LanePosition, RelativeLanePosition, RoutePosition, GeoPosition, TrajectoryPosition."
+  ],
+  "contextual_variants": [
+    {
+      "parent_context": "AcquirePositionAction",
+      "type_ref": "Position",
+      "deprecated": false
+    },
+    {
+      "parent_context": "AddEntityAction",
+      "type_ref": "Position",
+      "deprecated": false
+    },
+    {
+      "parent_context": "Clothoid",
+      "type_ref": "Position",
+      "deprecated": false
+    },
+    {
+      "parent_context": "ControlPoint",
+      "type_ref": "Position",
+      "deprecated": false
+    },
+    {
+      "parent_context": "DistanceCondition",
+      "type_ref": "Position",
+      "deprecated": false
+    },
+    {
+      "parent_context": "Polygon",
+      "type_ref": "Position",
+      "deprecated": false
+    },
+    {
+      "parent_context": "ReachPositionCondition",
+      "type_ref": "Position",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TeleportAction",
+      "type_ref": "Position",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TimeToCollisionConditionTarget",
+      "type_ref": "Position",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TrafficSinkAction",
+      "type_ref": "Position",
+      "deprecated": false
+    },
+    {
+      "parent_context": "TrafficSourceAction",
+      "type_ref": "Position",
+      "deprecated": false
+    },
+    {
+      "parent_context": "UsedArea",
+      "type_ref": "Position",
+      "deprecated": false
+    },
+    {
+      "parent_context": "Vertex",
+      "type_ref": "Position",
+      "deprecated": false
+    },
+    {
+      "parent_context": "Waypoint",
+      "type_ref": "Position",
+      "deprecated": false
+    }
+  ],
+  "parent_contexts": [
+    "AcquirePositionAction",
+    "AddEntityAction",
+    "Clothoid",
+    "ControlPoint",
+    "DistanceCondition",
+    "Polygon",
+    "ReachPositionCondition",
+    "TeleportAction",
+    "TimeToCollisionConditionTarget",
+    "TrafficSinkAction",
+    "TrafficSourceAction",
+    "UsedArea",
+    "Vertex",
+    "Waypoint"
+  ],
+  "required_attributes": [],
+  "optional_attributes": [],
+  "allowed_children": [
+    {
+      "name": "WorldPosition",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "RelativeWorldPosition",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "RelativeObjectPosition",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "RoadPosition",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "RelativeRoadPosition",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "LanePosition",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "RelativeLanePosition",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "RoutePosition",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "GeoPosition",
+      "cardinality": "1..1"
+    },
+    {
+      "name": "TrajectoryPosition",
+      "cardinality": "1..1"
+    }
+  ],
+  "child_order": [
+    "WorldPosition|RelativeWorldPosition|RelativeObjectPosition|RoadPosition|RelativeRoadPosition|LanePosition|RelativeLanePosition|RoutePosition|GeoPosition|TrajectoryPosition"
+  ],
+  "multiplicity": {
+    "WorldPosition": "1..1",
+    "RelativeWorldPosition": "1..1",
+    "RelativeObjectPosition": "1..1",
+    "RoadPosition": "1..1",
+    "RelativeRoadPosition": "1..1",
+    "LanePosition": "1..1",
+    "RelativeLanePosition": "1..1",
+    "RoutePosition": "1..1",
+    "GeoPosition": "1..1",
+    "TrajectoryPosition": "1..1"
+  },
+  "enum_constraints": {},
+  "source_path": "knowledge/raw/schema/OpenSCENARIO.xsd#L767; knowledge/raw/schema/OpenSCENARIO.xsd#L804; knowledge/raw/schema/OpenSCENARIO.xsd#L971; knowledge/raw/schema/OpenSCENARIO.xsd#L1083; knowledge/raw/schema/OpenSCENARIO.xsd#L1153; knowledge/raw/schema/OpenSCENARIO.xsd#L1818; knowledge/raw/schema/OpenSCENARIO.xsd#L1827; knowledge/raw/schema/OpenSCENARIO.xsd#L1914; knowledge/raw/schema/OpenSCENARIO.xsd#L2244; knowledge/raw/schema/OpenSCENARIO.xsd#L2289; knowledge/raw/schema/OpenSCENARIO.xsd#L2394; knowledge/raw/schema/OpenSCENARIO.xsd#L2404; knowledge/raw/schema/OpenSCENARIO.xsd#L2515; knowledge/raw/schema/OpenSCENARIO.xsd#L2648; knowledge/raw/schema/OpenSCENARIO.xsd#L2663"
+}
